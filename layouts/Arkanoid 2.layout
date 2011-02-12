@@ -213,7 +213,7 @@ HBMainContainer = 3Filler1 _VBMainContainer 3Filler2
                                             -ResetFilter \
                                             -MBSongTree
 
-                                                MBSongTree = HistItem
+                                                MBSongTree = LSortItem PlayItem HistItem
 
                 ############################################################
                 # RIGHT Area
