@@ -7,6 +7,10 @@ Type=G+
 # import [ArkanoidHelp]
 #
 
+SkinPath = skins/arkanoid_skin
+
+Skin = background.png::s
+
 ############## DEFAULT HIDDEN ################
 #
 # Filler18 - cover top space
@@ -32,7 +36,11 @@ KeyBindings = \
     cs-V ShowHideWidget(VPFilterTop|MenuItem23|MenuItem24) \
     cs-H ShowHideWidget(HPFilterCenter|MenuItem26|MenuItem27) \
     cs-S ShowHideWidget(VBSavedFilterPane) \
-    cs-W ShowHideWidget(VBSearchBar)
+    cs-W ShowHideWidget(VBSearchBar) \
+    cs-O ShowHideWidget(HBTotal) \
+    cs-C ShowHideWidget(HBTimeBar)
+
+
 
 # \
 #    cs-B ShowHideWidget(HBAlterReplayButtons|VBReplayButtons)
@@ -92,6 +100,8 @@ HBMainContainer = 3Filler1 _VBMainContainer 3Filler2
                             MenuItem05(togglewidget=VBReplayButtons,label=_"Standard position for replay buttons") \
                             SeparatorMenuItem02 \
                             MenuItem06(togglewidget=HBToggleTopSpace|HBToggleBottomSpace|VBToggleLeftSpace|VBToggleRightSpace,label=_"Buttons for cover positioning") \
+                            MenuItem07(togglewidget=HBTotal,label=_"Totals") \
+                            MenuItem08(togglewidget=HBTimeBar,label=_"Scale") \
                             SeparatorMenuItem03 \
                             MenuItem01(togglewidget=VBLeft|SMLeftPane10,label=_"Left pane") \
                             MenuItem02(togglewidget=VBMiddle|SMMiddlePane20,label=_"Middle pane") \
@@ -128,7 +138,7 @@ HBMainContainer = 3Filler1 _VBMainContainer 3Filler2
 
                         VBTimeBar = (minheight=34,maxheight=34) _Filler5 HBTimeBar _Filler6
 
-                            HBTimeBar = _TimeBar(text="")
+                            HBTimeBar = _Scale
 
                         HPCoverAndVisuals = _VBCover _HBVisuals
 
@@ -254,7 +264,7 @@ SBMain = VBMain
                 HBInfos = 5VBInfos
 
                     VBInfos = \
-                        Text21(markup="You can use the mouse wheel for volume control on the buttons to use for playback. In addition to the button for volume control and the entire top bar.")
+                        Text01(markup="You can use the mouse wheel for volume control on the buttons to use for playback. In addition to the button for volume control and the entire top bar.")
 
                 HBShortcuts = 5VBShortCuts
 
@@ -268,7 +278,9 @@ SBMain = VBMain
                         Text17(markup="<tt><b>Ctrl-Shift V</b></tt>    Show/Hide <b><u>v</u></b>ertical filter") \
                         Text18(markup="<tt><b>Ctrl-Shift S</b></tt>    Show/Hide <b><u>s</u></b>aved filter/lists") \
                         Text19(markup="<tt><b>Ctrl-Shift B</b></tt>    Toggle playback <b><u>b</u></b>uttons") \
-                        Text20(markup="<tt><b>Ctrl-Shift W</b></tt>    Show/Hide serach bar (<b><u>W</u></b>here is)")
+                        Text20(markup="<tt><b>Ctrl-Shift W</b></tt>    Show/Hide search bar (<b><u>W</u></b>here is)") \
+                        Text21(markup="<tt><b>Ctrl-Shift O</b></tt>    Show/Hide t<b><u>o</u></b>tals") \
+                        Text22(markup="<tt><b>Ctrl-Shift C</b></tt>    Show/Hide s<b><u>c</u></b>ale")
 
 [Arkanoid Fullscreen]
 
