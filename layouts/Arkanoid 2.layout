@@ -282,25 +282,11 @@ SBMain = VBMain
                         Text21(markup="<tt><b>Ctrl-Shift O</b></tt>    Show/Hide t<b><u>o</u></b>tals") \
                         Text22(markup="<tt><b>Ctrl-Shift C</b></tt>    Show/Hide s<b><u>c</u></b>ale")
 
-[Arkanoid Fullscreen]
-
-Author=aboettger
-Type=F
-Window  = fullscreen=1,sticky=0
-VBmain  = _HPContent -HBReplayButtons
-    HBReplayButtons = Prev(size=menu) Play(size=menu) Next(size=menu) 20VSeparator 5_TimeBar(text="%t by %a (%m)",minwidth=240) 10-Stars
-
-HPContent = _HBCover
-    HBCover = _Cover(click1="",reflection=1,overlay=6x6:778x778:skins/arkanoid_skin/overlay.png,default=skins/arkanoid_skin/no-cover.png,showcover=0)
-
-KeyBindings	= Escape CloseWindow
-VolumeScroll	= VBmain
-
-
-[Arkanoid Fullscreen with queue] based on Arkanoid Fullscreen
+[Arkanoid Fullscreen with queue] based on Arkanoid 2 Fullscreen
 
     HPContent = HBCover HBQueueList
         HBQueueList = _QueueList
+
 
 [Arkanoid browser]
 Author=aboettger
