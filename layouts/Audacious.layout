@@ -4,6 +4,10 @@ Type = G+
 Title = %n %t (%m) - gmusicbrowser
 Default = Window(size=480x200)
 
+SkinPath = skins/audacious_skin
+
+Skin = background.png::e
+
 KeyBindings = c-Q Quit \
     P OpenCustom(Audacious_PLM)
     S ToggleRandom
@@ -16,8 +20,22 @@ KeyBindings = c-Q Quit \
 
 VolumeScroll = HBVolume
 
-VBMain = HBMenubar HBToolbar _HBPlaylist @AudaciousSongInfo 3HBStatusbar
+VBMain = HBMenubar HBToolbar _HBPlaylist HBSonginfo 3HBStatusbar
 
+    HBSonginfo = 10HBCover \
+            VBSongInfo \
+            10Filler10 \
+            2_VBVisuals
+
+                VBVisuals = 2Filler2 _Visuals(minwidth=200,maxwidth=200) 2Filler3
+
+                VBSongInfo = 3Filler4 \
+                    Title(minsize=0,markup="<big><big><big><big>%t</big></big></big></big>",click1="") \
+                    Artist(minsize=0,markup="%a",click1="") \
+                    Album(minsize=1,markup="%l",click1="")
+
+            HBCover = (maxheight=80,minheight=80,minwidth=80,maxwidth=80) \
+                Cover(default=elementary/no-cover.svg,showcover=0,minsize=100,maxsize=100)
 
     HBMenubar = _MBMenubar
             MBMenubar = SMMenu1 SMMenu2 SMMenu3 SMMenu5 SMMenu6 SMMenu7
@@ -82,27 +100,6 @@ VBMain = HBMenubar HBToolbar _HBPlaylist @AudaciousSongInfo 3HBStatusbar
                 Stop(size=button,relief=none) \
                 Prev(size=button,relief=none) \
                 Next(size=button,relief=none)
-
-[AudaciousSongInfo]
-
-SkinPath = audacious_skin
-
-Skin = background_black.png::hs
-
-HBSonginfo = 10HBCover \
-        VBSongInfo \
-        10Filler10 \
-        2_VBVisuals
-
-            VBVisuals = 2Filler2 _Visuals(minwidth=200,maxwidth=200) 2Filler3
-
-            VBSongInfo = 3Filler4 \
-                Title(minsize=0,markup="<big><big><big><big>%t</big></big></big></big>",click1="") \
-                Artist(minsize=0,markup="%a",click1="") \
-                Album(minsize=1,markup="%l",click1="")
-
-        HBCover = (maxheight=80,minheight=80,minwidth=80,maxwidth=80) \
-            Cover(default=elementary/no-cover.svg,showcover=0,minsize=100,maxsize=100)
 
 [Audacious_PLM]
 Default = Window(size=400x250)
