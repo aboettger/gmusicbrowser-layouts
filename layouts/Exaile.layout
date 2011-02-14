@@ -1,6 +1,9 @@
 [Exaile]
 Author = shimmerproject.org
 Type = G+
+
+Category = Common
+
 Title = %t by %a
 Default = Window(size=80%x80%)
 

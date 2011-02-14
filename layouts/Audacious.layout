@@ -1,6 +1,9 @@
 [Audacious]
 Author = shimmerproject.org
 Type = G+
+
+Category = Common
+
 Title = %n %t (%m) - gmusicbrowser
 Default = Window(size=480x200)
 

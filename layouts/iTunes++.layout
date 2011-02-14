@@ -1,11 +1,9 @@
 [itunes++]
-
 Author=aboettger
-
-### based on itunes-like-plus
-
-####General
 Type = G
+
+Category = Common
+
 Default = Window size=1120x820 VPfp_list 120 HPfp0 300 VPfp_list 200_550
 
 VSize1 = 90 HBHeader
