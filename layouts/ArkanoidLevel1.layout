@@ -1,0 +1,44 @@
+[Arkanoid Level 1]
+
+Author=aboettger
+Type=G
+
+Category = Fun
+
+SkinPath = skins/arkanoid_skin
+
+Skin = Arkanoid_Level_1.png::e
+
+Default = Window(size=640x400,hidden=VBMainMenuBar)
+
+VolumeScroll = VBMainContainer
+
+KeyBindings = \
+    cs-T ShowHideWidget(VBMainMenuBar) \
+    cs-H ShowHideWidget(HBShortCuts)
+
+VBMainContainer  = HBShortCuts _HBMainContainer
+
+    HBMainContainer = _VBTimeBar -VBMainMenuBar
+
+        HBShortCuts = 70Filler3 VBShortCuts
+
+            VBShortCuts = 100Filler4 \
+                Text1(markup="<tt><b>Ctrl-Shift H</b></tt>    Show/Hide This <b><u>H</u></b>elp") \
+                Text2(markup="<tt><b>Ctrl-Shift T</b></tt>    Show/Hide <b><u>T</u></b>oolbar")
+
+        VBTimeBar = _Filler0 HBTimeBar
+
+            HBTimeBar = \
+                #Prev(size=menu) \
+                #Play(size=menu) \
+                #Next(size=menu) \
+                #20VSeparator \
+                10Filler1 _TimeBar(text="%t by %a (%m)",minheight=26,maxheight=26,skin=::,handle_skin=pad.png:::normal_prelight_active) 106Filler2
+
+    VBMainMenuBar =  \
+                    Prev(size=small-toolbar,tip=_"Previous Song") \
+                    Play(size=small-toolbar,tip=_"Play/Pause") \
+                    Next(size=small-toolbar,tip=_"Next Song") \
+                    Pref(stock=gtk-preferences,size=small-toolbar)
+
