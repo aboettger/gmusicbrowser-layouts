@@ -1,7 +1,8 @@
 [VastOne GQLC]
 Type=G+
 Default		= Window(size=1120x820) FilterPane0(page=genre) FilterPane1(page=artist) FilterPane2(page=album,albumpsize=32,albuminfo=1) QueueList(cols=track titleaa length nbplay rating) VPRight(size=230-353) VPListAndQueue(size=195-588)
-MBmenu		= MainMenuItem LayoutItem PSortItem PFilterItem QueueItem
+MBmenu		= MainMenuItem LayoutItem PSortItem PFilterItem QueueItem SMView
+SMView		= (label=_"View") MenuItem0(togglewidget=HPfp0,label=_"Categories pane") MenuItem1(togglewidget=FilterPane0,label=_"Genres pane") MenuItem2(togglewidget=FilterPane2,label=_"Album pane") MenuItem3(togglewidget=FilterPane1,label=_"Artist pane")   MenuItem4(togglewidget=NBLists,label=_"Left pane") MenuItem5(togglewidget=QueueList,label=_"Queue")
 MBlist 		= HistItem LSortItem PlayItem
 HBmenu		= _MBmenu
 HBButtons1	= Prev Stop Play Next ExtraButtons 5-VolumeIcon -Pref -OpenBrowser(toggle=1)
