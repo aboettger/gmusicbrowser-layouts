@@ -1,0 +1,36 @@
+[VastOne GQLC]
+Type=G+
+Default		= Window(size=1120x820) FilterPane0(page=genre) FilterPane1(page=artist) FilterPane2(page=album,albumpsize=32,albuminfo=1) QueueList(cols=track titleaa length nbplay rating) VPRight(size=230-353) VPListAndQueue(size=195-588)
+MBmenu		= MainMenuItem LayoutItem PSortItem PFilterItem QueueItem
+MBlist 		= HistItem LSortItem PlayItem
+HBmenu		= _MBmenu
+HBButtons1	= Prev Stop Play Next ExtraButtons 5-VolumeIcon -Pref -OpenBrowser(toggle=1)
+HBButtons3	= 5Sort 5Filter 5Queue 5Pos -Stars
+HBTime		= Time _TimeBar
+HBTitle		= Filler0 _Title
+HBArtist	= LockArtist _Artist
+HBAlbum		= LockAlbum _Album -Year
+VBText		= HBButtons1 2HBTitle 2HBArtist 2HBAlbum HBTime
+HBText_Cover	= _VBText
+VBplayer	= HBButtons3 HBText_Cover
+VBLeft		= VBplayer _NBLists
+    NBLists = SongTree(tabtitle=_"Artist/Album Playing",activate=queueinsert, activate2=addplay, songypad=1, group=Play:artist) \ 
+Context(tabtitle=_"Context") \ 
+VBartist \
+VBalbum \
+SongSearch(tabtitle=_"Song",activate=queueinsert) \
+SongList(tabtitle=_"Playlist",activate=queueinsert,activate2=addplay,mode=playlist,group=2,follow=1)
+VBartist= (tabtitle=_"Artist") SimpleSearch1(group=1,fields=artist,noselector=1) _FilterPane10(group=1,activate=queueinsert,pages=artist,nb=2)
+VBalbum= (tabtitle=_"Album") SimpleSearch2(group=3,fields=album,noselector=1) _FilterPane11(group=3,activate=queueinsert,pages=album,nb=2)
+HPfp1		= FilterPane1(nb=2,hidebb=1) FilterPane2(nb=3,hidebb=1)
+HPfp0	 	= FilterPane0(nb=1,hidebb=1) HPfp1
+HBSongList	= SimpleSearch(maxwidth=330) Total -FLock -PlayFilter -Refresh -ResetFilter -MBlist
+VBSongList	= HBSongList _SongTree1(activate=queueinsert,activate2=addplay,songypad=1)
+VPRight		= HPfp0 _VBSongList
+VPListAndQueue = VBQueue VPRight
+    VBQueue = _QueueList(group=1) HBQueueButtons
+        HBQueueButtons	= EditListButtons(group=1,small=1) 4QueueActions
+HPBottom	= VBLeft _VPListAndQueue 
+VBmain		= HBmenu 5_HPBottom
+HSize0		= Filler0 LockArtist LockAlbum
+VolumeScroll	= VBplayer
