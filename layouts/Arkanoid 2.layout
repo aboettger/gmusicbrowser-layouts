@@ -17,9 +17,10 @@ Skin = background.png::s
 # Filler19 - cover bottom space
 # HBVisuals - no visuals on 1st start, only works with gstreamer
 # HBAlterReplayButtons - no alternative replay buttons, only usefull if left pane is hidden
+# HBAlterTimeBar - no alternative timebar, only usefull if left pane is hidden
 #
 ##############################################
-Default = Window(size=90%x80%,hidden=HBAlterReplayButtons|HBVisuals|Filler18|Filler19) \
+Default = Window(size=90%x80%,hidden=HBAlternativeTimeBar|HBAlterReplayButtons|HBVisuals|Filler18|Filler19) \
     HPLeftMiddleAndRight(size=650) \
     HPSavedAndFilterAndList(size=100)\
     VPFilter(size=40) \
@@ -55,7 +56,9 @@ HBMainContainer = 3Filler1 _VBMainContainer 3Filler2
 
         HPTitleAndStats = _HBTitleAndAlterReplayButtons HBTotal
 
-            HBTitleAndAlterReplayButtons = HBAlterReplayButtons _HBTitle
+            HBTitleAndAlterReplayButtons = HBAlterReplayButtons _HBTitle _HBAlterTimeBar
+
+                HBAlterTimeBar = _Scale2
 
                 HBAlterReplayButtons = 0Filler51 \
                     Prev1(size=small-toolbar,tip=_"Previous Song") \
@@ -99,6 +102,9 @@ HBMainContainer = 3Filler1 _VBMainContainer 3Filler2
                             MenuItem04(togglewidget=HBAlterReplayButtons,label=_"Alternative position for replay buttons") \
                             MenuItem05(togglewidget=VBReplayButtons,label=_"Standard position for replay buttons") \
                             SeparatorMenuItem02 \
+                            MenuItem09(togglewidget=VBTimeBar,label=_"Standard position for timebar") \
+                            MenuItem010(togglewidget=HBAlterTimeBar,label=_"Alternative position for timebar") \
+                            SeparatorMenuItem04 \
                             MenuItem06(togglewidget=HBToggleTopSpace|HBToggleBottomSpace|VBToggleLeftSpace|VBToggleRightSpace,label=_"Buttons for cover positioning") \
                             MenuItem07(togglewidget=HBTotal,label=_"Totals") \
                             MenuItem08(togglewidget=HBTimeBar,label=_"Scale") \
@@ -138,7 +144,7 @@ HBMainContainer = 3Filler1 _VBMainContainer 3Filler2
 
                         VBTimeBar = (minheight=34,maxheight=34) _Filler5 HBTimeBar _Filler6
 
-                            HBTimeBar = _Scale
+                            HBTimeBar = _Scale1
 
                         HPCoverAndVisuals = _VBCover _HBVisuals
 
