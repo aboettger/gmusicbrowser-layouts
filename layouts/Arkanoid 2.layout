@@ -39,7 +39,7 @@ KeyBindings = \
     cs-S ShowHideWidget(VBSavedFilterPane) \
     cs-W ShowHideWidget(VBSearchBar) \
     cs-O ShowHideWidget(HBTotal) \
-    cs-C ShowHideWidget(HBTimeBar)
+    cs-C ShowHideWidget(VBTimeBar)
 
 
 
