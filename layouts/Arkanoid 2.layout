@@ -20,7 +20,7 @@ Skin = background.png::s
 # HBAlterTimeBar - no alternative timebar, only usefull if left pane is hidden
 #
 ##############################################
-Default = Window(size=90%x80%,hidden=HBAlternativeTimeBar|HBAlterReplayButtons|HBVisuals|Filler18|Filler19) \
+Default = Window(size=90%x80%,hidden=HBAlterTimeBar|HBAlterReplayButtons|HBVisuals|Filler18|Filler19) \
     HPLeftMiddleAndRight(size=650) \
     HPSavedAndFilterAndList(size=100)\
     VPFilter(size=40) \
@@ -99,8 +99,8 @@ HBMainContainer = 3Filler1 _VBMainContainer 3Filler2
                     MBViews = SMViews
 
                         SMViews = (label=_"->",minwidth=34,maxwidth=34) \
-                            MenuItem04(togglewidget=HBAlterReplayButtons,label=_"Alternative position for replay buttons") \
                             MenuItem05(togglewidget=VBReplayButtons,label=_"Standard position for replay buttons") \
+                            MenuItem04(togglewidget=HBAlterReplayButtons,label=_"Alternative position for replay buttons") \
                             SeparatorMenuItem02 \
                             MenuItem09(togglewidget=VBTimeBar,label=_"Standard position for timebar") \
                             MenuItem010(togglewidget=HBAlterTimeBar,label=_"Alternative position for timebar") \
@@ -123,8 +123,8 @@ HBMainContainer = 3Filler1 _VBMainContainer 3Filler2
                                 MenuItem21(togglewidget=VPFilter|MenuItem22|SeparatorMenuItem21|MenuItem25,label=_"Filter pane") \
                                 MenuItem26(togglewidget=VBSavedFilterPane,label=_"Saved filter/lists") \
                                 SeparatorMenuItem21 \
-                                MenuItem22(togglewidget=VPFilterTop|MenuItem23|MenuItem24,label=_"Vertical filter") \
-                                MenuItem25(togglewidget=HPFilterCenter|MenuItem26|MenuItem27,label=_"Horizontal filter") \
+                                MenuItem22(togglewidget=VPFilterTop,label=_"Vertical filter") \
+                                MenuItem25(togglewidget=HPFilterCenter,label=_"Horizontal filter") \
                                 SeparatorMenuItem22 \
                                 MenuItem23(togglewidget=VBSearchBar,label=_"Search bar") \
                                 MenuItem24(togglewidget=HBSongTreeAct,label=_"Song list actions")
