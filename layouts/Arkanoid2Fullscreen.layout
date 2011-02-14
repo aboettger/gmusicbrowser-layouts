@@ -1,14 +1,15 @@
 [Arkanoid 2 Fullscreen]
 
 Author=aboettger
-
 Type=F
+
+Category = Arkanoid
 
 SkinPath = skins/arkanoid_skin
 
 Skin = background_black.png::s
 
-Window  = fullscreen=1,sticky=0
+Window  = fullscreen=1,sticky=1
 
 KeyBindings	= Escape CloseWindow
 
@@ -17,9 +18,19 @@ VBMainContainer  = _HPContent -HBReplayButtons
         Play(size=menu) \
         Next(size=menu) \
         20VSeparator \
-        5_TimeBar(text="%t by %a (%m)",minwidth=240,skin=background_white.png::hs,handle_skin=paper_PosHand.png:::normal_prelight_active) \
+        5_TimeBar(text="%t by %a (%m)",minwidth=240,skin=::,handle_skin=pad.png:::normal_prelight_active) \
         10-Stars
 
     HPContent = _HBCover
-        HBCover = _Cover(click1="",reflection=1,overlay=6x6:778x778:skins/arkanoid_skin/overlay.png,default=skins/arkanoid_skin/no-cover.png,showcover=0)
+        HBCover = _Cover(click1="",reflection=40,r_alpha1=80,r_alpha2=0,r_scale=90,overlay=6x6:778x778:skins/arkanoid_skin/overlay.png,default=skins/arkanoid_skin/no-cover.png,showcover=0)
+
+[Arkanoid Fullscreen with queue] based on Arkanoid 2 Fullscreen
+
+Author=aboettger
+Type=F
+
+Category = Arkanoid
+
+    HPContent = HBCover HBQueueList
+        HBQueueList = _QueueList
 

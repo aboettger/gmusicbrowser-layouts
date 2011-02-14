@@ -30,11 +30,9 @@ VBMainContainer  = HBShortCuts _HBMainContainer
         VBTimeBar = _Filler0 HBTimeBar
 
             HBTimeBar = \
-                #Prev(size=menu) \
-                #Play(size=menu) \
-                #Next(size=menu) \
-                #20VSeparator \
-                10Filler1 _TimeBar(text="%t by %a (%m)",minheight=26,maxheight=26,skin=::,handle_skin=pad.png:::normal_prelight_active) 106Filler2
+                10Filler1 \
+                _TimeBar(text="%t by %a (%m)",minheight=26,maxheight=26,skin=::,handle_skin=pad.png:::normal_prelight_active) \
+                106Filler2
 
     VBMainMenuBar =  \
                     Prev(size=small-toolbar,tip=_"Previous Song") \

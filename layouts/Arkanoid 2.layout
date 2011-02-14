@@ -187,7 +187,7 @@ HBMainContainer = 3Filler1 _VBMainContainer 3Filler2
 
                         VBSearchBar = (minheight=34,maxheight=34) _Filler7 HBSearchBar _Filler8
 
-                            HBSearchBar = 2_SimpleSearch(noselector=1,suggest=1)
+                            HBSearchBar = 2_SimpleSearch(noselector=0,suggest=1)
 
                         HPSavedAndFilterAndList = VBSavedFilterPane VPFilterAndList
 
@@ -286,12 +286,6 @@ SBMain = VBMain
                         Text20(markup="<tt><b>Ctrl-Shift W</b></tt>    Show/Hide search bar (<b><u>W</u></b>here is)") \
                         Text21(markup="<tt><b>Ctrl-Shift O</b></tt>    Show/Hide t<b><u>o</u></b>tals") \
                         Text22(markup="<tt><b>Ctrl-Shift C</b></tt>    Show/Hide s<b><u>c</u></b>ale")
-
-[Arkanoid Fullscreen with queue] based on Arkanoid 2 Fullscreen
-
-    HPContent = HBCover HBQueueList
-        HBQueueList = _QueueList
-
 
 [Arkanoid browser]
 Author=aboettger
