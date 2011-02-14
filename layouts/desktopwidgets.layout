@@ -18,11 +18,11 @@ VBmain = \
 
     HBStarsAndButtons = Stars -HBButtons
 
-    HBTitle = _Title(click1="",click2="",markup="<b>%t</b>")
+    HBTitle = _Title(click1="",markup="<b>%t</b>")
 
-    HBArtist = _Artist(click1="",click2="",markup="<i><small>%a</small></i>")
+    HBArtist = _Artist(click1="",markup="<i><small>%a</small></i>")
 
-    HBAlbum= _Album(click1="",click2="",markup="<small>%l</small>")
+    HBAlbum= _Album(click1="",markup="<small>%l</small>")
 
     HBButtons = 0Filler1 \
         Prev(size=small-toolbar) \

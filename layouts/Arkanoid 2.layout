@@ -77,7 +77,8 @@ HBMainContainer = 3Filler1 _VBMainContainer 3Filler2
                 Title(expand_max=300,minsize=1,markup="<big><b>%t</b></big> ",click1="",yalign=0.5) \
                 LockAlbum(stock="on:gmb-lock gmb-locklight off:gmb-breadcrumb-album gmb-lock") \
                 Album(minsize=1,expand_max=200,yalign=0.5,minsize=0,markup="<big> </big>%l ",showcover=0) \
-                LockArtist(stock="on:gmb-lock gmb-locklight off:gmb-breadcrumb-artist gmb-lock") Artist(expand_max=200,yalign=0.5,minsize=0,markup="<big> </big>%a")
+                LockArtist(stock="on:gmb-lock gmb-locklight off:gmb-breadcrumb-artist gmb-lock") \
+                Artist(expand_max=200,yalign=0.5,minsize=0,markup="<big> </big>%a")
 
                 VBLabelsIcons = 2Filler40 _LabelsIcons
 
