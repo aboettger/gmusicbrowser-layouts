@@ -212,7 +212,7 @@ HBMainContainer = 3Filler1 _VBMainContainer 3Filler2
                                 VBList = _VBSongTree Progress
 
                                     VBSongTree = HBSongTreeAct \
-                                        _SongTree(cols="playandqueue track title ratingpic artist album",colwidth="album 150 artist 200 title 200",follow=1,grouping="album|artistalbumdisk_breadcrumbs(picsize=100)",sort="path album disc track file")
+                                        _SongTree(cols="playandqueue track title ratingpic artist album",colwidth="album 150 artist 200 title 200",follow=1,grouping="",sort="path album disc track file")
 
 
                                         HBSongTreeAct = FilterLock(button=1,relief=none) \
