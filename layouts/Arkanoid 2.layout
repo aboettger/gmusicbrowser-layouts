@@ -106,8 +106,7 @@ HBMainContainer = 3Filler1 _VBMainContainer 3Filler2
                             MenuItem010(togglewidget=HBAlterTimeBar,label=_"Alternative position for timebar") \
                             SeparatorMenuItem04 \
                             MenuItem06(togglewidget=HBToggleTopSpace|HBToggleBottomSpace|VBToggleLeftSpace|VBToggleRightSpace,label=_"Buttons for cover positioning") \
-                            MenuItem07(togglewidget=HBTotal,label=_"Totals") \
-                            MenuItem08(togglewidget=HBTimeBar,label=_"Scale") \
+                            MenuItem07(togglewidget=HBTotal,label=_"Totals")
                             SeparatorMenuItem03 \
                             MenuItem01(togglewidget=VBLeft|SMLeftPane10,label=_"Left pane") \
                             MenuItem02(togglewidget=VBMiddle|SMMiddlePane20,label=_"Middle pane") \
