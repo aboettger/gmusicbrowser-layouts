@@ -1,0 +1,14 @@
+[D_iPod_nano_4g]
+Type = D
+Name = _"iPod nano 4g"
+
+SkinPath = skins/ipod_skin
+
+Skin = Ipodnano4g.png::e
+
+Default = Window(size=146x357)
+
+VBmain = \
+    5Filler1 \
+    Cover(minsize=104,maxsize=104,overlay=0x0:110x104:skins/ipod_skin/cover_overlay.png)
+

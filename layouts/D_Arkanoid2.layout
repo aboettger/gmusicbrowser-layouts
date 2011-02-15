@@ -1,6 +1,6 @@
-[buttons_song_cover]
-Type= D
-Name= _"Arkanoid 2"
+[D_Arkanoid_2]
+Type = D
+Name = _"Arkanoid 2"
 
 SkinPath = skins/arkanoid_skin
 
