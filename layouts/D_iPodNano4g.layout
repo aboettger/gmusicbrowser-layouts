@@ -6,9 +6,56 @@ SkinPath = skins/ipod_skin
 
 Skin = Ipodnano4g.png::e
 
-Default = Window(size=146x357)
+Default = Window(size=146x357,hidden=VBView2|VBView3)
 
-VBmain = \
-    5Filler1 \
-    Cover(minsize=104,maxsize=104,overlay=0x0:110x104:skins/ipod_skin/cover_overlay.png)
+VBMainContainer = 25HBMain
+
+    HBMain = 17VBView1 17VBView2 17VBView3
+
+        ### 1st view
+
+        VBView1 = (minwidth=101,maxwidth=101,minheight=273,,maxheight=273) \
+            HBView1 \
+            _Filler100 \
+            -HBButtonLine13 \
+            3-HBButtonLine12 \
+            -HBButtonLine11
+
+            HBButtonLine11 = \
+                19Filler104 \
+                Pref(size=small-toolbar,stock=gtk-preferences)
+
+            HBButtonLine12 = \
+                1Filler102 \
+                Prev1(size=small-toolbar) \
+                _ToggleButton1(togglegroup=1,relief=none,size=large-toolbar,icon=gtk-goto-bottom,widget=VBView2,tip=_"top spacer") \
+                Next1(size=small-toolbar)
+
+                HBButtonLine13 = \
+                    19Filler103 \
+                    Play1(size=small-toolbar)
+
+
+            HBView1 = \
+                Cover1(minsize=50,maxsize=50,overlay=0x0:101x101:skins/ipod_skin/cover_overlay.png) \
+                _Filler101
+
+        ### 2nd view
+
+        VBView2 =  (minwidth=101,maxwidth=101,minheight=273,,maxheight=273) \
+            _Filler200 \
+            Stars \
+            _Filler201 \
+            -ToggleButton2(togglegroup=1,relief=none,size=button,icon=gtk-goto-bottom,widget=VBView3,tip=_"top spacer")
+
+        ### 3rd view
+
+        VBView3 =  (minwidth=101,maxwidth=101,minheight=273,,maxheight=273) \
+            HBView3 \
+            _Filler300 \
+            -ToggleButton3(togglegroup=1,relief=none,size=button,icon=gtk-goto-bottom,widget=VBView1,tip=_"top spacer")
+
+            HBView3 = \
+                Cover3(minsize=101,maxsize=101,overlay=0x0:101x101:skins/ipod_skin/cover_overlay.png) \
+                _Filler301
 
