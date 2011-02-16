@@ -8,6 +8,8 @@ Skin = Ipodnano4g.png::e
 
 Default = Window(size=146x357,hidden=VBView2|VBView3)
 
+DefaultFocus	= HBStatus
+
 VBMainContainer = 8Filler000 HBStatus 4HBMain
 
     HBStatus = \
@@ -36,26 +38,28 @@ VBMainContainer = 8Filler000 HBStatus 4HBMain
             -2Filler106 \
             -HBButtonLine11
 
-            HBTimeBar1 = \
-                10TimeBar1(minheight=6,maxheight=6,minwidth=80,maxwidth=80,skin=progress_bar_base.png::,handle_skin=progress_bar.png::hs:normal_prelight_active)
+                HBTimeBar1 = \
+                    _Filler111 \
+                    TimeBar1(minheight=6,maxheight=6,minwidth=80,maxwidth=80,skin=progress_bar_base.png::,handle_skin=progress_bar.png::hs:normal_prelight_active) \
+                    _Filler112
 
-            HBView1 = \
-                Cover1(minsize=50,maxsize=50,overlay=0x0:101x101:skins/ipod_skin/cover_overlay.png,click1="") \
-                _Filler101
+                HBView1 = \
+                    Cover1(minsize=50,maxsize=50,overlay=0x0:101x101:skins/ipod_skin/cover_overlay.png,click1="") \
+                    _Filler101
 
-            HBButtonLine11 = \
-                21Filler104 \
-                Pref1(skin=menu.png:::normal_prelight_active)
+                HBButtonLine11 = \
+                    21Filler104 \
+                    Pref1(skin=menu.png:::normal_prelight_active)
 
-            HBButtonLine12 = \
-                4Filler102 \
-                Prev1(skin=prev.png:::normal_prelight_active) \
-                6ToggleButton1(maxheight=49,minheight=49,minwidth=49,maxwidth=49,skin=select.png::s:normal_prelight_active,togglegroup=1,widget=VBView2) \
-                Next1(skin=next.png:::normal_prelight_active)
+                HBButtonLine12 = \
+                    4Filler102 \
+                    Prev1(skin=prev.png:::normal_prelight_active) \
+                    6ToggleButton1(maxheight=49,minheight=49,minwidth=49,maxwidth=49,skin=select.png::s:normal_prelight_active,togglegroup=1,widget=VBView2) \
+                    Next1(skin=next.png:::normal_prelight_active)
 
-            HBButtonLine13 = \
-                23Filler103 \
-                Play1(skin=play_pause.png:::normal_prelight_active)
+                HBButtonLine13 = \
+                    23Filler103 \
+                    Play1(skin=play_pause.png:::normal_prelight_active)
 
         ### 2nd view
 
@@ -70,21 +74,21 @@ VBMainContainer = 8Filler000 HBStatus 4HBMain
             -2Filler206 \
             -HBButtonLine21
 
-            HBView2 = 10Stars
+                HBView2 = 10Stars
 
-            HBButtonLine21 = \
-                21Filler204 \
-                Pref2(skin=menu.png:::normal_prelight_active)
+                HBButtonLine21 = \
+                    21Filler204 \
+                    Pref2(skin=menu.png:::normal_prelight_active)
 
-            HBButtonLine22 = \
-                4Filler202 \
-                Prev2(skin=prev.png:::normal_prelight_active) \
-                6ToggleButton2(maxheight=49,minheight=49,minwidth=49,maxwidth=49,skin=select.png::s:normal_prelight_active,togglegroup=1,widget=VBView3) \
-                Next2(skin=next.png:::normal_prelight_active)
+                HBButtonLine22 = \
+                    4Filler202 \
+                    Prev2(skin=prev.png:::normal_prelight_active) \
+                    6ToggleButton2(maxheight=49,minheight=49,minwidth=49,maxwidth=49,skin=select.png::s:normal_prelight_active,togglegroup=1,widget=VBView3) \
+                    Next2(skin=next.png:::normal_prelight_active)
 
-            HBButtonLine23 = \
-                23Filler203 \
-                Play2(skin=play_pause.png:::normal_prelight_active)
+                HBButtonLine23 = \
+                    23Filler203 \
+                    Play2(skin=play_pause.png:::normal_prelight_active)
 
         ### 3rd view
 
@@ -98,21 +102,21 @@ VBMainContainer = 8Filler000 HBStatus 4HBMain
             -2Filler306 \
             -HBButtonLine31
 
-            HBView3 = \
-                Cover3(minsize=101,maxsize=101,overlay=0x0:101x101:skins/ipod_skin/cover_overlay.png) \
-                _Filler301
+                HBView3 = \
+                    Cover3(minsize=101,maxsize=101,overlay=0x0:101x101:skins/ipod_skin/cover_overlay.png) \
+                    _Filler301
 
-            HBButtonLine31 = \
-                21Filler304 \
-                Pref3(skin=menu.png:::normal_prelight_active)
+                HBButtonLine31 = \
+                    21Filler304 \
+                    Pref3(skin=menu.png:::normal_prelight_active)
 
-            HBButtonLine32 = \
-                4Filler302 \
-                Prev3(skin=prev.png:::normal_prelight_active) \
-                6ToggleButton3(maxheight=49,minheight=49,minwidth=49,maxwidth=49,skin=select.png::s:normal_prelight_active,togglegroup=1,widget=VBView1) \
-                Next3(skin=next.png:::normal_prelight_active)
+                HBButtonLine32 = \
+                    4Filler302 \
+                    Prev3(skin=prev.png:::normal_prelight_active) \
+                    6ToggleButton3(maxheight=49,minheight=49,minwidth=49,maxwidth=49,skin=select.png::s:normal_prelight_active,togglegroup=1,widget=VBView1) \
+                    Next3(skin=next.png:::normal_prelight_active)
 
-            HBButtonLine33 = \
-                23Filler303 \
-                Play3(skin=play_pause.png:::normal_prelight_active)
+                HBButtonLine33 = \
+                    23Filler303 \
+                    Play3(skin=play_pause.png:::normal_prelight_active)
 
