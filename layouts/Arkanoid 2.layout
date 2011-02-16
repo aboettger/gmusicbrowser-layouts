@@ -122,7 +122,7 @@ HBMainContainer = 3Filler1 _VBMainContainer 3Filler2
 
                             SMMiddlePane20 = (label=_"Middle pane") \
                                 MenuItem21(togglewidget=VPFilter|MenuItem22|SeparatorMenuItem21|MenuItem25,label=_"Filter pane") \
-                                MenuItem26(togglewidget=VBSavedFilterPane,label=_"Saved filter/lists") \
+                                MenuItem26(tabpos=left90,togglewidget=VBSavedFilterPane,label=_"Saved filter/lists") \
                                 SeparatorMenuItem21 \
                                 MenuItem22(togglewidget=VPFilterTop,label=_"Vertical filter") \
                                 MenuItem25(togglewidget=HPFilterCenter,label=_"Horizontal filter") \
