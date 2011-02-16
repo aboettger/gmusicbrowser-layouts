@@ -13,7 +13,7 @@ VBMainContainer = 8Filler000 HBStatus 4HBMain
     HBStatus = \
         (minheight=6,maxheight=6) \
         26Filler001 \
-        Play0(skin=play_pause_text.png:::normal_prelight_active:Play_Paused)
+        Play0(skin=play_pause_text.png:::normal_prelight_active:play_pause)
 
 
     HBMain = 17VBView1 17VBView2 17VBView3
