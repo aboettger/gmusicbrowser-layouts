@@ -22,6 +22,10 @@ VBMainContainer = 8Filler000 HBStatus 4HBMain
 
         VBView1 = (minwidth=101,maxwidth=101,minheight=273,,maxheight=273) \
             HBView1 \
+            3Filler110 \
+            Title1(markup="<span fgcolor='black'>%t</span>",click1="") \
+            Album1(markup="<span size='small' fgcolor='black'>%l</span>",click1="") \
+            Artist1(markup="<span size='small' fgcolor='black'>%a</span>",click1="") \
             _Filler100 \
             HBTimeBar1 \
 28Filler108 \
@@ -29,14 +33,14 @@ VBMainContainer = 8Filler000 HBStatus 4HBMain
             -HBButtonLine13 \
             -1Filler107 \
             8-HBButtonLine12 \
-            -1Filler106 \
+            -2Filler106 \
             -HBButtonLine11
 
             HBTimeBar1 = \
                 10TimeBar1(minheight=6,maxheight=6,minwidth=80,maxwidth=80,skin=progress_bar_base.png::,handle_skin=progress_bar.png::hs:normal_prelight_active)
 
             HBView1 = \
-                Cover1(minsize=50,maxsize=50,overlay=0x0:101x101:skins/ipod_skin/cover_overlay.png) \
+                Cover1(minsize=50,maxsize=50,overlay=0x0:101x101:skins/ipod_skin/cover_overlay.png,click1="") \
                 _Filler101
 
             HBButtonLine11 = \
@@ -63,7 +67,7 @@ VBMainContainer = 8Filler000 HBStatus 4HBMain
             -HBButtonLine23 \
             -1Filler207 \
             8-HBButtonLine22 \
-            -1Filler206 \
+            -2Filler206 \
             -HBButtonLine21
 
             HBView2 = 10Stars
@@ -91,7 +95,7 @@ VBMainContainer = 8Filler000 HBStatus 4HBMain
             -HBButtonLine33 \
             -1Filler307 \
             8-HBButtonLine32 \
-            -1Filler306 \
+            -2Filler306 \
             -HBButtonLine31
 
             HBView3 = \
