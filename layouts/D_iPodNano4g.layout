@@ -4,19 +4,17 @@ Name = _"iPod nano 4g"
 
 SkinPath = skins/ipod_skin
 
-Skin = Ipodnano4g.png::e
+Skin = Ipodnano4g.png::
 
-Default = Window(size=146x357,hidden=VBView2|VBView3)
+Default = Window(size=135x328,hidden=VBView2|VBView3)
 
 DefaultFocus	= HBStatus
 
-VBMainContainer = 8Filler000 HBStatus 4HBMain
+FBMainContainer = 0,0,135,328 VBMainContainer
 
-    HBStatus = \
-        (minheight=6,maxheight=6) \
-        26Filler001 \
-        Play0(activate="",skin=play_pause_text.png:::normal_prelight_active:play_pause)
+    VBMainContainer = FBStatus HBMain
 
+        FBStatus = 50,16 Play0(activate="",skin=play_pause_text.png:::normal_prelight_active:play_pause)
 
     HBMain = 17VBView1 17VBView2 17VBView3
 
