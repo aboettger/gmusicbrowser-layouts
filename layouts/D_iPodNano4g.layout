@@ -17,45 +17,87 @@ VBMainContainer = 25HBMain
         VBView1 = (minwidth=101,maxwidth=101,minheight=273,,maxheight=273) \
             HBView1 \
             _Filler100 \
+            6-Filler105 \
             -HBButtonLine13 \
-            3-HBButtonLine12 \
+            -1Filler107 \
+            8-HBButtonLine12 \
+            -1Filler106 \
             -HBButtonLine11
-
-            HBButtonLine11 = \
-                19Filler104 \
-                Pref(size=small-toolbar,stock=gtk-preferences)
-
-            HBButtonLine12 = \
-                1Filler102 \
-                Prev1(size=small-toolbar) \
-                _ToggleButton1(togglegroup=1,relief=none,size=large-toolbar,icon=gtk-goto-bottom,widget=VBView2,tip=_"top spacer") \
-                Next1(size=small-toolbar)
-
-                HBButtonLine13 = \
-                    19Filler103 \
-                    Play1(size=small-toolbar)
-
 
             HBView1 = \
                 Cover1(minsize=50,maxsize=50,overlay=0x0:101x101:skins/ipod_skin/cover_overlay.png) \
                 _Filler101
 
+            HBButtonLine11 = \
+                21Filler104 \
+                Pref1(skin=menu.png:::normal_prelight_active)
+
+            HBButtonLine12 = \
+                4Filler102 \
+                Prev1(skin=prev.png:::normal_prelight_active) \
+                6ToggleButton1(maxheight=49,minheight=49,minwidth=49,maxwidth=49,skin=prev.png::s:normal_prelight_active,togglegroup=1,widget=VBView2) \
+                Next1(skin=next.png:::normal_prelight_active)
+
+            HBButtonLine13 = \
+                23Filler103 \
+                Play1(skin=play_pause.png:::normal_prelight_active)
+
         ### 2nd view
 
-        VBView2 =  (minwidth=101,maxwidth=101,minheight=273,,maxheight=273) \
-            _Filler200 \
-            Stars \
-            _Filler201 \
-            -ToggleButton2(togglegroup=1,relief=none,size=button,icon=gtk-goto-bottom,widget=VBView3,tip=_"top spacer")
+        VBView2 = (minwidth=101,maxwidth=101,minheight=273,,maxheight=273) \
+            15Filler200 \
+            HBView2 \
+            _Filler210 \
+            6-Filler205 \
+            -HBButtonLine23 \
+            -1Filler207 \
+            8-HBButtonLine22 \
+            -1Filler206 \
+            -HBButtonLine21
+
+            HBView2 = 10Stars
+
+            HBButtonLine21 = \
+                21Filler204 \
+                Pref2(skin=menu.png:::normal_prelight_active)
+
+            HBButtonLine22 = \
+                4Filler202 \
+                Prev2(skin=prev.png:::normal_prelight_active) \
+                6ToggleButton2(maxheight=49,minheight=49,minwidth=49,maxwidth=49,skin=prev.png::s:normal_prelight_active,togglegroup=1,widget=VBView3) \
+                Next2(skin=next.png:::normal_prelight_active)
+
+            HBButtonLine23 = \
+                23Filler203 \
+                Play2(skin=play_pause.png:::normal_prelight_active)
 
         ### 3rd view
 
         VBView3 =  (minwidth=101,maxwidth=101,minheight=273,,maxheight=273) \
             HBView3 \
             _Filler300 \
-            -ToggleButton3(togglegroup=1,relief=none,size=button,icon=gtk-goto-bottom,widget=VBView1,tip=_"top spacer")
+            6-Filler305 \
+            -HBButtonLine33 \
+            -1Filler307 \
+            8-HBButtonLine32 \
+            -1Filler306 \
+            -HBButtonLine31
 
             HBView3 = \
                 Cover3(minsize=101,maxsize=101,overlay=0x0:101x101:skins/ipod_skin/cover_overlay.png) \
                 _Filler301
+
+            HBButtonLine31 = \
+                21Filler304 \
+                Pref3(skin=menu.png:::normal_prelight_active)
+
+            HBButtonLine32 = \
+                4Filler302 \
+                Prev3(skin=prev.png:::normal_prelight_active) \
+                6ToggleButton3(maxheight=49,minheight=49,minwidth=49,maxwidth=49,skin=prev.png::s:normal_prelight_active,togglegroup=1,widget=VBView1) \
+                Next3(skin=next.png:::normal_prelight_active)
+
+            HBButtonLine33 = \
+                23Filler303 \
+                Play3(skin=play_pause.png:::normal_prelight_active)
 
