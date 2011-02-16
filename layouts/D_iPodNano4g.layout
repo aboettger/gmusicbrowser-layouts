@@ -13,7 +13,7 @@ VBMainContainer = 8Filler000 HBStatus 4HBMain
     HBStatus = \
         (minheight=6,maxheight=6) \
         26Filler001 \
-        Play0(skin=play_pause_text.png:::normal_prelight_active:play_pause)
+        Play0(activate="",skin=play_pause_text.png:::normal_prelight_active:play_pause)
 
 
     HBMain = 17VBView1 17VBView2 17VBView3
@@ -50,7 +50,7 @@ VBMainContainer = 8Filler000 HBStatus 4HBMain
             HBButtonLine12 = \
                 4Filler102 \
                 Prev1(skin=prev.png:::normal_prelight_active) \
-                6ToggleButton1(maxheight=49,minheight=49,minwidth=49,maxwidth=49,skin=prev.png::s:normal_prelight_active,togglegroup=1,widget=VBView2) \
+                6ToggleButton1(maxheight=49,minheight=49,minwidth=49,maxwidth=49,skin=select.png::s:normal_prelight_active,togglegroup=1,widget=VBView2) \
                 Next1(skin=next.png:::normal_prelight_active)
 
             HBButtonLine13 = \
@@ -79,7 +79,7 @@ VBMainContainer = 8Filler000 HBStatus 4HBMain
             HBButtonLine22 = \
                 4Filler202 \
                 Prev2(skin=prev.png:::normal_prelight_active) \
-                6ToggleButton2(maxheight=49,minheight=49,minwidth=49,maxwidth=49,skin=prev.png::s:normal_prelight_active,togglegroup=1,widget=VBView3) \
+                6ToggleButton2(maxheight=49,minheight=49,minwidth=49,maxwidth=49,skin=select.png::s:normal_prelight_active,togglegroup=1,widget=VBView3) \
                 Next2(skin=next.png:::normal_prelight_active)
 
             HBButtonLine23 = \
@@ -109,7 +109,7 @@ VBMainContainer = 8Filler000 HBStatus 4HBMain
             HBButtonLine32 = \
                 4Filler302 \
                 Prev3(skin=prev.png:::normal_prelight_active) \
-                6ToggleButton3(maxheight=49,minheight=49,minwidth=49,maxwidth=49,skin=prev.png::s:normal_prelight_active,togglegroup=1,widget=VBView1) \
+                6ToggleButton3(maxheight=49,minheight=49,minwidth=49,maxwidth=49,skin=select.png::s:normal_prelight_active,togglegroup=1,widget=VBView1) \
                 Next3(skin=next.png:::normal_prelight_active)
 
             HBButtonLine33 = \
