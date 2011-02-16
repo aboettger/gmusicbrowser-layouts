@@ -8,7 +8,13 @@ Skin = Ipodnano4g.png::e
 
 Default = Window(size=146x357,hidden=VBView2|VBView3)
 
-VBMainContainer = 25HBMain
+VBMainContainer = 8Filler000 HBStatus 4HBMain
+
+    HBStatus = \
+        (minheight=6,maxheight=6) \
+        26Filler001 \
+        Play0(skin=play_pause_text.png:::normal_prelight_active:Play_Paused)
+
 
     HBMain = 17VBView1 17VBView2 17VBView3
 
@@ -17,12 +23,17 @@ VBMainContainer = 25HBMain
         VBView1 = (minwidth=101,maxwidth=101,minheight=273,,maxheight=273) \
             HBView1 \
             _Filler100 \
+            HBTimeBar1 \
+28Filler108 \
             6-Filler105 \
             -HBButtonLine13 \
             -1Filler107 \
             8-HBButtonLine12 \
             -1Filler106 \
             -HBButtonLine11
+
+            HBTimeBar1 = \
+                10TimeBar1(minheight=6,maxheight=6,minwidth=80,maxwidth=80,skin=progress_bar_base.png::,handle_skin=progress_bar.png::hs:normal_prelight_active)
 
             HBView1 = \
                 Cover1(minsize=50,maxsize=50,overlay=0x0:101x101:skins/ipod_skin/cover_overlay.png) \
