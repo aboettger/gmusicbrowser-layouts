@@ -6,117 +6,69 @@ SkinPath = skins/ipod_skin
 
 Skin = Ipodnano4g.png::
 
-Default = Window(size=135x328,hidden=VBView2|VBView3)
+Default = Window(size=135x328,hidden=FBMainContainer2|FBMainContainer3)
 
 # DefaultFocus	= FBStatus
 
-HBMainContainer = FBMainContainer
-
-        FBMainContainer = 15,15,120,312 VBMainContainer
-
-            VBMainContainer = FBStatusContainer1 FBDisplayContainer1 FBTimeBarContainer1 FBControlsContainer1
-
-                FBStatusContainer1 = 0,1,101,8 FBStatus1
-
-                    FBStatus1 = 36,0 Play0(activate="",skin=play_pause_text.png:::normal_prelight_active:play_pause)
-
-                FBDisplayContainer1 = 0,4,101,100 FBDisplays
-
-                    FBDisplays = 0,0 VBDisplay1 0,0 VBView2 0,0 VBView3
-
-                FBTimeBarContainer1 = 0,0,101,50 FBTimeBar1
-
-                    FBTimeBar1 = 12,15,80,6 TimeBar1(skin=progress_bar_base.png::hs,handle_skin=progress_bar.png::hs:normal_prelight_active)
-
-                FBControlsContainer1 = 0,26,100,100 FBControls1
-
-                    FBControls1 = 44,0,10,10 FBControls11
-
-                        FBControls11 = 0,0 Pref1(skin=menu.png:::normal_prelight_active)
-
-        ### 1st view
-
-        VBDisplay1 = FBCover1 FBTitle1 FBAlbum1 FBArtist1
-
-                FBTitle1 = 0,5,101,12 Title1(markup="<span fgcolor='black'>%t</span>",click1="")
-
-                FBAlbum1 = 0,2,101,12 Album1(markup="<span size='small' fgcolor='black'>%l</span>",click1="")
-
-                FBArtist1 = 0,0,101,12 Artist1(markup="<span size='small' fgcolor='black'>%a</span>",click1="")
 
 
+FBMainContainer = \
+    15,15 FBStatus \
+    15,129 FBTimeBar \
+    15,195 FBControls \
+    15,15 FBMainContainer1 \
+    15,15 FBMainContainer2 \
+    15,15 FBMainContainer3
 
-                FBCover1 = 0,0,50,50 Cover1(minsize=50,maxsize=50,overlay=0x0:101x101:skins/ipod_skin/cover_overlay.png,click1="")
+    FBStatus = 37,1 Play0(activate="",skin=play_pause_text.png:::normal_prelight_active:play_pause)
 
-#                HBButtonLine11 = \
-#                    21Filler104 \
-#                    Pref1(skin=menu.png:::normal_prelight_active)
+    FBTimeBar = 12,13,80,6 TimeBar1(skin=progress_bar_base.png::hs,handle_skin=progress_bar.png::hs:normal_prelight_active)
 
-#                HBButtonLine12 = \
-#                    4Filler102 \
-#                    Prev1(skin=prev.png:::normal_prelight_active) \
-#                    6ToggleButton1(maxheight=49,minheight=49,minwidth=49,maxwidth=49,skin=select.png::s:normal_prelight_active,togglegroup=1,widget=VBView2) \
-#                    Next1(skin=next.png:::normal_prelight_active)
+    FBControls = \
+        0,9 FBControls1 \
+        0,26 FBControls2 \
+        0,85 FBControls3
 
-#                HBButtonLine13 = \
-#                    23Filler103 \
-#                    Play1(skin=play_pause.png:::normal_prelight_active)
+            FBControls1 = 44,0 Pref1(skin=menu.png:::normal_prelight_active)
 
-        ### 2nd view
+            FBControls2 = \
+                11,20 Prev1(skin=prev.png:::normal_prelight_active) \
+                85,20 Next1(skin=next.png:::normal_prelight_active)
 
-        VBView2 = (minwidth=101,maxwidth=101,minheight=273,,maxheight=273) \
-            _HBView2 \
-            _Filler210 \
-            6-Filler205 \
-            -HBButtonLine23 \
-            -1Filler207 \
-            8-HBButtonLine22 \
-            -2Filler206 \
-            -HBButtonLine21
+            FBControls3 = 48,0 Play1(skin=play_pause.png:::normal_prelight_active)
 
-                HBView2 = 10Stars
+    ##################
+    ### 1st page
+    ##################
 
-                HBButtonLine21 = \
-                    21Filler204 \
-                    Pref2(skin=menu.png:::normal_prelight_active)
+    # Cover and Text and Select Button (ToggleButton)
+    FBMainContainer1 = \
+        0,10 Cover1(minsize=50,maxsize=50,overlay=0x0:101x101:skins/ipod_skin/cover_overlay.png,click1="") \
+        0,67 FBTitleAlbumArtist1 \
+        29,205 ToggleButton1(skin=select.png::s:normal_prelight_active,togglegroup=1,widget=FBMainContainer2)
 
-                HBButtonLine22 = \
-                    4Filler202 \
-                    Prev2(skin=prev.png:::normal_prelight_active) \
-                    6ToggleButton2(maxheight=49,minheight=49,minwidth=49,maxwidth=49,skin=select.png::s:normal_prelight_active,togglegroup=1,widget=VBView3) \
-                    Next2(skin=next.png:::normal_prelight_active)
+        FBTitleAlbumArtist1 = \
+            0,0,101,14 Title1(markup="<span font='12px' fgcolor='black'>%t</span>",click1="") \
+            0,14,101,12 Album1(markup="<span font='10px' fgcolor='black'>%l</span>",click1="") \
+            0,26,101,12 Artist1(markup="<span font='10px' fgcolor='black'>%a</span>",click1="")
 
-                HBButtonLine23 = \
-                    23Filler203 \
-                    Play2(skin=play_pause.png:::normal_prelight_active)
+    ##################
+    ### 2nd page
+    ##################
 
-        ### 3rd view
+    # Rating and Select Button (ToggleButton)
+    FBMainContainer2 = \
+        0,50,101,25 HBStars2 \
+        29,205 ToggleButton2(skin=select.png::s:normal_prelight_active,togglegroup=1,widget=FBMainContainer3)
 
-        VBView3 =  (minwidth=101,maxwidth=101,minheight=273,,maxheight=273) \
-            HBView3 \
-            _Filler300 \
-            6-Filler305 \
-            -HBButtonLine33 \
-            -1Filler307 \
-            8-HBButtonLine32 \
-            -2Filler306 \
-            -HBButtonLine31
+        HBStars2= _Stars2
 
-                HBView3 = \
-                    Cover3(minsize=101,maxsize=101,overlay=0x0:101x101:skins/ipod_skin/cover_overlay.png) \
-                    _Filler301
+    ##################
+    ### 3rd page
+    ##################
 
-                HBButtonLine31 = \
-                    21Filler304 \
-                    Pref3(skin=menu.png:::normal_prelight_active)
-
-                HBButtonLine32 = \
-                    4Filler302 \
-                    Prev3(skin=prev.png:::normal_prelight_active) \
-                    6ToggleButton3(maxheight=49,minheight=49,minwidth=49,maxwidth=49,skin=select.png::s:normal_prelight_active,togglegroup=1,widget=VBView1) \
-                    Next3(skin=next.png:::normal_prelight_active)
-
-                HBButtonLine33 = \
-                    23Filler303 \
-                    Play3(skin=play_pause.png:::normal_prelight_active)
+    # Cover and Select Button (ToggleButton)
+    FBMainContainer3 = \
+        0,10 Cover3(minsize=101,maxsize=101,overlay=0x0:101x101:skins/ipod_skin/cover_overlay.png,click1="") \
+        29,205 ToggleButton3(skin=select.png::s:normal_prelight_active,togglegroup=1,widget=FBMainContainer1)
 
