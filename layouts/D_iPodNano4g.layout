@@ -8,62 +8,64 @@ Skin = Ipodnano4g.png::
 
 Default = Window(size=135x328,hidden=VBView2|VBView3)
 
-DefaultFocus	= HBStatus
+# DefaultFocus	= FBStatus
 
-FBMainContainer = 0,0,135,328 VBMainContainer
+HBMainContainer = FBMainContainer
 
-    VBMainContainer = FBStatus HBMain
+        FBMainContainer = 15,15,120,312 VBMainContainer
 
-        FBStatus = 50,16 Play0(activate="",skin=play_pause_text.png:::normal_prelight_active:play_pause)
+            VBMainContainer = FBStatusContainer1 FBDisplayContainer1 FBTimeBarContainer1 FBControlsContainer1
 
-    HBMain = 17VBView1 17VBView2 17VBView3
+                FBStatusContainer1 = 0,1,101,8 FBStatus1
+
+                    FBStatus1 = 36,0 Play0(activate="",skin=play_pause_text.png:::normal_prelight_active:play_pause)
+
+                FBDisplayContainer1 = 0,4,101,100 FBDisplays
+
+                    FBDisplays = 0,0 VBDisplay1 0,0 VBView2 0,0 VBView3
+
+                FBTimeBarContainer1 = 0,0,101,50 FBTimeBar1
+
+                    FBTimeBar1 = 12,15,80,6 TimeBar1(skin=progress_bar_base.png::hs,handle_skin=progress_bar.png::hs:normal_prelight_active)
+
+                FBControlsContainer1 = 0,26,100,100 FBControls1
+
+                    FBControls1 = 44,0,10,10 FBControls11
+
+                        FBControls11 = 0,0 Pref1(skin=menu.png:::normal_prelight_active)
 
         ### 1st view
 
-        VBView1 = (minwidth=101,maxwidth=101,minheight=273,,maxheight=273) \
-            HBView1 \
-            3Filler110 \
-            Title1(markup="<span fgcolor='black'>%t</span>",click1="") \
-            Album1(markup="<span size='small' fgcolor='black'>%l</span>",click1="") \
-            Artist1(markup="<span size='small' fgcolor='black'>%a</span>",click1="") \
-            _Filler100 \
-            HBTimeBar1 \
-28Filler108 \
-            6-Filler105 \
-            -HBButtonLine13 \
-            -1Filler107 \
-            8-HBButtonLine12 \
-            -2Filler106 \
-            -HBButtonLine11
+        VBDisplay1 = FBCover1 FBTitle1 FBAlbum1 FBArtist1
 
-                HBTimeBar1 = \
-                    _Filler111 \
-                    TimeBar1(minheight=6,maxheight=6,minwidth=80,maxwidth=80,skin=progress_bar_base.png::,handle_skin=progress_bar.png::hs:normal_prelight_active) \
-                    _Filler112
+                FBTitle1 = 0,5,101,12 Title1(markup="<span fgcolor='black'>%t</span>",click1="")
 
-                HBView1 = \
-                    Cover1(minsize=50,maxsize=50,overlay=0x0:101x101:skins/ipod_skin/cover_overlay.png,click1="") \
-                    _Filler101
+                FBAlbum1 = 0,2,101,12 Album1(markup="<span size='small' fgcolor='black'>%l</span>",click1="")
 
-                HBButtonLine11 = \
-                    21Filler104 \
-                    Pref1(skin=menu.png:::normal_prelight_active)
+                FBArtist1 = 0,0,101,12 Artist1(markup="<span size='small' fgcolor='black'>%a</span>",click1="")
 
-                HBButtonLine12 = \
-                    4Filler102 \
-                    Prev1(skin=prev.png:::normal_prelight_active) \
-                    6ToggleButton1(maxheight=49,minheight=49,minwidth=49,maxwidth=49,skin=select.png::s:normal_prelight_active,togglegroup=1,widget=VBView2) \
-                    Next1(skin=next.png:::normal_prelight_active)
 
-                HBButtonLine13 = \
-                    23Filler103 \
-                    Play1(skin=play_pause.png:::normal_prelight_active)
+
+                FBCover1 = 0,0,50,50 Cover1(minsize=50,maxsize=50,overlay=0x0:101x101:skins/ipod_skin/cover_overlay.png,click1="")
+
+#                HBButtonLine11 = \
+#                    21Filler104 \
+#                    Pref1(skin=menu.png:::normal_prelight_active)
+
+#                HBButtonLine12 = \
+#                    4Filler102 \
+#                    Prev1(skin=prev.png:::normal_prelight_active) \
+#                    6ToggleButton1(maxheight=49,minheight=49,minwidth=49,maxwidth=49,skin=select.png::s:normal_prelight_active,togglegroup=1,widget=VBView2) \
+#                    Next1(skin=next.png:::normal_prelight_active)
+
+#                HBButtonLine13 = \
+#                    23Filler103 \
+#                    Play1(skin=play_pause.png:::normal_prelight_active)
 
         ### 2nd view
 
         VBView2 = (minwidth=101,maxwidth=101,minheight=273,,maxheight=273) \
-            15Filler200 \
-            HBView2 \
+            _HBView2 \
             _Filler210 \
             6-Filler205 \
             -HBButtonLine23 \
