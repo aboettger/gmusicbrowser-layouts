@@ -244,7 +244,7 @@ HBMainContainer = 3Filler1 _VBMainContainer 3Filler2
                             _QueueList(cols="queuenumber titleaa",colwidth="queuenumber 20",sort="path album:i disc track file",songtree=1,group=2) \
                             HBQueueActions
 
-                                HBQueueActions = Total(size="small",group=2) -QueueActions
+                                HBQueueActions = Total1(size="small",group=2) -QueueActions
 
                         VBPlayList = (tabtitle=_"Playlist") \
                             _SongList(cols="playandqueue titleaa",colwidth="queuenumber 20",sort="path album:i disc track file",mode=playlist,group=1,follow=1)
