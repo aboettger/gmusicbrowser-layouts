@@ -1,5 +1,6 @@
 [D_iPod_nano_4g]
 Type = D
+Author = aboettger
 Name = _"iPod nano 4g"
 
 SkinPath = skins/ipod_skin
