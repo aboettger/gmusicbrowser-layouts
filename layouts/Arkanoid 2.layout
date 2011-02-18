@@ -90,6 +90,7 @@ HBMainContainer = 3Filler1 _VBMainContainer 3Filler2
                 MBViews \
                 Fullscreen(size=button,minwidth=34,maxwidth=34) \
                 Playlist(size=button,minwidth=34,maxwidth=34) \
+                -Button5(click1="Quit",relief=none,size=button,stock=gtk-quit,minwidth=34,maxwidth=34,tip=_"Quit") \
                 -Button4(click1="OpenCustom(ArkanoidHelp)",relief=none,size=button,stock=gtk-help,minwidth=34,maxwidth=34,tip=_"Help") \
                 -Pref(stock=gtk-preferences,size=button,minwidth=34,maxwidth=34) \
                 -Button2(click1="RunPerlCode(::IdleCheck)",stock=gtk-refresh,size=button,minwidth=34,maxwidth=34,tip=_"check now") \
