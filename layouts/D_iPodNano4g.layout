@@ -13,7 +13,7 @@ Default = Window(size=135x328,hidden=FBMainContainer2|FBMainContainer3)
 VolumeScroll = Vol
 
 FBMainContainer = \
-    15,195 Vol(skin=touchwheel.png:::normal) \
+    15,195 Vol(click1="",skin=touchwheel.png:::normal) \
     15,15 FBStatus \
     15,129 FBTimeBar \
     15,195 FBControls \
