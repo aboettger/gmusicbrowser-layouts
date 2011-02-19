@@ -8,7 +8,7 @@ MBlist 		= HistItem LSortItem PlayItem
 HBmenu		= MBmenu _HBButtons3
 HBButtons1	= Prev Stop Play Next ExtraButtons 5-VolumeIcon -Pref -OpenBrowser(toggle=1)
 HBButtons3	= 5Sort 5Filter 5Queue 5Pos -Stars
-HBTime		= 5LabelTime Length _Scale
+HBTime		= 15PlayingTime(markup="%s",initsize="XX:XX",xalign=0) _TimeSlider(direct_mode=1) -Length(markup="$length",initsize="XX:XX",xalign=1)
 HBTitle		= Filler0 _Title
 HBArtist	= LockArtist _Artist
 HBAlbum		= LockAlbum _Album -Year

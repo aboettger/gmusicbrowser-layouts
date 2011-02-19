@@ -10,7 +10,7 @@ VBButtons	= HBButtons2
 HBTitle		= Filler0 _Title -Stars
 HBArtist	= LockArtist _Artist 
 HBAlbum		= LockAlbum _Album -VBVol
-HBTime		= 10Prev 5Play 5Next 5LabelTime Length _Scale
+HBTime		= 10Prev 5Play 5Next PlayingTime(markup="%s",initsize="XX:XX",xalign=0) _TimeSlider(direct_mode=1) -Length(markup="$length",initsize="XX:XX",xalign=1)
 VBText		= 2HBTitle 2HBArtist 2HBAlbum
 HBleft		= 1_VBText
 HBmenu		= MBmenu 5Sort 5Filter 5Queue 5Pos
