@@ -1,5 +1,6 @@
 [VastOne GQLC Bottom]
 Type=G+
+Title		= Gmusicbrowser playing %S by %a
 Default		= Window(size=1120x820) FilterPane0(page=genre) FilterPane1(page=artist) FilterPane2(page=album,albumpsize=32,albuminfo=1) QueueList(cols=track titleaa length nbplay rating) VPRight(size=230-353) VPListAndQueue(size=195-588)
 HBIndic		= MBmenu
 MBmenu		= MainMenuItem LayoutItem PSortItem PFilterItem QueueItem SMView
@@ -10,9 +11,9 @@ SMView		= (label=_"View") MenuItem0(togglewidget=HPfp0,label=_"Categories pane")
 HBTitle		= Filler0 _Title 
 HBArtist	= LockArtist _Artist -Stars
 HBAlbum		= LockAlbum _Album -VBVol
-HBTime		= Prev Play Next Time _TimeBar
+HBTime		= 10Prev 5Play 5Next 5LabelTime Length _Scale
 VBText		= 2HBTitle 2HBArtist 2HBAlbum
-HBleft		= 5_VBText
+HBleft		= 1_VBText
 HBmenu		= MBmenu 5Sort 5Filter 5Queue 5Pos -Quit -Pref -OpenBrowser
 VBleft2		= HBleft 6_HBTime
 VBVol		= VolumeIcon

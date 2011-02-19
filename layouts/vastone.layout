@@ -1,19 +1,20 @@
 [VastOne GQLC]
 Type=G+
+Title		= Gmusicbrowser playing %S by %a
 Default		= Window(size=1120x820) FilterPane0(page=genre) FilterPane1(page=artist) FilterPane2(page=album,albumpsize=32,albuminfo=1) QueueList(cols=track titleaa length nbplay rating) VPRight(size=230-353) VPListAndQueue(size=195-588)
 MBmenu		= MainMenuItem LayoutItem PSortItem PFilterItem QueueItem SMView
 SMView		= (label=_"View") MenuItem0(togglewidget=HPfp0,label=_"Categories pane") MenuItem1(togglewidget=FilterPane0,label=_"Genres pane") MenuItem2(togglewidget=FilterPane2,label=_"Album pane") MenuItem3(togglewidget=FilterPane1,label=_"Artist pane") MenuItem4(togglewidget=NBLists,label=_"Left pane") MenuItem5(togglewidget=QueueList,label=_"Queue") MenuItem6(togglewidget=VBSongList,label=_"Playlist")
 MBlist 		= HistItem LSortItem PlayItem
-HBmenu		= _MBmenu
+HBmenu		= MBmenu _HBButtons3
 HBButtons1	= Prev Stop Play Next ExtraButtons 5-VolumeIcon -Pref -OpenBrowser(toggle=1)
 HBButtons3	= 5Sort 5Filter 5Queue 5Pos -Stars
-HBTime		= Time _TimeBar
+HBTime		= 5LabelTime Length _Scale
 HBTitle		= Filler0 _Title
 HBArtist	= LockArtist _Artist
 HBAlbum		= LockAlbum _Album -Year
 VBText		= HBButtons1 2HBTitle 2HBArtist 2HBAlbum HBTime
 HBText_Cover	= _VBText
-VBplayer	= HBButtons3 HBText_Cover
+VBplayer	= HBText_Cover
 VBLeft		= VBplayer _NBLists
     NBLists = SongTree(tabtitle=_"Artist/Album Playing",activate=queueinsert, activate2=addplay, songypad=1, group=Play:artist) \ 
 Context(tabtitle=_"Context") \ 
