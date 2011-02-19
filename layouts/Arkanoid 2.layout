@@ -90,6 +90,7 @@ HBMainContainer = 3Filler1 _VBMainContainer 3Filler2
                 MBViews \
                 Fullscreen(size=button,minwidth=34,maxwidth=34) \
                 Playlist(size=button,minwidth=34,maxwidth=34) \
+                -Button5(click1="Quit",relief=none,size=button,stock=gtk-quit,minwidth=34,maxwidth=34,tip=_"Quit") \
                 -Button4(click1="OpenCustom(ArkanoidHelp)",relief=none,size=button,stock=gtk-help,minwidth=34,maxwidth=34,tip=_"Help") \
                 -Pref(stock=gtk-preferences,size=button,minwidth=34,maxwidth=34) \
                 -Button2(click1="RunPerlCode(::IdleCheck)",stock=gtk-refresh,size=button,minwidth=34,maxwidth=34,tip=_"check now") \
@@ -241,7 +242,10 @@ HBMainContainer = 3Filler1 _VBMainContainer 3Filler2
 
                         VBQueueList = (tabtitle=_"Queue") \
                             EditListButtons(group=2,small=1,relief=none) \
-                            _QueueList(cols="queuenumber titleaa",colwidth="queuenumber 20",sort="path album:i disc track file",songtree=1,group=2)
+                            _QueueList(cols="queuenumber titleaa",colwidth="queuenumber 20",sort="path album:i disc track file",songtree=1,group=2) \
+                            HBQueueActions
+
+                                HBQueueActions = Total1(size="small",group=2) -QueueActions
 
                         VBPlayList = (tabtitle=_"Playlist") \
                             _SongList(cols="playandqueue titleaa",colwidth="queuenumber 20",sort="path album:i disc track file",mode=playlist,group=1,follow=1)
