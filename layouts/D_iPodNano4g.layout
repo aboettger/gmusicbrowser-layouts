@@ -23,7 +23,7 @@ FBMainContainer = \
 
     FBStatus = 37,1 Play0(activate="",skin=play_pause_text.png:::normal_prelight_active:play_pause)
 
-    FBTimeBar = 12,13,80,6 TimeBar1(skin=progress_bar_base.png::hs,handle_skin=progress_bar.png::hs:normal_prelight_active)
+    FBTimeBar = 12,13,80,6 TimeBar1(skin=progress_bar_base.png::hs,handle_skin=progress_bar.png::hs:normal)
 
     FBControls = \
         0,9 FBControls1 \
@@ -70,6 +70,6 @@ FBMainContainer = \
 
     # Cover and Select Button (ToggleButton)
     FBMainContainer3 = \
-        0,10 Cover3(minsize=101,maxsize=101,overlay=0x0:101x101:skins/ipod_skin/cover_overlay.png,click1="") \
+        3,10 Cover3(minsize=100,maxsize=100,overlay=0x0:101x101:skins/ipod_skin/cover_overlay.png,click1="") \
         29,205 ToggleButton3(skin=select.png::s:normal_prelight_active,togglegroup=1,widget=FBMainContainer1)
 
