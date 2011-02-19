@@ -1,4 +1,4 @@
-[VastOne GQLC Bottom II]
+[VastOne GQLC Bottom]
 Type=G+
 Default		= Window(size=1120x820) FilterPane0(page=genre) FilterPane1(page=artist) FilterPane2(page=album,albumpsize=32,albuminfo=1) QueueList(cols=track titleaa length nbplay rating) VPRight(size=230-353) VPListAndQueue(size=195-588)
 HBIndic		= MBmenu
