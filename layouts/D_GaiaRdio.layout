@@ -10,11 +10,16 @@ Skin = case.png::
 
 Default = Window(size=226x437)
 
+VolumeScroll = Vol
+
 FBMainContainer = 1,0 Cover(minsize=180,maxsize=180,overlay=0x0:181x181:skins/gaiardio_skin/overlay.png,click1="") \
     30,190 Prev(skin=prev.png:::normal_prelight_active) \
     70,190 Play(skin=play_pause.png:::normal_prelight_active:play_pause) \
     110,190 Next(skin=next.png:::normal_prelight_active) \
-    10,250 FBTitleAlbumArtist
+    10,250 FBTitleAlbumArtist \
+    10,350 Vol(skin=vol.png:::normal)
+    # \
+    #40,360,79,6 TimeBar(skin=bar.png::,handle_skin=fill.png:::normal)
 
         FBTitleAlbumArtist = \
             0,0,142,15 Artist(markup="<span font='12px' font-weight='bold' fgcolor='white'>%a</span>",click1="") \
