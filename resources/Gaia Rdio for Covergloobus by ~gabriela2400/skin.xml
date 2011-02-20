@@ -1,0 +1,26 @@
+<skin name="GAIA 10 Rdio" width="226" height="437">
+
+	<!-- http://www.gaia10.us
+http://www.gaian.me
+--
+This contribution has been made by gabriela2400
+http://gabriela2400.deviantart.com
+http://artescritorio.com --> 
+
+	<albumcover x="23" y="35" width="180" height="182" round="2"/> 
+	<image src="case.png" x="0" y="0" width="226" height="437"/>
+	<image src="overlay.png" x="0" y="0" width="226" height="500"/>
+	<image src="fill.png" x="55" y="395" width="79" height="6"/>
+  
+
+  	<artistname x="35" y="280" width="580" font="Segoeui Bold 10 " align="left" color="#FFFFFFff" shadowcolor="d4d4d4ff"  maxchars="25" scroll="true"/>
+   	<titlename x="35" y="297" width="580" font="Segoeui 9" align="left" color="#d4d4d4ff"  maxchars="26" scroll="true"/>
+	<albumname x="35" y="312" width="580" font="Segoeui 9" align="left" color="#d4d4d4ff"  maxchars="26" scroll="true" />
+
+<playercontrols spacing="0" x="0" y="0">
+     	<prev 	x="50"  y="225" src="prev1.png" hover="prev2.png" /> 
+	<play	x="92" y="225" src="play1.png" hover="play2.png" pause="pause1.png" pause_hover="pause2.png"/>
+	 <next	x="134" y="225"	src="next1.png" hover="next2.png" /> 
+  	</playercontrols>
+</skin>
+
