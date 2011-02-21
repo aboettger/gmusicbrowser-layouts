@@ -25,7 +25,7 @@ FBMainContainer = 1,0 Cover(minsize=180,maxsize=180,overlay=0x0:181x181:skins/ga
     #40,360,79,6 TimeBar(skin=bar.png::,handle_skin=fill.png:::normal)
 
         FBTitleAlbumArtist = \
-            0,0,142,15 Artist(markup="<span font='12px' font-weight='bold' fgcolor='white'>%a</span>",click1="") \
-            0,14,142,13 Title(markup="<span font='10px' fgcolor='white'>%t</span>",click1="") \
-            0,26,142,14 Album(markup="<span font='11px' fgcolor='white'>%l</span>",click1="")
+            0,0,147,15 Artist(markup="<span font='12px' font-weight='bold' fgcolor='white'>%a</span>",click1="") \
+            0,14,147,13 Title(markup="<span font='10px' fgcolor='white'>%t</span>",click1="") \
+            0,26,147,14 Album(markup="<span font='11px' fgcolor='white'>%l</span>",click1="")
 
