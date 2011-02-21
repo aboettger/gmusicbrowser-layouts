@@ -2,7 +2,10 @@
 # This is a clone of Gaia Rdio by gabriela2400 (http://fav.me/d317fy3)
 Type = D
 Author = aboettger
+
 Name = _"Gaia Rdio"
+
+Category = Covergloobus
 
 SkinPath = skins/gaiardio_skin
 
