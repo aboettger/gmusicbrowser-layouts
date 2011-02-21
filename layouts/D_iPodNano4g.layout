@@ -2,8 +2,6 @@
 Type = D
 Name = _"iPod nano 4g"
 
-Category = Covergloobus
-
 SkinPath = skins/ipod_skin
 
 Skin = Ipodnano4g.png::
