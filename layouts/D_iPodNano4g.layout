@@ -2,6 +2,8 @@
 Type = D
 Name = _"iPod nano 4g"
 
+Category = Covergloobus
+
 SkinPath = skins/ipod_skin
 
 Skin = Ipodnano4g.png::
@@ -9,8 +11,6 @@ Skin = Ipodnano4g.png::
 Default = Window(size=135x328,hidden=FBMainContainer2|FBMainContainer3)
 
 # DefaultFocus	= FBStatus
-
-
 
 FBMainContainer = \
     15,15 FBStatus \
