@@ -90,6 +90,7 @@ HBMainContainer = 3Filler1 _VBMainContainer 3Filler2
                 MBViews \
                 Fullscreen(size=button,minwidth=34,maxwidth=34) \
                 Playlist(size=button,minwidth=34,maxwidth=34) \
+                -Button5(click1="Quit",relief=none,size=button,stock=gtk-quit,minwidth=34,maxwidth=34,tip=_"Quit") \
                 -Button4(click1="OpenCustom(ArkanoidHelp)",relief=none,size=button,stock=gtk-help,minwidth=34,maxwidth=34,tip=_"Help") \
                 -Pref(stock=gtk-preferences,size=button,minwidth=34,maxwidth=34) \
                 -Button2(click1="RunPerlCode(::IdleCheck)",stock=gtk-refresh,size=button,minwidth=34,maxwidth=34,tip=_"check now") \
@@ -219,6 +220,7 @@ HBMainContainer = 3Filler1 _VBMainContainer 3Filler2
                                         HBSongTreeAct = FilterLock(button=1,relief=none) \
                                             Sort(button=1) \
                                             QueueFilter \
+                                            MBQueueItem1 \
                                             Filter(button=1) \
                                             PlayFilter \
                                             Button(size=menu,click1=GoToCurrentSong,stock=gtk-jump-to,tip=_"Go to playing song") \
@@ -228,6 +230,8 @@ HBMainContainer = 3Filler1 _VBMainContainer 3Filler2
                                             -MBSongTree
 
                                                 MBSongTree = PlayItem HistItem
+
+                                                MBQueueItem1 = QueueItem1(label="AQ",minwidth=34,maxwidth=34)
 
                 ############################################################
                 # RIGHT Area
@@ -240,11 +244,20 @@ HBMainContainer = 3Filler1 _VBMainContainer 3Filler2
                         VBPlayList
 
                         VBQueueList = (tabtitle=_"Queue") \
-                            EditListButtons(group=2,small=1,relief=none) \
-                            _QueueList(cols="queuenumber titleaa",colwidth="queuenumber 20",sort="path album:i disc track file",songtree=1,group=2) \
-                            HBQueueActions
+                            _HBQueueList \
+                            -HBQueueActions
 
-                                HBQueueActions = Total1(size="small",group=2) -QueueActions
+                            HBQueueList = \
+                                VBEditListButtons \
+                                _QueueList(cols="queuenumber titleaa",colwidth="queuenumber 20",sort="path album:i disc track file",songtree=1,group=2)
+
+                                    VBEditListButtons = \
+                                        _Filler200 \
+                                        EditListButtons(group=2,small=1,orientation=vertical,relief=none) \
+                                        MBQueueItem \
+                                        _Filler201
+
+                                        MBQueueItem = QueueItem(label="AQ",minwidth=34,maxwidth=34)
 
                         VBPlayList = (tabtitle=_"Playlist") \
                             _SongList(cols="playandqueue titleaa",colwidth="queuenumber 20",sort="path album:i disc track file",mode=playlist,group=1,follow=1)
