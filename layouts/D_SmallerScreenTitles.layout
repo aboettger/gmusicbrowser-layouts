@@ -1,5 +1,7 @@
 [D_Smaller Screen Titles]
 # This is a clone of Smaller Screen Titles by rafeviper (http://fav.me/d356vlg)
+# Needs the full support for transparency.
+# This support will later be implemented in the GMB.
 Type = D
 Author = aboettger
 
