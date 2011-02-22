@@ -1,0 +1,17 @@
+<skin name="Smaller Screen Titles" width="150" height="200">
+
+ <image src="nocover.png" x="0" y="0" width="150" height="150"/>
+ <albumcover x="24"   y="24"  width="102"  height="102" round="0" mask="mask.png"/>
+ <image src="case.png"  x="0"   y="0"  width="150"  height="200"/>
+
+<playercontrols spacing="0" x="57" y="77">
+        <prev x="33"  y="119"  src="buttonblank.png" hover="buttonhover.png"/> 
+        <play x="58"  y="119"  src="pauseblank.png" hover="playbutton.png" pause="playbutton.png" pause_hover="playbutton.png"/> 
+	<next x="87"  y="119"  src="buttonblank.png" hover="buttonhover.png"/> 
+  </playercontrols>
+
+<titlename x="5" y="147" width="124" align="right" maxchars="26" font="Trebuchet MS Bold 7" color="#FFFFFFFF" shadowcolor="#ff0000ff"/>   
+<albumname x="5" y="161" width="124" align="right" maxchars="26" font="Trebuchet MS Bold 7" color="#FFFFFFFF"  shadowcolor="#ff0000ff"/>
+<artistname x="5" y="177" width="124" align="right" maxchars="26" font="Calibri bold caps Bold 8" color="#7bced8FF" shadowcolor="#ff0000ff"/>
+	
+</skin>
