@@ -3,7 +3,7 @@
 # Needs the full support for transparency.
 # This support will later be implemented in the GMB.
 Type = D
-Author = aboettger
+Author = aboettger, rafeviper
 
 Name = _"Smaller Screen Titles"
 
