@@ -44,7 +44,7 @@ VBMain = HBMainMenuBar _NBMain -Scale -HBReplayButtons -HBSearchBar
     NBMain = (tabpos=bottom,typesubmenu='PC',pages="VBCover VBCurrentPlay VBSavedFilterPane VBArtist VBAlbum VBSongTree VBQueueList VBPlayList") \
         VBCover \
         VBCurrentPlay \
-        VBSavedFilterPane \
+        HPSavedFilterPane \
         VBArtist \
         VBAlbum \
         VBSongTree \
@@ -56,9 +56,22 @@ VBMain = HBMainMenuBar _NBMain -Scale -HBReplayButtons -HBSearchBar
             HBStars \
             HBLabelsIcons \
             5Filler201 \
-            HBTitle \
+            5HBTitle \
             HBArtist \
-            HBAlbum
+            5HBAlbum \
+            10HBLabelTime \
+            10HBAddLabelEntry \
+            EBComment
+
+            EBComment = (border=10,label=_"Comment") \
+                HBComment
+
+                HBComment = (border=10) Comment
+
+            HBLabelTime = _Filler500 \
+                LabelTime \
+                Length \
+                _Filler501
 
             HBLabelsIcons = _Filler308 \
                 LabelsIcons \
@@ -71,26 +84,48 @@ VBMain = HBMainMenuBar _NBMain -Scale -HBReplayButtons -HBSearchBar
             HBTitle = _Filler300 \
                 20Filler400 \
                 LockSong(stock="on:gmb-lock gmb-locklight off:gmb-breadcrumb-song gmb-lock") \
-                5Title(markup="%t",click1="") \
+                5Title(markup="<big><big><b>%t</b></big></big>",click1="") \
                 _Filler301
 
             HBAlbum = _Filler302 \
                 20Filler402 \
                 LockAlbum(stock="on:gmb-lock gmb-locklight off:gmb-breadcrumb-album gmb-lock") \
-                5Album(markup="%l") \
+                5Album(markup="<big><big>%l</big></big>") \
+                Cover2 \
                 _Filler303
 
             HBArtist = _Filler304 \
                 20Filler403 \
                 LockArtist(stock="on:gmb-lock gmb-locklight off:gmb-breadcrumb-artist gmb-lock") \
-                5Artist(markup="%a") \
+                5Artist(markup="<big><big>%a</big></big>") \
+                ArtistPic2 \
                 _Filler305
 
-        VBSavedFilterPane = (tabtitle=_"Saved filters") \
-            _FilterPane4(nb=0,hidebb=0,tabpos=bottom,page=savedtree,pages=savedtree)
+            HBAddLabelEntry = _Filler404 \
+                Label1(markup=_"Label for <b>%t</b>:") \
+                5AddLabelEntry \
+                _Filler405
+
+        HPSavedFilterPane = (tabtitle=_"Saved filters") \
+            _FilterPane4(nb=0,hidebb=0,tabpos=bottom,page=savedtree,pages=savedtree) \
+            _FRArtistsAlbumsTitles
+
+            FRArtistsAlbumsTitles = (label="Artists, albums & titles based on this filter") \
+                VBArtistsAlbumsTitles
+
+                VBArtistsAlbumsTitles = (border=10) \
+                    _FilterPane2(nb=3, hidebb=1,tabpos=bottom,pages=artist,page=artist,page_artist/mode=mosaic,page_artist/mpicsize=128,page_artist/lpicsize=128,page_artist/lmarkup=1,page_artist/mmarkup=below) \
+                    5_FilterPane3(nb=5,hidebb=1,tabpos=bottom,pages=album,page=album,page_album/mode=mosaic,page_album/mpicsize=128,page_album/lpicsize=128,page_album/lmarkup=1,page_album/mmarkup=below) \
+                    _SongTree1(cols="playandqueue track title ratingpic ",colwidth="album 150 artist 200 title 200",follow=1,grouping="album|artistalbum_breadcrumbs(picsize=100)",sort="path album disc track file")
 
         VBCover = (tabtitle=_"Cover") \
-            Cover
+            Cover(click1="") \
+            20HBTitle1 \
+            _Filler800
+
+                HBTitle1 = _Filler700 \
+                    Label(markup="<big><big><b>%t</b></big></big>") \
+                   _Filler701
 
         VBQueueList = (tabtitle=_"Queue") \
             _HBQueueList \
