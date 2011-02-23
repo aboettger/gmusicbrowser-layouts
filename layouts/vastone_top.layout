@@ -15,7 +15,8 @@ VBleft2		= HBmenu HBleft HBTime
 HBTime		= 7Prev 7Play 7Next PlayingTime(markup="%s",initsize="XX:XX",xalign=0) _TimeSlider(direct_mode=1) -Length(markup="$length",initsize="XX:XX",xalign=1)
 VBText		= 2HBTitle 2HBArtist 2HBAlbum 
 HBleft		= 1_VBText
-HBmenu		= MBmenu 5Sort 5Filter 5Queue 5Pos
+HBmenu		= MBmenu 5Sort 5Filter 5Queue 5Pos ExtraButtons -Button2(click1="RunPerlCode(::IdleCheck)",stock=gtk-refresh,size=button,minwidth=34,maxwidth=34,tip=_"check now") \
+        -Button3(click1="RunPerlCode(::IdleScan)",stock=gtk-zoom-in,size=button,minwidth=34,maxwidth=34,tip=_"scan now")
 HBupper		= _VBleft2 -Cover
 VBLeft		= VBplayer _NBLists
     NBLists = SongTree(tabtitle=_"Artist/Album Playing",activate=queueinsert, activate2=addplay, songypad=1, group=Play:artist) \ 
