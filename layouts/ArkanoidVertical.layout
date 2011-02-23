@@ -1,0 +1,168 @@
+[Arkanoid Vertical]
+
+Author=aboettger
+Type=G+
+
+SkinPath = skins/arkanoid_skin
+
+Skin = background.png::s
+
+Default = Window(size=30%x100%)
+
+KeyBindings = \
+    cs-T ShowHideWidget(HBMainMenuBar) \
+    cs-W ShowHideWidget(HBSearchBar)
+
+VolumeScroll = HBReplayButtons HBVolume
+
+VBMain = HBMainMenuBar _NBMain -HBReplayButtons -HBSearchBar
+
+    HBMainMenuBar = \
+        HBVolume \
+        VSeparator2 \
+        ExtraButtons(size=button,minwidth=34,maxwidth=34) \
+        Playlist(size=button,minwidth=34,maxwidth=34) \
+        -Button5(click1="Quit",relief=none,size=button,stock=gtk-quit,minwidth=34,maxwidth=34,tip=_"Quit") \
+        -Button4(click1="OpenCustom(ArkanoidVerticalHelp)",relief=none,size=button,stock=gtk-help,minwidth=34,maxwidth=34,tip=_"Help") \
+        -Pref(stock=gtk-preferences,size=button,minwidth=34,maxwidth=34) \
+        -Button2(click1="RunPerlCode(::IdleCheck)",stock=gtk-refresh,size=button,minwidth=34,maxwidth=34,tip=_"check now") \
+        -Button3(click1="RunPerlCode(::IdleScan)",stock=gtk-zoom-in,size=button,minwidth=34,maxwidth=34,tip=_"scan now") \
+        -VSeparator1 \
+        -Button1(click1="RunPerlCode(::ChooseAddPath(0,1))",stock=gtk-add,size=button,minwidth=34,maxwidth=34,tip=_"Add folder ...")
+
+        HBVolume = VolumeIcon(button=1)
+
+    HBSearchBar = _SimpleSearch(noselector=0,suggest=1) -Total(size=small,mode=filter)
+
+    HBReplayButtons = \
+        _Filler100 \
+        Prev(size=large-toolbar,tip=_"Previous Song") \
+        Play(size=dialog,tip=_"Play/Pause") \
+        Next(size=large-toolbar,tip=_"Next Song") \
+        _Filler101
+
+    NBMain = (tabpos=bottom,typesubmenu='PC',pages="VBCover VBCurrentPlay VBSavedFilterPane VBArtist VBAlbum VBSongTree VBQueueList VBPlayList") \
+        VBCover \
+        VBCurrentPlay \
+        VBSavedFilterPane \
+        VBArtist \
+        VBAlbum \
+        VBSongTree \
+        VBQueueList \
+        VBPlayList
+
+        VBCurrentPlay = (tabtitle=_"Current") \
+            10Filler200 \
+            HBStars \
+            HBLabelsIcons \
+            5Filler201 \
+            HBTitle \
+            HBArtist \
+            HBAlbum \
+            5-Scale
+
+            HBLabelsIcons = _Filler308 \
+                LabelsIcons \
+                _Filler309
+
+            HBStars = _Filler306 \
+                Stars \
+                 _Filler307
+
+            HBTitle = _Filler300 \
+                20Filler400 \
+                LockSong(stock="on:gmb-lock gmb-locklight off:gmb-breadcrumb-song gmb-lock") \
+                5Title(markup="%t",click1="") \
+                _Filler301
+
+            HBAlbum = _Filler302 \
+                20Filler402 \
+                LockAlbum(stock="on:gmb-lock gmb-locklight off:gmb-breadcrumb-album gmb-lock") \
+                5Album(markup="%l") \
+                _Filler303
+
+            HBArtist = _Filler304 \
+                20Filler403 \
+                LockArtist(stock="on:gmb-lock gmb-locklight off:gmb-breadcrumb-artist gmb-lock") \
+                5Artist(markup="%a") \
+                _Filler305
+
+        VBSavedFilterPane = (tabtitle=_"Saved filters") \
+            _FilterPane4(nb=0,hidebb=0,tabpos=bottom,page=savedtree,pages=savedtree)
+
+        VBCover = (tabtitle=_"Cover") \
+            Cover
+
+        VBQueueList = (tabtitle=_"Queue") \
+            _HBQueueList \
+            -HBEditListButtons
+
+            HBQueueList = _QueueList(cols="track queuenumber titleaa",colwidth="track 20",sort="path album:i disc track file",grouping="album|artistalbum_breadcrumbs(picsize=100)",sort="path album disc track file",songtree=1,group=2)
+
+            HBEditListButtons = \
+                MBQueueItem \
+                EditListButtons(group=2,small=1,orientation=horizontal,relief=none)
+
+                MBQueueItem = QueueItem(label="AQ",minwidth=34,maxwidth=34)
+
+        VBPlayList = (tabtitle=_"Playlist") \
+            _SongList(cols="playandqueue titleaa",colwidth="queuenumber 20",sort="path album:i disc track file",mode=playlist,grouping="album|artistalbum_breadcrumbs(picsize=100)",sort="path album disc track file",songtree=1,group=1,follow=1)
+
+        VBArtist = (tabtitle=_"Artists") \
+            _FilterPane0(nb=3, hidebb=0,tabpos=bottom,pages=artist,page=artist,page_artist/mode=mosaic,page_artist/mpicsize=128,page_artist/lpicsize=128,page_artist/lmarkup=1,page_artist/mmarkup=below)
+
+        VBAlbum = (tabtitle=_"Albums") \
+            _FilterPane1(nb=5,hidebb=0,tabpos=bottom,pages=album,page=album,page_album/mode=mosaic,page_album/mpicsize=128,page_album/lpicsize=128,page_album/lmarkup=1,page_album/mmarkup=below)
+
+        VBSongTree = (tabtitle=_"Title") \
+            _SongTree(cols="playandqueue track title ratingpic artist album",colwidth="album 150 artist 200 title 200",follow=1,grouping="album|artistalbum_breadcrumbs(picsize=100)",sort="path album disc track file") \
+            HBSongTreeAct
+
+            HBSongTreeAct = FilterLock(button=1,relief=none) \
+                Sort(button=1) \
+                QueueFilter \
+                MBQueueItem1 \
+                Filter(button=1) \
+                PlayFilter \
+                Button(size=menu,click1=GoToCurrentSong,stock=gtk-jump-to,tip=_"Go to playing song") \
+                _Filler9 \
+                _Filler10 \
+                -ResetFilter \
+                -MBSongTree
+
+                    MBSongTree = PlayItem HistItem
+
+                    MBQueueItem1 = QueueItem1(label="AQ",minwidth=34,maxwidth=34)
+
+[ArkanoidVerticalHelp]
+# Help for Arkanoid Vertical
+Author=aboettger
+
+Default = Window(size=400x250)
+
+KeyBindings = Escape CloseWindow
+
+Title = _"Arkanoid Vertical - Help"
+
+SBMain = VBMain
+
+    VBMain = 5_HBMain
+
+        HBMain = 5_VBHelp
+
+            VBHelp = Text1(markup="<big><big><b>Keyboard shortcuts</b></big></big>") \
+                5HBShortcuts \
+                Text2(markup="<big><big><b>Usage</b></big></big>") \
+                5HBInfos
+
+                HBInfos = 5VBInfos
+
+                    VBInfos = \
+                        Text01(markup="You can use the mouse wheel for volume control on the buttons to use for playback. In addition to the button for volume control.")
+
+                HBShortcuts = 5VBShortCuts
+
+                    VBShortCuts = \
+                        Text14(markup="<tt><b>Ctrl-Shift T</b></tt>    Show/Hide menu bar (<b><u>t</u></b>oolbar)") \
+                        Text20(markup="<tt><b>Ctrl-Shift W</b></tt>    Show/Hide search bar (<b><u>W</u></b>here is)")
+
