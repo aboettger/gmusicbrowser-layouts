@@ -15,7 +15,7 @@ KeyBindings = \
 
 VolumeScroll = HBReplayButtons HBVolume
 
-VBMain = HBMainMenuBar _NBMain -HBReplayButtons -HBSearchBar
+VBMain = HBMainMenuBar _NBMain -Scale -HBReplayButtons -HBSearchBar
 
     HBMainMenuBar = \
         HBVolume \
@@ -58,8 +58,7 @@ VBMain = HBMainMenuBar _NBMain -HBReplayButtons -HBSearchBar
             5Filler201 \
             HBTitle \
             HBArtist \
-            HBAlbum \
-            5-Scale
+            HBAlbum
 
             HBLabelsIcons = _Filler308 \
                 LabelsIcons \
