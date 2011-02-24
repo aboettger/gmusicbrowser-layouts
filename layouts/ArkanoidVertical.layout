@@ -15,7 +15,24 @@ KeyBindings = \
 
 VolumeScroll = HBReplayButtons HBVolume
 
-VBMain = HBMainMenuBar _NBMain -Scale -HBReplayButtons -HBSearchBar
+VBMain = HBMainMenuBar _NBMain -HBScale -HBReplayButtons -HBSearchBar
+
+    HBScale = \
+        FilterLock(button=1,relief=none) \
+        3Filler600 \
+        HBSongLock \
+        HBAlbumLock \
+        HBArtistLock \
+        _Scale
+
+            HBSongLock = Label100(markup=_"<small>Song:</small>") \
+                LockSong1(button=1,stock="on:gmb-lock gmb-locklight off:gmb-locklight gmb-lock")
+
+            HBAlbumLock = Label101(markup="<small>Album:</small>") \
+                LockAlbum1(button=1,stock="on:gmb-lock gmb-locklight off:gmb-locklight gmb-lock")
+
+            HBArtistLock = Label102(markup=_"<small>Artist:</small>") \
+                LockArtist1(button=1,stock="on:gmb-lock gmb-locklight off:gmb-locklight gmb-lock")
 
     HBMainMenuBar = \
         HBVolume \
@@ -44,9 +61,7 @@ VBMain = HBMainMenuBar _NBMain -Scale -HBReplayButtons -HBSearchBar
     NBMain = (tabpos=bottom,typesubmenu='PC',pages="VBCover VBCurrentPlay VBSavedFilterPane VBArtist VBAlbum VBSongTree VBQueueList VBPlayList") \
         VBCover \
         VBCurrentPlay \
-        HPSavedFilterPane \
-        VBArtist \
-        VBAlbum \
+        NBFilter \
         VBSongTree \
         VBQueueList \
         VBPlayList
@@ -63,7 +78,7 @@ VBMain = HBMainMenuBar _NBMain -Scale -HBReplayButtons -HBSearchBar
             10HBAddLabelEntry \
             EBComment
 
-            EBComment = (border=10,label=_"Comment") \
+            EBComment = (border=10,label=_"Comment",expand=1) \
                 HBComment
 
                 HBComment = (border=10) Comment
@@ -84,21 +99,19 @@ VBMain = HBMainMenuBar _NBMain -Scale -HBReplayButtons -HBSearchBar
             HBTitle = _Filler300 \
                 20Filler400 \
                 LockSong(stock="on:gmb-lock gmb-locklight off:gmb-breadcrumb-song gmb-lock") \
-                5Title(markup="<big><big><b>%t</b></big></big>",click1="") \
+                5_Title(markup="<big><big><b>%t</b></big></big>",click1="") \
                 _Filler301
 
             HBAlbum = _Filler302 \
                 20Filler402 \
                 LockAlbum(stock="on:gmb-lock gmb-locklight off:gmb-breadcrumb-album gmb-lock") \
-                5Album(markup="<big><big>%l</big></big>") \
-                Cover2 \
+                5_Album(markup="<big><big>%l</big></big>") \
                 _Filler303
 
             HBArtist = _Filler304 \
                 20Filler403 \
                 LockArtist(stock="on:gmb-lock gmb-locklight off:gmb-breadcrumb-artist gmb-lock") \
-                5Artist(markup="<big><big>%a</big></big>") \
-                ArtistPic2 \
+                5_Artist(markup="<big><big>%a</big></big>") \
                 _Filler305
 
             HBAddLabelEntry = _Filler404 \
@@ -106,17 +119,22 @@ VBMain = HBMainMenuBar _NBMain -Scale -HBReplayButtons -HBSearchBar
                 5AddLabelEntry \
                 _Filler405
 
-        HPSavedFilterPane = (tabtitle=_"Saved filters") \
-            _FilterPane4(nb=0,hidebb=0,tabpos=bottom,page=savedtree,pages=savedtree) \
-            _FRArtistsAlbumsTitles
+            NBFilter = (tabtitle=_"Filter",tabpos=bottom,typesubmenu='',pages="HPSavedFilterPane VBArtist VBAlbum ") \
+                HPArtistFilter \
+                HPAlbumFilter \
+                HPMoreFilter
 
-            FRArtistsAlbumsTitles = (label="Artists, albums & titles based on this filter") \
-                VBArtistsAlbumsTitles
+                    HPArtistFilter = (tabtitle=_"2nd Level") \
+                        FilterPane01(nb=0,hidebb=0,tabpos=bottom,page=savedtree,pages=savedtree) \
+                        _FilterPane3(nb=3,hidetabs=0,hidebb=0,tabpos=bottom,pages=artist,page=artist,page_artist/mode=mosaic,page_artist/mpicsize=128,page_artist/lpicsize=128,page_artist/lmarkup=1,page_artist/mmarkup=below)
 
-                VBArtistsAlbumsTitles = (border=10) \
-                    _FilterPane2(nb=3, hidebb=1,tabpos=bottom,pages=artist,page=artist,page_artist/mode=mosaic,page_artist/mpicsize=128,page_artist/lpicsize=128,page_artist/lmarkup=1,page_artist/mmarkup=below) \
-                    5_FilterPane3(nb=5,hidebb=1,tabpos=bottom,pages=album,page=album,page_album/mode=mosaic,page_album/mpicsize=128,page_album/lpicsize=128,page_album/lmarkup=1,page_album/mmarkup=below) \
-                    _SongTree1(cols="playandqueue track title ratingpic ",colwidth="album 150 artist 200 title 200",follow=1,grouping="album|artistalbum_breadcrumbs(picsize=100)",sort="path album disc track file")
+                    HPAlbumFilter = (tabtitle=_"3rd Level") \
+                        FilterPane02(nb=0,hidebb=0,tabpos=bottom,page=savedtree,pages=savedtree) \
+                        _FilterPane4(nb=4,hidetabs=0,hidebb=0,tabpos=bottom,pages=album,page=album,page_album/mode=mosaic,page_album/mpicsize=128,page_album/lpicsize=128,page_album/lmarkup=1,page_album/mmarkup=below)
+
+                    HPMoreFilter = (tabtitle=_"1st Level") \
+                        FilterPane03(nb=0,hidebb=0,tabpos=bottom,page=savedtree,pages=savedtree) \
+                        _FilterPane2(nb=2,hidetabs=0,hidebb=0,tabpos=bottom,pages=genre,page=genre)
 
         VBCover = (tabtitle=_"Cover") \
             Cover(click1="") \
@@ -142,31 +160,22 @@ VBMain = HBMainMenuBar _NBMain -Scale -HBReplayButtons -HBSearchBar
         VBPlayList = (tabtitle=_"Playlist") \
             _SongList(cols="playandqueue titleaa",colwidth="queuenumber 20",sort="path album:i disc track file",mode=playlist,grouping="album|artistalbum_breadcrumbs(picsize=100)",sort="path album disc track file",songtree=1,group=1,follow=1)
 
-        VBArtist = (tabtitle=_"Artists") \
-            _FilterPane0(nb=3, hidebb=0,tabpos=bottom,pages=artist,page=artist,page_artist/mode=mosaic,page_artist/mpicsize=128,page_artist/lpicsize=128,page_artist/lmarkup=1,page_artist/mmarkup=below)
-
-        VBAlbum = (tabtitle=_"Albums") \
-            _FilterPane1(nb=5,hidebb=0,tabpos=bottom,pages=album,page=album,page_album/mode=mosaic,page_album/mpicsize=128,page_album/lpicsize=128,page_album/lmarkup=1,page_album/mmarkup=below)
-
         VBSongTree = (tabtitle=_"Title") \
             _SongTree(cols="playandqueue track title ratingpic artist album",colwidth="album 150 artist 200 title 200",follow=1,grouping="album|artistalbum_breadcrumbs(picsize=100)",sort="path album disc track file") \
             HBSongTreeAct
 
-            HBSongTreeAct = FilterLock(button=1,relief=none) \
+            HBSongTreeAct = \
+                MBSongTree \
                 Sort(button=1) \
                 QueueFilter \
-                MBQueueItem1 \
                 Filter(button=1) \
                 PlayFilter \
                 Button(size=menu,click1=GoToCurrentSong,stock=gtk-jump-to,tip=_"Go to playing song") \
                 _Filler9 \
                 _Filler10 \
-                -ResetFilter \
-                -MBSongTree
+                -ResetFilter
 
-                    MBSongTree = PlayItem HistItem
-
-                    MBQueueItem1 = QueueItem1(label="AQ",minwidth=34,maxwidth=34)
+                    MBSongTree = QueueItem1(label="AQ",minwidth=34,maxwidth=34) PlayItem HistItem
 
 [ArkanoidVerticalHelp]
 # Help for Arkanoid Vertical
