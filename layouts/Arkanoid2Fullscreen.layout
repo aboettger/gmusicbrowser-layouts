@@ -11,7 +11,8 @@ Skin = background_black.png::s
 
 Window  = fullscreen=1,sticky=1
 
-KeyBindings	= Escape CloseWindow
+KeyBindings	= Escape CloseWindow \
+    F11 ToggleFullscreenLayout
 
 VBMainContainer  = _HPContent -HBReplayButtons
     HBReplayButtons = Prev(size=menu) \

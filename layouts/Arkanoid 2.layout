@@ -29,6 +29,7 @@ Default = Window(size=90%x80%,hidden=HBAlterTimeBar|HBAlterReplayButtons|HBVisua
     HPTitleAndStats(size=200-200)
 
 KeyBindings = \
+    F11 ToggleFullscreenLayout \
     cs-L ShowHideWidget(VBLeft) \
     cs-M ShowHideWidget(VBMiddle) \
     cs-R ShowHideWidget(VBRight) \
