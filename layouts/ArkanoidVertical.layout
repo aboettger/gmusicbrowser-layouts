@@ -124,7 +124,7 @@ VBMain = HBMainMenuBar _NBMain -HBScale -HBReplayButtons -HBSearchBar
                 Filter(button=1) \
                 PlayFilter \
                 Button(size=menu,click1=GoToCurrentSong,stock=gtk-jump-to,tip=_"Go to playing song") \
-                ResetFilter
+                 ResetFilter
 
                     MBSongTree = QueueItem1(label="AQ",minwidth=34,maxwidth=34) PlayItem HistItem
 
