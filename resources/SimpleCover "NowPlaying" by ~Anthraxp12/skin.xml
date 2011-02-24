@@ -1,0 +1,13 @@
+<skin name="Simplecover" width="935" height="450">
+	
+	<image src="disc.svg" x="0" y="0" width="450" height="445" display="on-playing, on-stopped" />
+	<albumcover x="6" y="6" width="435" height="435" display="on-playing" />
+	<image src="main.svg" x="0" y="0" width="450" height="450" display="on-playing" />
+	<image src="title.svg" x="400" y="400" width="935" height="450" display="on-playing, on-stopped" />   
+	<artistname x="480" y="365" font="FreeSans 28" color="#FFFFFFFF" maxchars="24" scroll="true" allignement="center" />
+	<titlename x="480" y="260" font="FreeSans 25" color="#FFFFFFFF" maxchars="28" scroll="true" allignement="center" />
+	<albumname x="480" y="315" font="FreeSans 20" color="#00FFFFFF" maxchars="32" scroll="false" allignement="center" />
+	<playername x="810" y="410" font="FreeSans 15" color="#c9c9c9FF" maxchars="15" scroll="false" allignement="right" />
+
+</skin>
+

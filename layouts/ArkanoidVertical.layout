@@ -83,7 +83,7 @@ VBMain = HBMainMenuBar _NBMain -HBScale -HBReplayButtons -HBSearchBar
                         _FilterPane2(nb=2,hidetabs=0,hidebb=0,tabpos=bottom,pages=genre,page=genre)
 
         VBCover = (tabtitle=_"Cover") \
-            Cover(click1="") \
+            _Cover(click1="",default=skins/arkanoid_skin/no-cover.svg) \
             20HBTitle \
             HBArtist \
             HBAlbum \
@@ -124,9 +124,7 @@ VBMain = HBMainMenuBar _NBMain -HBScale -HBReplayButtons -HBSearchBar
                 Filter(button=1) \
                 PlayFilter \
                 Button(size=menu,click1=GoToCurrentSong,stock=gtk-jump-to,tip=_"Go to playing song") \
-                _Filler9 \
-                _Filler10 \
-                -ResetFilter
+                ResetFilter
 
                     MBSongTree = QueueItem1(label="AQ",minwidth=34,maxwidth=34) PlayItem HistItem
 
