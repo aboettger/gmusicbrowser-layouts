@@ -31,10 +31,14 @@ HPfp1		= FilterPane1(nb=2,hidebb=1) FilterPane2(nb=3,hidebb=1)
 HPfp0	 	= FilterPane0(nb=1,hidebb=1) HPfp1
 HBSongList	= SimpleSearch(maxwidth=260) Total
 VBSongList	= HBSongList _SongTree1(activate=queueinsert,activate2=addplay,songypad=1)
-TBRight		= _"Library                  " VPRight 
-VPRight		= HPfp0 _VBSongList
+NBList2 = VPRight \
+VBQueue 
+VPRight		= (tabtitle=_"Library                  ") HPfp0 _VBSongList
+VBQueue 	= (tabtitle=_"Queue                  ") _QueueList(group=1) HBQueueButtons
+HBQueueButtons = EditListButtons(group=1,small=1) 4QueueActions Total2(group=1,size=small)
+# HBSearch	= SimpleSearch2(maxwidth=150) Total2 
 HBupper		= _VBleft2 -Cover
-HPBottom	= VBLeft _TBRight
+HPBottom	= VBLeft _NBList2
 
 # VBmain2     = HBmain 3Filler2
 VolumeScroll    = HBupper
