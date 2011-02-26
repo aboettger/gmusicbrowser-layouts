@@ -1,8 +1,8 @@
 [Audacious]
-Author = shimmerproject.org
+Author = aboettger
 Type = G+
 
-Category = Common
+Category = _"Make it look like"
 
 Title = %n %t (%m) - gmusicbrowser
 Default = Window(size=480x200)
