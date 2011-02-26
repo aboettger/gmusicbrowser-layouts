@@ -1,0 +1,12 @@
+[VastOne full with buttons]
+Type=T
+Window= borderwidth=2
+HBTime		= 7Filler3 PlayingTime(markup="%s",initsize="XX:XX",xalign=0) _TimeSlider(direct_mode=1) -Length(markup="$length",initsize="XX:XX",xalign=1)
+HBButtons	= 7Prev 35Filler2 Play -Next
+HBIndic		= 14Stars -Quit
+HBTitle		= LockSong _Title LabelsIcons
+HBArtist	= LockArtist _Artist -Pref(size=menu)
+HBAlbum		= LockAlbum _Album -VolumeIcon
+VBText		= HBTitle HBArtist HBAlbum
+VBmain		= HBIndic _VBText -HBTime HBButtons
+HBmain		= _VBmain Filler1 -Cover(forceratio=1)
