@@ -1,0 +1,12 @@
+Source: gmusicbrowser-art
+Section: sound
+Priority: optional
+Maintainer: Andreas Böttger <andreas.boettger@gmx.de>
+Homepage: http://gmusicbrowser.org/
+
+Package: gmusicbrowser-art
+Architecture: all
+Depends: gmusicbrowser (>= 1.1.7)
+Recommends: 
+Suggests:
+Description: No description yet
