@@ -1,3 +1,10 @@
+gmusicbrowser-art (0.1.2) maverick; urgency=low
+
+  * Launchpad error: make: dh_testdir: Command not found
+
+ -- Andreas Böttger <andreas.boettger@gmx.de>  Sat, 27 Feb 2011 23:55:35 +0200
+
+
 gmusicbrowser-art (0.1.1) maverick; urgency=low
 
   * Updates for the new gmusicbrowser version in git be2cd73

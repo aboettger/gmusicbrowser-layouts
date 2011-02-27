@@ -9,7 +9,7 @@
 
 build: build-stamp
 build-stamp:
-	dh_testdir
+#	dh_testdir
 
 	# Add here commands to compile the package.
 	#$(MAKE)
@@ -17,6 +17,7 @@ build-stamp:
 	touch build-stamp
 
 clean:
+#	dh_testdir
 	dh_testroot
 	rm -f build-stamp
 
@@ -27,15 +28,18 @@ clean:
 	dh_clean
 
 install: build
+#	dh_testdir
 	dh_testroot
 	dh_prep
 	dh_installdirs
 
 	# Add here commands to install the package into debian/<packagename>.
-	$(MAKE) prefix=`pwd`/debian/`dh_listpackages`/usr install
+	#$(MAKE) prefix=`pwd`/debian/`dh_listpackages`/usr install
+	$(MAKE) install
 
 # Build architecture-independent files here.
 binary-indep: build install
+#	dh_testdir
 	dh_testroot
 	dh_installchangelogs
 	dh_installdocs
