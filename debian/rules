@@ -17,7 +17,6 @@ build-stamp:
 	touch build-stamp
 
 clean:
-	dh_testdir
 	dh_testroot
 	rm -f build-stamp
 
@@ -28,7 +27,6 @@ clean:
 	dh_clean
 
 install: build
-	dh_testdir
 	dh_testroot
 	dh_prep
 	dh_installdirs
@@ -38,7 +36,6 @@ install: build
 
 # Build architecture-independent files here.
 binary-indep: build install
-	dh_testdir
 	dh_testroot
 	dh_installchangelogs
 	dh_installdocs
