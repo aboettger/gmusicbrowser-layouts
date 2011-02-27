@@ -9,6 +9,8 @@ Skin = Ipodnano4g.png::
 
 Default = Window(size=135x328,hidden=FBMainContainer2|FBMainContainer3)
 
+Window = transparent=1
+
 # DefaultFocus	= FBStatus
 
 #VolumeScroll = Vol
