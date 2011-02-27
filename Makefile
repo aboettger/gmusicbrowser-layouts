@@ -38,24 +38,24 @@ locale: $(foreach l,$(LINGUAS),locale/$l/LC_MESSAGES/gmusicbrowser-art.mo)
 
 install: all
 	install -pd "$(datadir)/gmusicbrowser/pix/awoken/"
+	install -pd "$(datadir)/gmusicbrowser/layouts-orig/"
 	install -pd "$(datadir)/gmusicbrowser/layouts/"
+	mv "$(datadir)/gmusicbrowser/layouts/" "$(datadir)/gmusicbrowser/layouts-orig/"
+	install -pd "$(datadir)/gmusicbrowser/layouts/"
+	install -pd "$(datadir)/gmusicbrowser/layouts/skins/"
 	install -pm 644 layouts/*.layout  "$(datadir)/gmusicbrowser/layouts/"
+	cp -rp layouts/skins/* "$(datadir)/gmusicbrowser/layouts/skins/"
 	install -pm 644 icons/awoken/*.png    "$(datadir)/gmusicbrowser/pix/awoken/"
-	for lang in $(LINGUAS) ; \
-	do \
-		install -pd "$(localedir)/$$lang/LC_MESSAGES/"; \
-		install -pm 644 locale/$$lang/LC_MESSAGES/gmusicbrowser-art.mo	"$(localedir)/$$lang/LC_MESSAGES/"; \
-	done
 
 postinstall:
 
 uninstall:
-	rm -rf "$(datadir)/gmusicbrowser/layouts" "$(docdir)"
-	rm -f "$(localedir)/*/LC_MESSAGES/gmusicbrowser-art.mo"
+	rm -rf "$(datadir)/gmusicbrowser/layouts"
+	rm -rf "$(datadir)/gmusicbrowser/layouts/skins"
+	rm -rf "$(datadir)/gmusicbrowser/pix/awoken"
+	mv "$(datadir)/gmusicbrowser/layouts-orig/layouts" "$(datadir)/gmusicbrowser/"
 
 postuninstall:
-	#clean_menus
-	update-menus
 
 prepackage : all
 	perl -pi -e 's!Version:.*!Version: '$(VERSION)'!' gmusicbrowser-art.spec
