@@ -13,10 +13,10 @@ Window = transparent=1
 
 # DefaultFocus	= FBStatus
 
-#VolumeScroll = Vol
+VolumeScroll = Vol
 
 FBMainContainer = \
-#    15,195 Vol(click1="",skin=touchwheel.png:::normal) \
+    15,195 Vol(click1="",skin=touchwheel.png:::normal) \
     15,15 FBStatus \
     15,129 FBTimeBar \
     15,195 FBControls \
