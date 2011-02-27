@@ -7,6 +7,7 @@ Homepage: http://gmusicbrowser.org/
 Package: gmusicbrowser-art
 Architecture: all
 Depends: gmusicbrowser (>= 1.1.7)
-Recommends: 
+Recommends:
 Suggests:
 Description: No description yet
+
