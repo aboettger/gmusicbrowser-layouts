@@ -1,3 +1,10 @@
+gmusicbrowser-art (0.1.1) maverick; urgency=low
+
+  * Updates for the new gmusicbrowser version in git be2cd73
+
+ -- Andreas Böttger <andreas.boettger@gmx.de>  Sat, 27 Feb 2011 22:41:51 +0200
+
+
 gmusicbrowser-art (0.1.0) maverick; urgency=low
 
   * first version
