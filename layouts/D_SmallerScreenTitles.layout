@@ -15,7 +15,9 @@ Skin = case.png::
 
 Default = Window(size=150x200)
 
-FBMainContainer = 23,23 Cover(minsize=104,maxsize=104,default=skins/smallerscreentitles_skin/no-cover.png,overlay=0x0:104x104:skins/smallerscreentitles_skin/overlay.png,click1="") \
+Window = transparent=1
+
+FBMainContainer = 25,25 Cover(minsize=100,maxsize=100,default=skins/smallerscreentitles_skin/no-cover.png,overlay=0x0:104x104:skins/smallerscreentitles_skin/overlay.png,click1="") \
     33,120 Prev(skin=prev_next.png:::normal_prelight_active) \
     60,120 Play(skin=play_pause.png:::normal_prelight_active:play_pause) \
     90,120 Next(skin=prev_next.png:::normal_prelight_active) \
