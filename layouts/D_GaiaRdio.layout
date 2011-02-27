@@ -13,14 +13,16 @@ Skin = case.png::
 
 Default = Window(size=226x437)
 
+Window = transparent=1
+
 VolumeScroll = VolBar
 
-FBMainContainer = 1,0 Cover(minsize=180,maxsize=180,overlay=0x0:181x181:skins/gaiardio_skin/overlay.png,click1="") \
-    30,190 Prev(skin=prev.png:::normal_prelight_active) \
-    70,190 Play(skin=play_pause.png:::normal_prelight_active:play_pause) \
-    110,190 Next(skin=next.png:::normal_prelight_active) \
-    10,250 FBTitleAlbumArtist \
-    35,359,79,6 VolBar(skin=bar.png::,handle_skin=fill.png:::normal)
+FBMainContainer = 26,39 Cover(minsize=175,maxsize=175,overlay=0x0:181x181:skins/gaiardio_skin/overlay.png,click1="") \
+    54,226 Prev(skin=prev.png:::normal_prelight_active) \
+    94,226 Play(skin=play_pause.png:::normal_prelight_active:play_pause) \
+    134,226 Next(skin=next.png:::normal_prelight_active) \
+    34,286 FBTitleAlbumArtist \
+    59,395,77,5 VolBar(skin=bar.png::,handle_skin=fill.png:::normal)
     # \
     #40,360,79,6 TimeBar(skin=bar.png::,handle_skin=fill.png:::normal)
 
