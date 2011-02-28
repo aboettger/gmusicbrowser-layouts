@@ -1,0 +1,799 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: gmusicbrowser-art VERSION\n"
+"Report-Msgid-Bugs-To: andreas.boettger@gmx.de\n"
+"POT-Creation-Date: 2011-02-26 21:39+0100\n"
+"PO-Revision-Date: 2011-02-26 21:40+0100\n"
+"Last-Translator: Andreas Böttger <andreas.boettger@gmx.de>\n"
+"Language-Team: German\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: de\n"
+
+#: layouts/Arkanoid 2.layout:104
+msgid "->"
+msgstr ""
+
+#: layouts/ArkanoidVertical.layout:81
+msgid "1st Level"
+msgstr ""
+
+#: layouts/ArkanoidVertical.layout:73
+msgid "2nd Level"
+msgstr ""
+
+#: layouts/ArkanoidVertical.layout:77
+msgid "3rd Level"
+msgstr ""
+
+#: layouts/ArkanoidVertical.layout:34
+msgid "<small>Artist:</small>"
+msgstr ""
+
+#: layouts/ArkanoidVertical.layout:28
+msgid "<small>Song:</small>"
+msgstr ""
+
+#: layouts/Audacious.layout:82 layouts/Exaile.layout:45
+#: layouts/makeitlooklike.layout:69 layouts/makeitlooklike.layout:275
+#: layouts/Rhythmbox.layout:66
+msgid "About"
+msgstr ""
+
+#: layouts/Audacious.layout:47
+msgid "Add Files ..."
+msgstr ""
+
+#: layouts/Arkanoid 2.layout:100 layouts/ArkanoidVertical.layout:48
+#: layouts/Exaile.layout:23 layouts/makeitlooklike.layout:47
+#: layouts/makeitlooklike.layout:230 layouts/makeitlooklike.layout:335
+#: layouts/Rhythmbox.layout:21 layouts/Rhythmbox.layout:126
+msgid "Add folder ..."
+msgstr ""
+
+#: layouts/Exaile.layout:28 layouts/makeitlooklike.layout:52
+#: layouts/makeitlooklike.layout:237 layouts/Rhythmbox.layout:28
+msgid "Add to playlist"
+msgstr ""
+
+#: layouts/makeitlooklike.layout:236 layouts/Rhythmbox.layout:27
+msgid "Add to queue"
+msgstr ""
+
+#: layouts/Exaile.layout:70 layouts/makeitlooklike.layout:94
+#: layouts/makeitlooklike.layout:316 layouts/Rhythmbox.layout:107
+#: layouts/vastone.layout:27 layouts/vastone_bottom.layout:29
+#: layouts/vastone_glc.layout:29 layouts/vastone_top.layout:29
+msgid "Album"
+msgstr ""
+
+#: layouts/songtree.layout:152
+msgid "Album and artist"
+msgstr ""
+
+#: layouts/songtree.layout:59
+msgid "Album and artist on the left side"
+msgstr ""
+
+#: layouts/vastone.layout:6 layouts/vastone_bottom.layout:7
+#: layouts/vastone_glc.layout:6 layouts/vastone_top.layout:6
+msgid "Album pane"
+msgstr ""
+
+#: layouts/shimmer.layout:17 layouts/shimmer.layout:59
+#: layouts/shimmer.layout:100
+msgid "Album: %l (%Y)"
+msgstr ""
+
+#: layouts/makeitlooklike.layout:314 layouts/Rhythmbox.layout:105
+msgid "All"
+msgstr ""
+
+#: layouts/Arkanoid 2.layout:106
+msgid "Alternative position for replay buttons"
+msgstr ""
+
+#: layouts/Arkanoid 2.layout:109
+msgid "Alternative position for timebar"
+msgstr ""
+
+#: layouts/Arkanoid 2.layout:274
+msgid "Arkanoid - Help"
+msgstr ""
+
+#: layouts/Arkanoid 2.layout:1 layouts/D_Arkanoid2.layout:3
+msgid "Arkanoid 2"
+msgstr ""
+
+#: layouts/Arkanoid2Fullscreen.layout:1
+msgid "Arkanoid 2 Fullscreen"
+msgstr ""
+
+#: layouts/Arkanoid2Fullscreen.layout:28
+msgid "Arkanoid Fullscreen with queue"
+msgstr ""
+
+#: layouts/D_ArkanoidLevel1.layout:1
+msgid "Arkanoid Level 1"
+msgstr ""
+
+#: layouts/ArkanoidVertical.layout:1
+msgid "Arkanoid Vertical"
+msgstr ""
+
+#: layouts/ArkanoidVertical.layout:139
+msgid "Arkanoid Vertical - Help"
+msgstr ""
+
+#: layouts/Arkanoid 2.layout:308
+msgid "Arkanoid browser"
+msgstr ""
+
+#: layouts/T_Arkanoid.layout:6
+msgid "Arkanoid tray"
+msgstr ""
+
+#: layouts/Arkanoid 2.layout:266
+msgid "ArkanoidHelp"
+msgstr ""
+
+#: layouts/ArkanoidVertical.layout:131
+msgid "ArkanoidVerticalHelp"
+msgstr ""
+
+#: layouts/Exaile.layout:57 layouts/makeitlooklike.layout:81
+#: layouts/makeitlooklike.layout:315 layouts/Rhythmbox.layout:106
+#: layouts/shimmer.layout:29 layouts/vastone.layout:26
+#: layouts/vastone_bottom.layout:28 layouts/vastone_glc.layout:28
+#: layouts/vastone_top.layout:28
+msgid "Artist"
+msgstr ""
+
+#: layouts/Exaile.layout:130 layouts/makeitlooklike.layout:154
+msgid "Artist (Jahr - Album)"
+msgstr ""
+
+#: layouts/vastone.layout:6 layouts/vastone_bottom.layout:7
+#: layouts/vastone_glc.layout:6 layouts/vastone_top.layout:6
+msgid "Artist pane"
+msgstr ""
+
+#: layouts/vastone.layout:20 layouts/vastone_bottom.layout:22
+#: layouts/vastone_glc.layout:22 layouts/vastone_top.layout:22
+msgid "Artist/Album Playing"
+msgstr ""
+
+#: layouts/shimmer.layout:17 layouts/shimmer.layout:59
+#: layouts/shimmer.layout:100
+msgid "Artist: %a"
+msgstr ""
+
+#: layouts/Audacious.layout:1
+msgid "Audacious"
+msgstr ""
+
+#: layouts/Audacious.layout:107
+msgid "Audacious_PLM"
+msgstr ""
+
+#: layouts/makeitlooklike.layout:257 layouts/Rhythmbox.layout:48
+msgid "Browser views"
+msgstr ""
+
+#: layouts/Arkanoid 2.layout:111
+msgid "Buttons for cover positioning"
+msgstr ""
+
+#: layouts/vastone.layout:6 layouts/vastone_bottom.layout:7
+#: layouts/vastone_glc.layout:6 layouts/vastone_top.layout:6
+msgid "Categories pane"
+msgstr ""
+
+#: layouts/makeitlooklike.layout:281 layouts/Rhythmbox.layout:72
+msgid "Change the context visibility"
+msgstr ""
+
+#: layouts/Exaile.layout:56 layouts/makeitlooklike.layout:80
+msgid "Collection"
+msgstr ""
+
+#: layouts/vastone.layout:21 layouts/vastone_bottom.layout:23
+#: layouts/vastone_glc.layout:23 layouts/vastone_top.layout:23
+msgid "Context"
+msgstr ""
+
+#: layouts/makeitlooklike.layout:265 layouts/makeitlooklike.layout:349
+#: layouts/Rhythmbox.layout:56 layouts/Rhythmbox.layout:140
+msgid "Control"
+msgstr ""
+
+#: layouts/Arkanoid 2.layout:122 layouts/ArkanoidVertical.layout:85
+msgid "Cover"
+msgstr ""
+
+#: layouts/makeitlooklike.layout:272 layouts/makeitlooklike.layout:356
+#: layouts/Rhythmbox.layout:63 layouts/Rhythmbox.layout:147
+msgid "Decrease volume"
+msgstr ""
+
+#: layouts/makeitlooklike.layout:240 layouts/Rhythmbox.layout:31
+msgid "Delete"
+msgstr ""
+
+#: layouts/Exaile.layout:26 layouts/makeitlooklike.layout:50
+#: layouts/makeitlooklike.layout:235 layouts/makeitlooklike.layout:340
+#: layouts/Rhythmbox.layout:26 layouts/Rhythmbox.layout:131
+msgid "Edit"
+msgstr ""
+
+#: layouts/Audacious.layout:71 layouts/Exaile.layout:42
+#: layouts/makeitlooklike.layout:66
+msgid "Equalizer"
+msgstr ""
+
+#: layouts/Exaile.layout:1 layouts/makeitlooklike.layout:27
+msgid "Exaile"
+msgstr ""
+
+#: layouts/Audacious.layout:45 layouts/Exaile.layout:22
+#: layouts/makeitlooklike.layout:46
+msgid "File"
+msgstr ""
+
+#: layouts/Exaile.layout:54 layouts/makeitlooklike.layout:78
+msgid "Files"
+msgstr ""
+
+#: layouts/ArkanoidVertical.layout:68
+msgid "Filter"
+msgstr ""
+
+#: layouts/Arkanoid 2.layout:126
+msgid "Filter pane"
+msgstr ""
+
+#: layouts/songtree.layout:144
+msgid "Folder"
+msgstr ""
+
+#: layouts/songtree.layout:143
+msgid "Folder (right-aligned)"
+msgstr ""
+
+#: layouts/D_GaiaRdio.layout:6
+msgid "Gaia Rdio"
+msgstr ""
+
+#: layouts/Exaile.layout:91 layouts/makeitlooklike.layout:115
+msgid "Genre - Album"
+msgstr ""
+
+#: layouts/Exaile.layout:78 layouts/makeitlooklike.layout:102
+msgid "Genre - Artist"
+msgstr ""
+
+#: layouts/vastone.layout:6 layouts/vastone_bottom.layout:7
+#: layouts/vastone_glc.layout:6 layouts/vastone_top.layout:6
+msgid "Genres pane"
+msgstr ""
+
+#: layouts/Exaile.layout:34 layouts/makeitlooklike.layout:58
+msgid "Go to Playing Track"
+msgstr ""
+
+#: layouts/Arkanoid 2.layout:227 layouts/ArkanoidVertical.layout:126
+msgid "Go to playing song"
+msgstr ""
+
+#: layouts/Arkanoid 2.layout:95 layouts/ArkanoidVertical.layout:43
+#: layouts/Audacious.layout:81 layouts/Exaile.layout:44
+#: layouts/makeitlooklike.layout:68 layouts/makeitlooklike.layout:274
+#: layouts/Rhythmbox.layout:65
+msgid "Help"
+msgstr ""
+
+#: layouts/Arkanoid 2.layout:130
+msgid "Horizontal filter"
+msgstr ""
+
+#: layouts/makeitlooklike.layout:271 layouts/makeitlooklike.layout:355
+#: layouts/Rhythmbox.layout:62 layouts/Rhythmbox.layout:146
+msgid "Increase volume"
+msgstr ""
+
+#: layouts/shimmer.layout:28 layouts/shimmer.layout:67
+msgid "Info"
+msgstr ""
+
+#: layouts/songtree.layout:104
+msgid "Labels' icons"
+msgstr ""
+
+#: layouts/Arkanoid 2.layout:114 2.layout:121 layouts/vastone.layout:6
+#: layouts/vastone_bottom.layout:7 layouts/vastone_glc.layout:6
+#: layouts/vastone_top.layout:6
+msgid "Left pane"
+msgstr ""
+
+#: layouts/vastone_glc.layout:34
+msgid "Library                  "
+msgstr ""
+
+#: layouts/shimmer.layout:27 layouts/shimmer.layout:66
+msgid "Lyrics"
+msgstr ""
+
+#: layouts/Arkanoid 2.layout:331
+msgid "Main Tree"
+msgstr ""
+
+#: layouts/Audacious.layout:5
+msgid "Make it look like"
+msgstr ""
+
+#: layouts/Arkanoid 2.layout:115 2.layout:125
+msgid "Middle pane"
+msgstr ""
+
+#: layouts/shimmer.layout:20
+msgid "Mosaic View"
+msgstr ""
+
+#: layouts/makeitlooklike.layout:229 layouts/makeitlooklike.layout:334
+#: layouts/Rhythmbox.layout:20 layouts/Rhythmbox.layout:125
+msgid "Music"
+msgstr ""
+
+#: layouts/Audacious.layout:57 layouts/makeitlooklike.layout:269
+#: layouts/makeitlooklike.layout:353 layouts/Rhythmbox.layout:60
+#: layouts/Rhythmbox.layout:144
+msgid "Next"
+msgstr ""
+
+#: layouts/Arkanoid 2.layout:67 2.layout:182
+#: layouts/ArkanoidVertical.layout:58 layouts/D_ArkanoidLevel1.layout:31
+#: layouts/T_Arkanoid.layout:20
+msgid "Next Song"
+msgstr ""
+
+#: layouts/Audacious.layout:46
+msgid "Open files"
+msgstr ""
+
+#: layouts/makeitlooklike.layout:242 layouts/makeitlooklike.layout:341
+#: layouts/Rhythmbox.layout:33 layouts/Rhythmbox.layout:132
+msgid "Options ..."
+msgstr ""
+
+#: layouts/Audacious.layout:70
+msgid "Output"
+msgstr ""
+
+#: layouts/columns.layout:2
+msgid "P&S"
+msgstr ""
+
+#: layouts/Audacious.layout:54 layouts/makeitlooklike.layout:266
+#: layouts/makeitlooklike.layout:350 layouts/Rhythmbox.layout:57
+#: layouts/Rhythmbox.layout:141
+msgid "Play"
+msgstr ""
+
+#: layouts/Arkanoid 2.layout:66 2.layout:181
+#: layouts/ArkanoidVertical.layout:57 layouts/D_ArkanoidLevel1.layout:30
+#: layouts/T_Arkanoid.layout:19
+msgid "Play/Pause"
+msgstr ""
+
+#: layouts/Audacious.layout:52
+msgid "Playback"
+msgstr ""
+
+#: layouts/songtree.layout:99
+msgid "Playing and queue icons"
+msgstr ""
+
+#: layouts/Arkanoid 2.layout:263 layouts/ArkanoidVertical.layout:113
+#: layouts/Audacious.layout:61 layouts/shimmer.layout:68
+#: layouts/vastone.layout:6 layouts/vastone.layout:25
+#: layouts/vastone_bottom.layout:7 layouts/vastone_bottom.layout:27
+#: layouts/vastone_glc.layout:6 layouts/vastone_glc.layout:27
+#: layouts/vastone_top.layout:6 layouts/vastone_top.layout:27
+msgid "Playlist"
+msgstr ""
+
+#: layouts/Exaile.layout:149 layouts/makeitlooklike.layout:173
+msgid "Playlist 1"
+msgstr ""
+
+#: layouts/Exaile.layout:37 layouts/makeitlooklike.layout:61
+msgid "Playlist Utilities Bar"
+msgstr ""
+
+#: layouts/Audacious.layout:68 layouts/Audacious.layout:111
+#: layouts/Exaile.layout:53 layouts/makeitlooklike.layout:77
+msgid "Playlists"
+msgstr ""
+
+#: layouts/Audacious.layout:49 layouts/Exaile.layout:30
+#: layouts/makeitlooklike.layout:54
+msgid "Preferences"
+msgstr ""
+
+#: layouts/Audacious.layout:56 layouts/makeitlooklike.layout:268
+#: layouts/makeitlooklike.layout:352 layouts/Rhythmbox.layout:59
+#: layouts/Rhythmbox.layout:143
+msgid "Previous"
+msgstr ""
+
+#: layouts/Arkanoid 2.layout:65 2.layout:180
+#: layouts/ArkanoidVertical.layout:56 layouts/D_ArkanoidLevel1.layout:29
+#: layouts/T_Arkanoid.layout:18
+msgid "Previous Song"
+msgstr ""
+
+#: layouts/makeitlooklike.layout:337 layouts/Rhythmbox.layout:128
+msgid "Properties"
+msgstr ""
+
+#: layouts/Arkanoid 2.layout:247 layouts/ArkanoidVertical.layout:101
+#: layouts/Exaile.layout:27 layouts/makeitlooklike.layout:51
+#: layouts/Rhythmbox.layout:159 layouts/songtree.layout:69
+#: layouts/vastone.layout:6 layouts/vastone_bottom.layout:7
+#: layouts/vastone_glc.layout:6 layouts/vastone_top.layout:6
+msgid "Queue"
+msgstr ""
+
+#: layouts/shimmer.layout:26 layouts/shimmer.layout:65
+msgid "Queue (%n)"
+msgstr ""
+
+#: layouts/makeitlooklike.layout:252 layouts/Rhythmbox.layout:43
+msgid "Queue in Sidebar"
+msgstr ""
+
+#: layouts/Arkanoid 2.layout:94 layouts/ArkanoidVertical.layout:42
+#: layouts/Audacious.layout:50 layouts/Exaile.layout:25
+#: layouts/makeitlooklike.layout:49 layouts/makeitlooklike.layout:234
+#: layouts/makeitlooklike.layout:339 layouts/Rhythmbox.layout:25
+#: layouts/Rhythmbox.layout:130
+msgid "Quit"
+msgstr ""
+
+#: layouts/makeitlooklike.layout:4
+msgid "Quodlibet"
+msgstr ""
+
+#: layouts/Audacious.layout:63
+msgid "Random Playback"
+msgstr ""
+
+#: layouts/songtree.layout:134
+msgid "Rating"
+msgstr ""
+
+#: layouts/songtree.layout:135
+msgid "Rating (picture)"
+msgstr ""
+
+#: layouts/Audacious.layout:65
+msgid "Refresh"
+msgstr ""
+
+#: layouts/makeitlooklike.layout:239 layouts/Rhythmbox.layout:30
+msgid "Remove"
+msgstr ""
+
+#: layouts/Audacious.layout:66
+msgid "Rescan"
+msgstr ""
+
+#: layouts/Exaile.layout:40 layouts/makeitlooklike.layout:64
+msgid "Rescan Collection"
+msgstr ""
+
+#: layouts/makeitlooklike.layout:263 layouts/makeitlooklike.layout:212
+#: layouts/Rhythmbox.layout:54 layouts/Rhythmbox.layout:1
+msgid "Rhythmbox"
+msgstr ""
+
+#: layouts/Rhythmbox.layout:158 layouts/songtree.layout:68
+msgid "Rhythmbox 2nd queue column"
+msgstr ""
+
+#: layouts/makeitlooklike.layout:327 layouts/Rhythmbox.layout:118
+msgid "Rhythmbox Compact"
+msgstr ""
+
+#: layouts/Arkanoid 2.layout:116
+msgid "Right Pane"
+msgstr ""
+
+#: layouts/shimmer.layout:31
+msgid "Right-click to remove filters"
+msgstr ""
+
+#: layouts/shimmer.layout:31
+msgid "Right-click to toggle Shuffle"
+msgstr ""
+
+#: layouts/Arkanoid 2.layout:334
+msgid "Same Title"
+msgstr ""
+
+#: layouts/Arkanoid 2.layout:127
+msgid "Saved filter/lists"
+msgstr ""
+
+#: layouts/makeitlooklike.layout:253 layouts/Rhythmbox.layout:44
+msgid "Search"
+msgstr ""
+
+#: layouts/makeitlooklike.layout:315 layouts/Rhythmbox.layout:106
+msgid "Search Artist"
+msgstr ""
+
+#: layouts/makeitlooklike.layout:316 layouts/Rhythmbox.layout:107
+msgid "Search album"
+msgstr ""
+
+#: layouts/makeitlooklike.layout:314 layouts/Rhythmbox.layout:105
+msgid "Search all fields"
+msgstr ""
+
+#: layouts/Arkanoid 2.layout:132
+msgid "Search bar"
+msgstr ""
+
+#: layouts/makeitlooklike.layout:261 layouts/Rhythmbox.layout:52
+msgid "Search box type"
+msgstr ""
+
+#: layouts/makeitlooklike.layout:317 layouts/Rhythmbox.layout:108
+msgid "Search title"
+msgstr ""
+
+#: layouts/Exaile.layout:173 layouts/makeitlooklike.layout:197
+#: layouts/makeitlooklike.layout:306 layouts/makeitlooklike.layout:308
+#: layouts/Rhythmbox.layout:97 layouts/Rhythmbox.layout:99
+msgid "Search:"
+msgstr ""
+
+#: layouts/shimmer.layout:1
+msgid "Shimmer Desktop"
+msgstr ""
+
+#: layouts/shimmer.layout:45
+msgid "Shimmer Netbook"
+msgstr ""
+
+#: layouts/shimmer.layout:93
+msgid "Shimmer Party"
+msgstr ""
+
+#: layouts/shimmer.layout:73
+msgid "Shimmer Traytip"
+msgstr ""
+
+#: layouts/makeitlooklike.layout:259 layouts/Rhythmbox.layout:50
+msgid "Show album"
+msgstr ""
+
+#: layouts/makeitlooklike.layout:258 layouts/Rhythmbox.layout:49
+msgid "Show genre"
+msgstr ""
+
+#: layouts/Audacious.layout:78
+msgid "Show info panel"
+msgstr ""
+
+#: layouts/Audacious.layout:76
+msgid "Show main window"
+msgstr ""
+
+#: layouts/Audacious.layout:77
+msgid "Show playlist"
+msgstr ""
+
+#: layouts/Audacious.layout:59
+msgid "Show song details"
+msgstr ""
+
+#: layouts/Audacious.layout:79
+msgid "Show status bar"
+msgstr ""
+
+#: layouts/makeitlooklike.layout:280 layouts/Rhythmbox.layout:71
+msgid "Show/Hide Browser"
+msgstr ""
+
+#: layouts/shimmer.layout:31
+msgid "Show/Hide Cover"
+msgstr ""
+
+#: layouts/makeitlooklike.layout:251 layouts/Rhythmbox.layout:42
+msgid "Sidebar"
+msgstr ""
+
+#: layouts/shimmer.layout:20
+msgid "Simple List View"
+msgstr ""
+
+#: layouts/songtree.layout:52
+msgid "Simple title"
+msgstr ""
+
+#: layouts/songtree.layout:127
+msgid "Small album picture"
+msgstr ""
+
+#: layouts/D_SmallerScreenTitles.layout:8
+msgid "Smaller Screen Titles"
+msgstr ""
+
+#: layouts/songtree.layout:111 layouts/vastone.layout:24
+#: layouts/vastone_bottom.layout:26 layouts/vastone_glc.layout:26
+#: layouts/vastone_top.layout:26
+msgid "Song"
+msgstr ""
+
+#: layouts/makeitlooklike.layout:232 layouts/Rhythmbox.layout:23
+msgid "Song Properties"
+msgstr ""
+
+#: layouts/Arkanoid 2.layout:133
+msgid "Song list actions"
+msgstr ""
+
+#: layouts/ArkanoidVertical.layout:116
+msgid "Songlist"
+msgstr ""
+
+#: layouts/shimmer.layout:20
+msgid "Songtree View"
+msgstr ""
+
+#: layouts/Arkanoid 2.layout:105
+msgid "Standard position for replay buttons"
+msgstr ""
+
+#: layouts/Arkanoid 2.layout:108
+msgid "Standard position for timebar"
+msgstr ""
+
+#: layouts/makeitlooklike.layout:254 layouts/Rhythmbox.layout:45
+msgid "Statusbar"
+msgstr ""
+
+#: layouts/Audacious.layout:55
+msgid "Stop"
+msgstr ""
+
+#: layouts/songtree.layout:118
+msgid "Title & icon"
+msgstr ""
+
+#: layouts/songtree.layout:76
+msgid "Title & progress"
+msgstr ""
+
+#: layouts/songtree.layout:110
+msgid "Title - Artist - Album"
+msgstr ""
+
+#: layouts/shimmer.layout:17 layouts/shimmer.layout:59
+#: layouts/shimmer.layout:100
+msgid "Title: %t (Track No. %n)"
+msgstr ""
+
+#: layouts/makeitlooklike.layout:255 layouts/makeitlooklike.layout:347
+#: layouts/Rhythmbox.layout:46 layouts/Rhythmbox.layout:138
+msgid "Toolbar"
+msgstr ""
+
+#: layouts/Exaile.layout:39 layouts/makeitlooklike.layout:63
+msgid "Tools"
+msgstr ""
+
+#: layouts/Arkanoid 2.layout:112
+msgid "Totals"
+msgstr ""
+
+#: layouts/Exaile.layout:41 layouts/makeitlooklike.layout:65
+msgid "Track Properties"
+msgstr ""
+
+#: layouts/vastone_glc.layout:1
+msgid "VastOne GLC"
+msgstr ""
+
+#: layouts/vastone.layout:1
+msgid "VastOne GQLC"
+msgstr ""
+
+#: layouts/vastone_bottom.layout:1
+msgid "VastOne GQLC Bottom"
+msgstr ""
+
+#: layouts/vastone_top.layout:1
+msgid "VastOne GQLC Top"
+msgstr ""
+
+#: layouts/Arkanoid 2.layout:129
+msgid "Vertical filter"
+msgstr ""
+
+#: layouts/Audacious.layout:73 layouts/Exaile.layout:33
+#: layouts/makeitlooklike.layout:57 layouts/makeitlooklike.layout:245
+#: layouts/makeitlooklike.layout:344 layouts/Rhythmbox.layout:36
+#: layouts/Rhythmbox.layout:135 layouts/vastone.layout:6
+#: layouts/vastone_bottom.layout:7 layouts/vastone_glc.layout:6
+#: layouts/vastone_top.layout:6
+msgid "View"
+msgstr ""
+
+#: layouts/Arkanoid 2.layout:123
+msgid "Visuals"
+msgstr ""
+
+#: layouts/Exaile.layout:117 layouts/makeitlooklike.layout:141
+msgid "Year - Album"
+msgstr ""
+
+#: layouts/Exaile.layout:104 layouts/makeitlooklike.layout:128
+msgid "Year - Artist"
+msgstr ""
+
+#: layouts/groups.layout:2
+msgid "album and artist breadcrumbs"
+msgstr ""
+
+#: layouts/groups.layout:14
+msgid "album, artist and disk breadcrumbs"
+msgstr ""
+
+#: layouts/Arkanoid 2.layout:164
+msgid "bottom spacer"
+msgstr ""
+
+#: layouts/Arkanoid 2.layout:97 layouts/ArkanoidVertical.layout:45
+#: layouts/vastone.layout:10 layouts/vastone_bottom.layout:17
+#: layouts/vastone_glc.layout:18 layouts/vastone_top.layout:18
+msgid "check now"
+msgstr ""
+
+#: layouts/makeitlooklike.layout:262 layouts/Rhythmbox.layout:53
+msgid "gmusicbrowser"
+msgstr ""
+
+#: layouts/D_iPodNano4g.layout:4
+msgid "iPod nano 4g"
+msgstr ""
+
+#: layouts/Arkanoid 2.layout:173
+msgid "left spacer"
+msgstr ""
+
+#: layouts/Arkanoid 2.layout:175
+msgid "right spacer"
+msgstr ""
+
+#: layouts/Arkanoid 2.layout:98 layouts/ArkanoidVertical.layout:46
+#: layouts/vastone.layout:11 layouts/vastone_bottom.layout:18
+#: layouts/vastone_glc.layout:19 layouts/vastone_top.layout:19
+msgid "scan now"
+msgstr ""
+
+#: layouts/shimmer.layout:42
+msgid "shimmer"
+msgstr ""
+
+#: layouts/Arkanoid 2.layout:162
+msgid "top spacer"
+msgstr ""
+
+#: layouts/groups.layout:26 layouts/songtree.layout:36
+msgid "with picture"
+msgstr ""
