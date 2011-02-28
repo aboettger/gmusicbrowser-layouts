@@ -2,7 +2,7 @@
 Type=T
 Window= borderwidth=2
 HBTime		= 7Filler3 PlayingTime(markup="%s",initsize="XX:XX",xalign=0) _TimeSlider(direct_mode=1) 3-Length(markup="$length",initsize="XX:XX",xalign=1)
-HBButtons	= 7Prev 35Filler2 Play -Next
+HBButtons	= 7Prev(size=small-toolbar) 45Filler2 Play(size=small-toolbar) -Next(size=small-toolbar)
 HBIndic		= -Stars 14Quit(size=menu)
 HBTitle		= LockSong _Title LabelsIcons
 HBArtist	= LockArtist _Artist -Pref(size=menu)
