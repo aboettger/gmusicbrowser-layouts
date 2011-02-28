@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gmusicbrowser-art VERSION\n"
 "Report-Msgid-Bugs-To: andreas.boettger@gmx.de\n"
-"POT-Creation-Date: 2011-02-27 22:37+0100\n"
+"POT-Creation-Date: 2011-02-28 22:19+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE\n"
@@ -781,6 +781,14 @@ msgstr ""
 
 #: layouts/main.layout:426
 msgid "Volume"
+msgstr ""
+
+#: layouts/widebar.layout:6
+msgid "Widescreen"
+msgstr ""
+
+#: layouts/widebar.layout:28
+msgid "Widescreen with rating"
 msgstr ""
 
 #: layouts/Exaile.layout:117 layouts/makeitlooklike.layout:141
