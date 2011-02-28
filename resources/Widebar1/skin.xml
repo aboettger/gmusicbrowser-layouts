@@ -1,0 +1,12 @@
+<skin name="widebar1" width="1920" height="57">
+
+  
+  <image src="bg1.png" 	x="0" y="0"  	width="1920" height="57"/> 
+  
+  <titlename 	x="735" y="38" width="450" maxchars="65" align="center" font="Andale Mono 8" color="#ffffffFF" shadowcolor="#000000ff" />     
+  <artistname 	x="10" y="38" width="200" maxchars="100" align="left" font="Andale Mono 8"	color="#ffffffFF" shadowcolor="#000000ff" />
+  <albumname 	x="1400" y="38" width="400" maxchars="100" align="right" font="Andale Mono 8" color="#ffffffFF"  shadowcolor="#000000ff"/>
+  <rating			x="1820" y="39" width="10" height="10" spacing = "10" star="star.png" nostar="nostar.png" />
+ 
+</skin>
+
