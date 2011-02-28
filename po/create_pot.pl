@@ -53,11 +53,11 @@ while (my $file=shift @files)
 $version||="VERSION";
 my $date=`date --iso-8601=minutes`; $date=~s/T/ /; chomp $date;
 
-open my$fh,'>',$FindBin::Bin.'/gmusicbrowser-art.pot'  or die $!;
+open my$fh,'>',$FindBin::Bin.'/gmusicbrowserart.pot'  or die $!;
 print $fh '
 msgid ""
 msgstr ""
-"Project-Id-Version: gmusicbrowser-art '.$version.'\n"
+"Project-Id-Version: gmusicbrowserart '.$version.'\n"
 "Report-Msgid-Bugs-To: andreas.boettger@gmx.de\n"
 "POT-Creation-Date: '.$date.'\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -81,5 +81,6 @@ for my $msg (sort keys %msgid_p)
 
 close $fh;
 
-warn "wrote gmusicbrowser-art.pot\n" if $verbose;
-warn "to update de.po, run :  msgmerge -s -U de.po gmusicbrowser-art.pot\n" if $verbose;
+warn "wrote gmusicbrowserart.pot\n" if $verbose;
+warn "to update de.po, run :  msgmerge -s -U de.po gmusicbrowserart.pot\n" if $verbose;
+

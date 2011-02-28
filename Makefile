@@ -1,4 +1,4 @@
-PACKAGE = gmusicbrowser-art
+PACKAGE = gmusicbrowserart
 VERSION = $(shell git tag)
 
 
@@ -23,17 +23,17 @@ clean:
 distclean: clean
 	rm -rf locale/
 
-po/gmusicbrowser-art.pot : layouts/*.layout
+po/gmusicbrowserart.pot : layouts/*.layout
 	perl po/create_pot.pl --quiet
 
 po/%.po : po/gmusicbrowser.pot
 	msgmerge -s -U -N $@ po/gmusicbrowser.pot
 
-locale/%/LC_MESSAGES/gmusicbrowser-art.mo : po/%.po po/gmusicbrowser-art.pot
+locale/%/LC_MESSAGES/gmusicbrowserart.mo : po/%.po po/gmusicbrowserart.pot
 	mkdir -p locale/$*/LC_MESSAGES/
 	msgfmt --statistics -c -o $@ $<
 
-locale: $(foreach l,$(LINGUAS),locale/$l/LC_MESSAGES/gmusicbrowser-art.mo)
+locale: $(foreach l,$(LINGUAS),locale/$l/LC_MESSAGES/gmusicbrowserart.mo)
 
 
 install: all
@@ -58,7 +58,7 @@ uninstall:
 postuninstall:
 
 prepackage : all
-	perl -pi -e 's!Version:.*!Version: '$(VERSION)'!' gmusicbrowser-art.spec
+	perl -pi -e 's!Version:.*!Version: '$(VERSION)'!' gmusicbrowserart.spec
 	mkdir -p dist/
 
 dist: prepackage

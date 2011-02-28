@@ -1,7 +1,7 @@
 
 msgid ""
 msgstr ""
-"Project-Id-Version: gmusicbrowser-art VERSION\n"
+"Project-Id-Version: gmusicbrowserart VERSION\n"
 "Report-Msgid-Bugs-To: andreas.boettger@gmx.de\n"
 "POT-Creation-Date: 2011-02-28 22:19+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"

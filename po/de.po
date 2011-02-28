@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: gmusicbrowser-art VERSION\n"
+"Project-Id-Version: gmusicbrowserart VERSION\n"
 "Report-Msgid-Bugs-To: andreas.boettger@gmx.de\n"
 "POT-Creation-Date: 2011-02-26 21:39+0100\n"
 "PO-Revision-Date: 2011-02-26 21:40+0100\n"
@@ -797,3 +797,4 @@ msgstr ""
 #: layouts/groups.layout:26 layouts/songtree.layout:36
 msgid "with picture"
 msgstr ""
+
