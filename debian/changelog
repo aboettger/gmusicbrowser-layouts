@@ -1,3 +1,17 @@
+gmusicbrowser-art (0.1.7) maverick; urgency=low
+
+  * dh_*
+
+ -- Andreas Böttger <andreas.boettger@gmx.de>  Mon, 28 Feb 2011 22:49:29 +0200
+
+
+gmusicbrowser-art (0.1.6) maverick; urgency=low
+
+  * dh_installdirs
+
+ -- Andreas Böttger <andreas.boettger@gmx.de>  Mon, 28 Feb 2011 22:35:28 +0200
+
+
 gmusicbrowser-art (0.1.5) maverick; urgency=low
 
   * dh_prep
