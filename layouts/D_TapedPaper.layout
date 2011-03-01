@@ -1,0 +1,22 @@
+[D_TapedPaper]
+# Sources:
+#
+# Background and overlay: Grungy_paper_v_6___or_sumtin___by_bashcorpo (http://danigranger.deviantart.com/) on deviantArt (http://fav.me/d1q3kbf)
+# Tape: Tape stocks by ~danigranger (http://bashcorpo.deviantart.com/) on deviantArt (http://fav.me/dmeybp)
+Type = D
+Author = aboettger
+
+Name = _"Taped paper"
+
+Category =
+
+SkinPath = skins/tapedpaper_skin
+
+Skin = bg.png::
+
+Default = Window(size=150x174)
+
+Window = transparent=1
+
+FBMainContainer = 0,24,150,150 Cover(minsize=150,maxsize=150,default=skins/tapedpaper_skin/bg.png,overlay=0x0:150x150:skins/tapedpaper_skin/overlay.png,click1="")
+
