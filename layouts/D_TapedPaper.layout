@@ -12,11 +12,11 @@ Category =
 
 SkinPath = skins/tapedpaper_skin
 
-Skin = bg.png::
+#Skin = bg.png::
 
 Default = Window(size=150x174)
 
 Window = transparent=1
 
-FBMainContainer = 0,24,150,150 Cover(minsize=150,maxsize=150,default=skins/tapedpaper_skin/bg.png,overlay=0x0:150x150:skins/tapedpaper_skin/overlay.png,click1="")
+FBMainContainer = 0,0 Cover(forceratio=1,minsize=150,maxsize=150,overlay=0x24:150x150:skins/tapedpaper_skin/overlay.png,click1="")
 
