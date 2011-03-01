@@ -1,12 +1,14 @@
-Source: gmusicbrowserart
+Source: gmusicbrowser-art
 Section: sound
 Priority: optional
 Maintainer: Andreas Böttger <andreas.boettger@gmx.de>
-Homepage: http://gmusicbrowser.org/
+Build-Depends: debhelper (>= 7)
+Standards-Version: 3.9.1
+Homepage: http://alecive.deviantart.com/
 
-Package: gmusicbrowserart
+Package: gmusicbrowser-art
 Architecture: all
-Depends: gmusicbrowser (>= 1.1.7)
+Depends: ${shlibs:Depends}, ${misc:Depends}, gmusicbrowser (>= 1.1.7)
 Recommends:
 Suggests:
 Description: No description yet
