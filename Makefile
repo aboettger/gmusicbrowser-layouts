@@ -17,26 +17,12 @@ miconsdir	= $(iconsdir)/mini
 DOCS=AUTHORS COPYING README NEWS INSTALL layout_doc.html
 LINGUAS=$(shell for l in po/*po; do basename $$l .po; done)
 
-all: locale
 clean:
 	rm -rf dist/
 distclean: clean
 	rm -rf locale/
 
-po/gmusicbrowser-art.pot : layouts/*.layout
-	perl po/create_pot.pl --quiet
-
-po/%.po : po/gmusicbrowser.pot
-	msgmerge -s -U -N $@ po/gmusicbrowser.pot
-
-locale/%/LC_MESSAGES/gmusicbrowser-art.mo : po/%.po po/gmusicbrowser-art.pot
-	mkdir -p locale/$*/LC_MESSAGES/
-	msgfmt --statistics -c -o $@ $<
-
-locale: $(foreach l,$(LINGUAS),locale/$l/LC_MESSAGES/gmusicbrowser-art.mo)
-
-
-install: all
+install:
 	install -pd "$(datadir)/gmusicbrowser/pix/awoken/"
 	install -pd "$(datadir)/gmusicbrowser/layouts-orig/"
 	install -pd "$(datadir)/gmusicbrowser/layouts/"
@@ -57,7 +43,7 @@ uninstall:
 
 postuninstall:
 
-prepackage : all
+prepackage :
 	perl -pi -e 's!Version:.*!Version: '$(VERSION)'!' gmusicbrowser-art.spec
 	mkdir -p dist/
 

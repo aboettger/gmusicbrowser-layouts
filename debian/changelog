@@ -1,3 +1,17 @@
+gmusicbrowser-art (0.1.12) maverick; urgency=low
+
+  * Makefile corrected
+
+ -- Andreas Böttger <andreas.boettger@gmx.de>  Tue, 01 Mar 2011 22:24:35 +0100
+
+
+gmusicbrowser-art (0.1.11) maverick; urgency=low
+
+  * a simple rule file
+
+ -- Andreas Böttger <andreas.boettger@gmx.de>  Tue, 01 Mar 2011 22:10:07 +0100
+
+
 gmusicbrowser-art (0.1.10) maverick; urgency=low
 
   * a simple rule file
