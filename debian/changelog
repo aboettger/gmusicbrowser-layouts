@@ -1,6 +1,6 @@
-gmusicbrowser-art (0.1.9) maverick; urgency=low
+gmusicbrowser-art (0.1.10) maverick; urgency=low
 
-  * next round: fighting with Launchpad
+  * a simple rule file
 
  -- Andreas Böttger <andreas.boettger@gmx.de>  Tue, 01 Mar 2011 21:43:36 +0100
 
