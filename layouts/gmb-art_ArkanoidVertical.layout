@@ -94,7 +94,7 @@ VBMain = HBMainMenuBar _NBMain -HBScale -HBReplayButtons -HBSearchBar
 
                 HBTitle = _Title(xalign=.5,markup="<big><big><b>%t</b></big></big>")
 
-                HBStars = _Stars(xalign=.5)
+                HBStars = 5Queue 5Pos _Stars(xalign=.5)
 
                 HBAlbum = _Album(xalign=.5,markup="<big>%l</big>")
 
