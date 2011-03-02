@@ -13,18 +13,22 @@ Default = Window(size=30%x100%)
 
 KeyBindings = \
     cs-T ShowHideWidget(HBMainMenuBar) \
-    cs-W ShowHideWidget(HBSearchBar)
+    cs-W ShowHideWidget(HBSearchBar) \
+    cs-N ShowHideWidget(HBInfo)
 
 VolumeScroll = HBReplayButtons HBVolume
 
-VBMain = HBMainMenuBar _NBMain -HBScale -HBReplayButtons -HBSearchBar
+VBMain = HBMainMenuBar _NBMain -HBScale -HBReplayButtons -HBInfo -HBSearchBar
 
-    HBScale = \
+    HBInfo = 2-Queue \
+        -Pos(xalign=1) \
         FilterLock(button=1,relief=none) \
         3Filler600 \
         HBSongLock \
         HBAlbumLock \
-        HBArtistLock \
+        HBArtistLock
+
+    HBScale = \
         _Scale
 
             HBSongLock = Label100(markup=_"<small>Song:</small>") \
@@ -94,7 +98,7 @@ VBMain = HBMainMenuBar _NBMain -HBScale -HBReplayButtons -HBSearchBar
 
                 HBTitle = _Title(xalign=.5,markup="<big><big><b>%t</b></big></big>")
 
-                HBStars = 5Queue 5Pos _Stars(xalign=.5)
+                HBStars = _Stars(xalign=.5)
 
                 HBAlbum = _Album(xalign=.5,markup="<big>%l</big>")
 
@@ -126,9 +130,12 @@ VBMain = HBMainMenuBar _NBMain -HBScale -HBReplayButtons -HBSearchBar
                 Filter(button=1) \
                 PlayFilter \
                 Button(size=menu,click1=GoToCurrentSong,stock=gtk-jump-to,tip=_"Go to playing song") \
-                 ResetFilter
+                5ResetFilter
 
-                    MBSongTree = QueueItem1(label="AQ",minwidth=34,maxwidth=34) PlayItem HistItem
+                    MBSongTree = \
+                        #QueueItem1(label="AQ",minwidth=34,maxwidth=34) \
+                        PlayItem \
+                        HistItem
 
 [ArkanoidVerticalHelp]
 # Help for Arkanoid Vertical
@@ -160,5 +167,6 @@ SBMain = VBMain
 
                     VBShortCuts = \
                         Text14(markup="<tt><b>Ctrl-Shift T</b></tt>    Show/Hide menu bar (<b><u>t</u></b>oolbar)") \
-                        Text20(markup="<tt><b>Ctrl-Shift W</b></tt>    Show/Hide search bar (<b><u>W</u></b>here is)")
+                        Text20(markup="<tt><b>Ctrl-Shift W</b></tt>    Show/Hide search bar (<b><u>W</u></b>here is)") \
+                        Text15(markup="<tt><b>Ctrl-Shift N</b></tt>    Show/Hide info and lock bar (i<b><u>n</u></b>fo and lockbar)") \
 
