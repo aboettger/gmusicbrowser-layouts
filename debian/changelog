@@ -1,3 +1,10 @@
+gmusicbrowser-art (0.1.13) maverick; urgency=low
+
+  * Compatibility with the shimmer gmusicbrowser project
+
+ -- Andreas Böttger <andreas.boettger@gmx.de>  Wed, 02 Mar 2011 09:47:07 +0100
+
+
 gmusicbrowser-art (0.1.12) maverick; urgency=low
 
   * Makefile corrected

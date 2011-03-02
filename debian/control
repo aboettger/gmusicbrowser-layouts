@@ -8,7 +8,7 @@ Homepage: http://alecive.deviantart.com/
 
 Package: gmusicbrowser-art
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}, gmusicbrowser (>= 1.1.7)
+Depends: ${shlibs:Depends}, ${misc:Depends}, gmusicbrowser (>= 1.1.6ppa6)
 Recommends:
 Suggests:
 Description: No description yet
