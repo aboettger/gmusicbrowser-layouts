@@ -8,9 +8,9 @@ Author = aboettger
 
 Name = _"Taped paper"
 
-Category =
+Category = gmb-art
 
-SkinPath = skins/tapedpaper_skin
+SkinPath = gmb-art_skins/tapedpaper_skin
 
 #Skin = bg.png::
 
@@ -18,5 +18,5 @@ Default = Window(size=150x174)
 
 Window = transparent=1
 
-FBMainContainer = 0,0 Cover(forceratio=1,minsize=150,maxsize=150,overlay=0x24:150x150:skins/tapedpaper_skin/overlay.png,click1="")
+FBMainContainer = 0,0 Cover(forceratio=1,minsize=150,maxsize=150,overlay=0x24:150x150:gmb-art_skins/tapedpaper_skin/overlay.png,click1="")
 

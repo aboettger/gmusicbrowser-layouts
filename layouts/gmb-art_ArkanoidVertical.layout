@@ -3,7 +3,9 @@
 Author=aboettger
 Type=G+
 
-SkinPath = skins/arkanoid_skin
+Category = gmb-art
+
+SkinPath = gmb-art_skins/arkanoid_skin
 
 Skin = background.png::s
 
@@ -83,7 +85,7 @@ VBMain = HBMainMenuBar _NBMain -HBScale -HBReplayButtons -HBSearchBar
                         _FilterPane2(nb=2,hidetabs=0,hidebb=0,tabpos=bottom,pages=genre,page=genre)
 
         VBCover = (tabtitle=_"Cover") \
-            _Cover(click1="",default=skins/arkanoid_skin/no-cover.svg) \
+            _Cover(click1="",default=gmb-art_skins/arkanoid_skin/no-cover.svg) \
             20HBTitle \
             HBArtist \
             HBAlbum \

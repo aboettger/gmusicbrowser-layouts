@@ -24,22 +24,18 @@ distclean: clean
 
 install:
 	install -pd "$(datadir)/gmusicbrowser/pix/awoken/"
-	install -pd "$(datadir)/gmusicbrowser/layouts-orig/"
 	install -pd "$(datadir)/gmusicbrowser/layouts/"
-	mv "$(datadir)/gmusicbrowser/layouts/" "$(datadir)/gmusicbrowser/layouts-orig/"
-	install -pd "$(datadir)/gmusicbrowser/layouts/"
-	install -pd "$(datadir)/gmusicbrowser/layouts/skins/"
+	install -pd "$(datadir)/gmusicbrowser/layouts/gmb-art_skins/"
 	install -pm 644 layouts/*.layout  "$(datadir)/gmusicbrowser/layouts/"
-	cp -rp layouts/skins/* "$(datadir)/gmusicbrowser/layouts/skins/"
+	cp -rp layouts/gmb-art_skins/* "$(datadir)/gmusicbrowser/layouts/gmb-art_skins/"
 	install -pm 644 icons/awoken/*.png    "$(datadir)/gmusicbrowser/pix/awoken/"
 
 postinstall:
 
 uninstall:
-	rm -rf "$(datadir)/gmusicbrowser/layouts"
-	rm -rf "$(datadir)/gmusicbrowser/layouts/skins"
+	rm -rf "$(datadir)/gmusicbrowser/layouts/gmb-art_skins"
 	rm -rf "$(datadir)/gmusicbrowser/pix/awoken"
-	mv "$(datadir)/gmusicbrowser/layouts-orig/layouts" "$(datadir)/gmusicbrowser/"
+	rm -f $(datadir)/gmusicbrowser/layouts/gmb-art*
 
 postuninstall:
 

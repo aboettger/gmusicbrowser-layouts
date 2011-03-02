@@ -3,9 +3,12 @@
 Type = T
 Author = aboettger
 
+Category = gmb-art
+
+
 Name = _"Arkanoid tray"
 
-SkinPath = skins/arkanoidtray_skin
+SkinPath = gmb-art_skins/arkanoidtray_skin
 
 Skin = base.png::
 

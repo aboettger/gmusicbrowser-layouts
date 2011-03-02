@@ -2,7 +2,8 @@
 Author = shimmerproject.org
 Type = G+
 
-Category = Common
+Category = gmb-art
+
 
 Title = %t by %a
 Default = Window(size=80%x80%)

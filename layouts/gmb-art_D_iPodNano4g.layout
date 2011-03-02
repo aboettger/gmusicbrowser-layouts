@@ -1,9 +1,12 @@
 [D_iPod_nano_4g]
 Type = D
+
+Category = gmb-art
+
 Author = aboettger
 Name = _"iPod nano 4g"
 
-SkinPath = skins/ipod_skin
+SkinPath = gmb-art_skins/ipod_skin
 
 Skin = Ipodnano4g.png::
 
@@ -47,7 +50,7 @@ FBMainContainer = \
 
     # Cover and Text and Select Button (ToggleButton)
     FBMainContainer1 = \
-        0,10 Cover1(minsize=50,maxsize=50,overlay=0x0:101x101:skins/ipod_skin/cover_overlay.png,click1="") \
+        0,10 Cover1(minsize=50,maxsize=50,overlay=0x0:101x101:gmb-art_skins/ipod_skin/cover_overlay.png,click1="") \
         0,67 FBTitleAlbumArtist1 \
         29,205 ToggleButton1(skin=select.png::s:normal_prelight_active,togglegroup=1,widget=FBMainContainer2)
 
@@ -73,6 +76,6 @@ FBMainContainer = \
 
     # Cover and Select Button (ToggleButton)
     FBMainContainer3 = \
-        3,10 Cover3(minsize=100,maxsize=100,overlay=0x0:101x101:skins/ipod_skin/cover_overlay.png,click1="") \
+        3,10 Cover3(minsize=100,maxsize=100,overlay=0x0:101x101:gmb-art_skins/ipod_skin/cover_overlay.png,click1="") \
         29,205 ToggleButton3(skin=select.png::s:normal_prelight_active,togglegroup=1,widget=FBMainContainer1)
 

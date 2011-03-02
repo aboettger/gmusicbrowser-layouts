@@ -5,9 +5,9 @@ Author = aboettger, gabriela2400
 
 Name = _"Gaia Rdio"
 
-Category = Covergloobus
+Category = gmb-art
 
-SkinPath = skins/gaiardio_skin
+SkinPath = gmb-art_skins/gaiardio_skin
 
 Skin = case.png::
 
@@ -17,7 +17,7 @@ Window = transparent=1
 
 VolumeScroll = VolBar
 
-FBMainContainer = 26,39 Cover(minsize=175,maxsize=175,overlay=0x0:181x181:skins/gaiardio_skin/overlay.png,click1="") \
+FBMainContainer = 26,39 Cover(minsize=175,maxsize=175,overlay=0x0:181x181:gmb-art_skins/gaiardio_skin/overlay.png,click1="") \
     54,226 Prev(skin=prev.png:::normal_prelight_active) \
     94,226 Play(skin=play_pause.png:::normal_prelight_active:play_pause) \
     134,226 Next(skin=next.png:::normal_prelight_active) \

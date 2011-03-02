@@ -1,3 +1,10 @@
+gmusicbrowser-art (0.1.12ppa2) maverick; urgency=low
+
+  * folders and files renamed
+
+ -- Andreas Böttger <andreas.boettger@gmx.de>  Wed, 02 Mar 2011 11:24:00 +0100
+
+
 gmusicbrowser-art (0.1.12ppa1) maverick; urgency=low
 
   * Compatibility with the shimmer gmusicbrowser project

@@ -1,2 +1,4 @@
-paper.layout
-testskin
+debian/files
+debian/gmusicbrowser-art.substvars
+debian/gmusicbrowser-art/
+

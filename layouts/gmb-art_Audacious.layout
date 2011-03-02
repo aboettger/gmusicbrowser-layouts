@@ -2,12 +2,12 @@
 Author = aboettger
 Type = G+
 
-Category = _"Make it look like"
+Category = gmb-art
 
 Title = %n %t (%m) - gmusicbrowser
 Default = Window(size=480x200)
 
-SkinPath = skins/audacious_skin
+SkinPath = gmb-art_skins/audacious_skin
 
 Skin = background.png::e
 

@@ -1,5 +1,9 @@
 [VastOne GQLC]
 Type=G+
+
+Category = gmb-art
+
+
 Title		= Gmusicbrowser playing %S by %a
 Default		= Window(size=1120x820) FilterPane0(page=genre) FilterPane1(page=artist) FilterPane2(page=album,albumpsize=32,albuminfo=1) QueueList(cols=titleaa length) VPRight(size=230-353) VPListAndQueue(size=195-588)
 MBmenu		= MainMenuItem LayoutItem PSortItem PFilterItem QueueItem SMView
@@ -7,19 +11,19 @@ SMView		= (label=_"View") MenuItem0(togglewidget=HPfp0,label=_"Categories pane")
 # MBlist 		= HistItem LSortItem PlayItem
 HBmenu		= MBmenu _HBButtons3
 HBmain      = _VBmain
-# HBButtons1	= 10Prev Stop Play Next ExtraButtons 
+# HBButtons1	= 10Prev Stop Play Next ExtraButtons
 HBButtons3	= 5Sort 5Filter 5Queue 5Pos ExtraButtons -Pref -Quit -Button2(click1="RunPerlCode(::IdleCheck)",stock=gtk-refresh,size=button,minwidth=34,maxwidth=34,tip=_"check now") \
         -Button3(click1="RunPerlCode(::IdleScan)",stock=gtk-zoom-in,size=button,minwidth=34,maxwidth=34,tip=_"scan now")
 HBTime		= 7Prev 7Play 7Next PlayingTime(markup="%s",initsize="XX:XX",xalign=0) _TimeSlider(direct_mode=1) -Length(markup="$length",initsize="XX:XX",xalign=1)
 HBTitle		= Filler0 _Title -Stars
-HBArtist	= LockArtist _Artist 
+HBArtist	= LockArtist _Artist
 HBAlbum		= LockAlbum _Album 5-VolumeIcon
 VBText		= 2HBTitle 2HBArtist 2HBAlbum HBTime
 HBText_Cover	= _VBText
 VBplayer	= HBText_Cover
 VBLeft		= VBplayer _NBLists
-    NBLists = SongTree(tabtitle=_"Artist/Album Playing",activate=queueinsert, activate2=addplay, songypad=1, group=Play:artist) \ 
-Context(tabtitle=_"Context") \ 
+    NBLists = SongTree(tabtitle=_"Artist/Album Playing",activate=queueinsert, activate2=addplay, songypad=1, group=Play:artist) \
+Context(tabtitle=_"Context") \
 VBartist \
 VBalbum \
 SongSearch(tabtitle=_"Song",activate=queueinsert)
@@ -34,7 +38,8 @@ VPRight		= HPfp0 _VBSongList
 VPListAndQueue = VBQueue VPRight
     VBQueue = _QueueList(group=1) HBQueueButtons
         HBQueueButtons	= EditListButtons(group=1,small=1) 4QueueActions
-HPBottom	= VBLeft _VPListAndQueue 
+HPBottom	= VBLeft _VPListAndQueue
 VBmain		= HBmenu 5_HPBottom
 HSize0		= Filler0 LockArtist LockAlbum
 VolumeScroll	= VBplayer
+

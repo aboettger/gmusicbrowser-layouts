@@ -2,7 +2,7 @@
 Author = shimmerproject.org
 Type = G+
 
-Category = Common
+Category = gmb-art
 
 Title = %a - %t
 Default = Window(size=80%x80%) HPSidebarAndCenter(size=200)

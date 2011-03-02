@@ -3,9 +3,9 @@
 Author=aboettger
 Type=D
 
-Category = Fun
+Category = gmb-art
 
-SkinPath = skins/arkanoid_skin
+SkinPath = gmb-art_skins/arkanoid_skin
 
 Skin = Arkanoid_Level_1.png::e
 
