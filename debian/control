@@ -4,12 +4,13 @@ Priority: optional
 Maintainer: Andreas Böttger <andreas.boettger@gmx.de>
 Build-Depends: debhelper (>= 7)
 Standards-Version: 3.9.1
-Homepage: http://alecive.deviantart.com/
+Homepage: http://gmusicbrowser.deviantart.com/
 
 Package: gmusicbrowser-art
 Architecture: all
 Depends: ${shlibs:Depends}, ${misc:Depends}, gmusicbrowser (>= 1.1.6ppa6)
 Recommends:
 Suggests:
-Description: No description yet
+Description: Additional layouts for gmusicbrowser.
+ Additional layouts, icons, etc. for gmusicbrowser (http://gmusicbrowser.org/).
 

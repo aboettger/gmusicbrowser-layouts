@@ -1,7 +1,8 @@
-gmusicbrowser-art (0.1.13) maverick; urgency=low
+gmusicbrowser-art (0.1.12ppa1) maverick; urgency=low
 
   * Compatibility with the shimmer gmusicbrowser project
-  * Merge branch 'master' of https://github.com/VastOne/gmusicbrowser-layouts into VastOne-master
+  * Merge branch 'master' of https://github.com/VastOne/gmusicbrowser-layouts
+    into VastOne-master
 
  -- Andreas Böttger <andreas.boettger@gmx.de>  Wed, 02 Mar 2011 09:47:07 +0100
 
