@@ -1,5 +1,6 @@
 [VastOne GQLC Bottom]
 Type=G+
+Category = gmb-art
 Title		= Gmusicbrowser playing %S by %a
 Default		= Window(size=1120x820) FilterPane0(page=genre) FilterPane1(page=artist) FilterPane2(page=album,albumpsize=32,albuminfo=1) QueueList(cols=titleaa length) VPRight(size=230-353) VPListAndQueue(size=195-588)
 MBmenu		= MainMenuItem LayoutItem PSortItem PFilterItem QueueItem SMView
@@ -7,7 +8,7 @@ SMView		= (label=_"View") MenuItem0(togglewidget=HPfp0,label=_"Categories pane")
 # HBButtons1	= -Pos -Queue -5Sort -5Filter
 # HBButtons2	= OpenBrowser Pref Quit
 # VBButtons	= HBButtons1 HBButtons2
-HBTitle		= Filler0 _Title 
+HBTitle		= Filler0 _Title
 HBArtist	= LockArtist _Artist -Stars
 HBAlbum		= LockAlbum _Album -VBVol
 HBTime		= 7Prev 7Play 7Next PlayingTime(markup="%s",initsize="XX:XX",xalign=0) _TimeSlider(direct_mode=1) -Length(markup="$length",initsize="XX:XX",xalign=1)
@@ -18,8 +19,8 @@ HBmenu		= MBmenu 5Sort 5Filter 5Queue 5Pos ExtraButtons -Quit -Pref -Button2(cli
 VBleft2		= HBleft 6_HBTime
 VBVol		= VolumeIcon
 VBLeft		= _NBLists
-    NBLists = SongTree(tabtitle=_"Artist/Album Playing",activate=queueinsert, activate2=addplay, songypad=1, group=Play:artist) \ 
-Context(tabtitle=_"Context") \ 
+    NBLists = SongTree(tabtitle=_"Artist/Album Playing",activate=queueinsert, activate2=addplay, songypad=1, group=Play:artist) \
+Context(tabtitle=_"Context") \
 VBartist \
 VBalbum \
 SongSearch(tabtitle=_"Song",activate=queueinsert)
@@ -40,3 +41,4 @@ HPBottom	= VBLeft _VPListAndQueue
 VBmain		= HBmenu 5_HPBottom  HBupper
 HSize0		= Filler0 LockArtist LockAlbum
 VolumeScroll	= HBupper
+
