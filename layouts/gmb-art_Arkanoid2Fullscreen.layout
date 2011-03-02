@@ -30,7 +30,7 @@ VBMainContainer  = _HPContent -HBReplayButtons
 Author=aboettger
 Type=F
 
-Category = Arkanoid
+Category = gmb-art
 
     HPContent = HBCover HBQueueList
         HBQueueList = _QueueList
