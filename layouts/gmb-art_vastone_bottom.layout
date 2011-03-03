@@ -1,5 +1,6 @@
 [VastOne GQLC Bottom]
-Type=G+
+Type=G
+Author=VastOne
 Category = gmb-art
 Title		= Gmusicbrowser playing %S by %a
 Default		= Window(size=1120x820) FilterPane0(page=genre) FilterPane1(page=artist) FilterPane2(page=album,albumpsize=32,albuminfo=1) QueueList(cols=titleaa length) VPRight(size=230-353) VPListAndQueue(size=195-588)

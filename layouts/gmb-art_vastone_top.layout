@@ -1,5 +1,6 @@
 [VastOne GQLC Top]
-Type=G+
+Type=G
+Author=VastOne
 Category = gmb-art
 
 Title		= Gmusicbrowser playing %S by %a

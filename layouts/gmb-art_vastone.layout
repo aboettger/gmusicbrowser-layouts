@@ -1,19 +1,42 @@
 [VastOne GQLC]
-Type=G+
+Type=G
+Author=VastOne
 
 Category = gmb-art
 
+Default = Window(size=1120x820) \
+    FilterPane0(page=genre) \
+    FilterPane1(page=artist) \
+    FilterPane2(page=album,albumpsize=32,albuminfo=1) \
+    QueueList(cols=titleaa length) \
+    VPRight(size=230-353) \
+    VPListAndQueue(size=195-588)
 
-Title		= Gmusicbrowser playing %S by %a
-Default		= Window(size=1120x820) FilterPane0(page=genre) FilterPane1(page=artist) FilterPane2(page=album,albumpsize=32,albuminfo=1) QueueList(cols=titleaa length) VPRight(size=230-353) VPListAndQueue(size=195-588)
-MBmenu		= MainMenuItem LayoutItem PSortItem PFilterItem QueueItem SMView
+Title = Gmusicbrowser playing %S by %a
+
+MBmenu = MainMenuItem \
+    LayoutItem \
+    PSortItem \
+    PFilterItem \
+    QueueItem \
+    SMView
+
 SMView		= (label=_"View") MenuItem0(togglewidget=HPfp0,label=_"Categories pane") MenuItem1(togglewidget=FilterPane0,label=_"Genres pane") MenuItem2(togglewidget=FilterPane2,label=_"Album pane") MenuItem3(togglewidget=FilterPane1,label=_"Artist pane") MenuItem4(togglewidget=NBLists,label=_"Left pane") MenuItem5(togglewidget=QueueList,label=_"Queue") MenuItem6(togglewidget=VBSongList,label=_"Playlist")
-# MBlist 		= HistItem LSortItem PlayItem
+
 HBmenu		= MBmenu _HBButtons3
 HBmain      = _VBmain
-# HBButtons1	= 10Prev Stop Play Next ExtraButtons
-HBButtons3	= 5Sort 5Filter 5Queue 5Pos ExtraButtons -Pref -Quit -Button2(click1="RunPerlCode(::IdleCheck)",stock=gtk-refresh,size=button,minwidth=34,maxwidth=34,tip=_"check now") \
-        -Button3(click1="RunPerlCode(::IdleScan)",stock=gtk-zoom-in,size=button,minwidth=34,maxwidth=34,tip=_"scan now")
+
+HBButtons3	= \
+    5Sort \
+    5Filter \
+    5Queue \
+    5Pos \
+    -Quit \
+    -Pref \
+    -Button2(click1="RunPerlCode(::IdleCheck)",stock=gtk-refresh,tip=_"check now") \
+    -Button3(click1="RunPerlCode(::IdleScan)",stock=gtk-zoom-in,tip=_"scan now") \
+    -ExtraButtons
+
 HBTime		= 7Prev 7Play 7Next PlayingTime(markup="%s",initsize="XX:XX",xalign=0) _TimeSlider(direct_mode=1) -Length(markup="$length",initsize="XX:XX",xalign=1)
 HBTitle		= Filler0 _Title -Stars
 HBArtist	= LockArtist _Artist
