@@ -168,5 +168,5 @@ SBMain = VBMain
                     VBShortCuts = \
                         Text14(markup="<tt><b>Ctrl-Shift T</b></tt>    Show/Hide menu bar (<b><u>t</u></b>oolbar)") \
                         Text20(markup="<tt><b>Ctrl-Shift W</b></tt>    Show/Hide search bar (<b><u>W</u></b>here is)") \
-                        Text15(markup="<tt><b>Ctrl-Shift N</b></tt>    Show/Hide info and lock bar (i<b><u>n</u></b>fo and lockbar)") \
+                        Text15(markup="<tt><b>Ctrl-Shift N</b></tt>    Show/Hide info and lock bar (i<b><u>n</u></b>fo and lockbar)")
 
