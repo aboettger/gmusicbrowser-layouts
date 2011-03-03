@@ -20,16 +20,17 @@ VolumeScroll = HBReplayButtons HBVolume
 
 VBMain = HBMainMenuBar _NBMain -HBScale -HBReplayButtons -HBInfo -HBSearchBar
 
-    HBInfo = 2-Queue \
-        -Pos(xalign=1) \
-        FilterLock(button=1,relief=none) \
+    HBInfo = \
+        2-Pos(xalign=1) \
+        -Queue(button=1,stock="queue:gmb-queue gtk-edit noqueue:gtk-edit gmb-queue") \
+        -Sort1(button=1) \
+        -FilterLock(relief=none) \
         3Filler600 \
         HBSongLock \
         HBAlbumLock \
         HBArtistLock
 
-    HBScale = \
-        _Scale
+    HBScale = _Scale
 
             HBSongLock = Label100(markup=_"<small>Song:</small>") \
                 LockSong1(button=1,stock="on:gmb-lock gmb-locklight off:gmb-locklight gmb-lock")
@@ -127,9 +128,11 @@ VBMain = HBMainMenuBar _NBMain -HBScale -HBReplayButtons -HBInfo -HBSearchBar
                 MBSongTree \
                 Sort(button=1) \
                 QueueFilter \
+                VSeparator100 \
                 Filter(button=1) \
                 PlayFilter \
-                Button(size=menu,click1=GoToCurrentSong,stock=gtk-jump-to,tip=_"Go to playing song") \
+                VSeparator101 \
+                Button(click1=GoToCurrentSong,stock=gtk-jump-to,tip=_"Go to playing song") \
                 5ResetFilter
 
                     MBSongTree = \
