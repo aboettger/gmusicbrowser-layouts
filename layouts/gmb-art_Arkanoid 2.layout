@@ -64,9 +64,9 @@ HBMainContainer = 3Filler1 _VBMainContainer 3Filler2
                 HBAlterTimeBar = _Scale2
 
                 HBAlterReplayButtons = 0Filler51 \
-                    Prev1(size=small-toolbar,tip=_"Previous Song") \
-                    Play1(size=small-toolbar,tip=_"Play/Pause") \
-                    Next1(size=small-toolbar,tip=_"Next Song") \
+                    Prev1(tip=_"Previous Song") \
+                    Play1(tip=_"Play/Pause") \
+                    Next1(tip=_"Next Song") \
                     5Filler61
 
             HBTotal = -Total(size=small)
@@ -91,15 +91,15 @@ HBMainContainer = 3Filler1 _VBMainContainer 3Filler2
                 HBVolume \
                 HSeparator2 \
                 MBViews \
-                ExtraButtons(size=button,minwidth=34,maxwidth=34) \
-                Playlist(size=button,minwidth=34,maxwidth=34) \
-                -Button5(click1="Quit",relief=none,size=button,stock=gtk-quit,minwidth=34,maxwidth=34,tip=_"Quit") \
-                -Button4(click1="OpenCustom(ArkanoidHelp)",relief=none,size=button,stock=gtk-help,minwidth=34,maxwidth=34,tip=_"Help") \
-                -Pref(stock=gtk-preferences,size=button,minwidth=34,maxwidth=34) \
-                -Button2(click1="RunPerlCode(::IdleCheck)",stock=gtk-refresh,size=button,minwidth=34,maxwidth=34,tip=_"check now") \
-                -Button3(click1="RunPerlCode(::IdleScan)",stock=gtk-zoom-in,size=button,minwidth=34,maxwidth=34,tip=_"scan now") \
+                ExtraButtons \
+                Playlist \
+                -Button5(click1="Quit",relief=none,stock=gtk-quit,tip=_"Quit") \
+                -Button4(click1="OpenCustom(ArkanoidHelp)",relief=none,stock=gtk-help,tip=_"Help") \
+                -Pref(stock=gtk-preferences) \
+                -Button2(click1="RunPerlCode(::IdleCheck)",stock=gtk-refresh,tip=_"check now") \
+                -Button3(click1="RunPerlCode(::IdleScan)",stock=gtk-zoom-in,,tip=_"scan now") \
                 -HSeparator1 \
-                -Button1(click1="RunPerlCode(::ChooseAddPath(0,1))",stock=gtk-add,size=button,minwidth=34,maxwidth=34,tip=_"Add folder ...")
+                -Button1(click1="RunPerlCode(::ChooseAddPath(0,1))",stock=gtk-add,tip=_"Add folder ...")
 
                     MBViews = SMViews
 
@@ -179,9 +179,9 @@ HBMainContainer = 3Filler1 _VBMainContainer 3Filler2
                         VBReplayButtons = 5Filler16 HBReplayButtons
 
                             HBReplayButtons = _Filler14 \
-                                Prev(size=large-toolbar,tip=_"Previous Song") \
-                                Play(size=button,tip=_"Play/Pause") \
-                                Next(size=large-toolbar,tip=_"Next Song") \
+                                Prev(tip=_"Previous Song") \
+                                Play(tip=_"Play/Pause") \
+                                Next(tip=_"Next Song") \
                                 _Filler15
 
                     ############################################################

@@ -43,15 +43,15 @@ VBMain = HBMainMenuBar _NBMain -HBScale -HBReplayButtons -HBInfo -HBSearchBar
     HBMainMenuBar = \
         HBVolume \
         VSeparator2 \
-        ExtraButtons(size=button,minwidth=34,maxwidth=34) \
-        Playlist(size=button,minwidth=34,maxwidth=34) \
-        -Button5(click1="Quit",relief=none,size=button,stock=gtk-quit,minwidth=34,maxwidth=34,tip=_"Quit") \
-        -Button4(click1="OpenCustom(ArkanoidVerticalHelp)",relief=none,size=button,stock=gtk-help,minwidth=34,maxwidth=34,tip=_"Help") \
-        -Pref(stock=gtk-preferences,size=button,minwidth=34,maxwidth=34) \
-        -Button2(click1="RunPerlCode(::IdleCheck)",stock=gtk-refresh,size=button,minwidth=34,maxwidth=34,tip=_"check now") \
-        -Button3(click1="RunPerlCode(::IdleScan)",stock=gtk-zoom-in,size=button,minwidth=34,maxwidth=34,tip=_"scan now") \
+        ExtraButtons \
+        Playlist \
+        -Button5(click1="Quit",relief=none,stock=gtk-quit,tip=_"Quit") \
+        -Button4(click1="OpenCustom(ArkanoidVerticalHelp)",relief=none,stock=gtk-help,tip=_"Help") \
+        -Pref(stock=gtk-preferences) \
+        -Button2(click1="RunPerlCode(::IdleCheck)",stock=gtk-refresh,tip=_"check now") \
+        -Button3(click1="RunPerlCode(::IdleScan)",stock=gtk-zoom-in,tip=_"scan now") \
         -VSeparator1 \
-        -Button1(click1="RunPerlCode(::ChooseAddPath(0,1))",stock=gtk-add,size=button,minwidth=34,maxwidth=34,tip=_"Add folder ...")
+        -Button1(click1="RunPerlCode(::ChooseAddPath(0,1))",stock=gtk-add,tip=_"Add folder ...")
 
         HBVolume = VolumeIcon(button=1)
 
@@ -59,9 +59,9 @@ VBMain = HBMainMenuBar _NBMain -HBScale -HBReplayButtons -HBInfo -HBSearchBar
 
     HBReplayButtons = \
         _Filler100 \
-        Prev(size=large-toolbar,tip=_"Previous Song") \
-        Play(size=button,tip=_"Play/Pause") \
-        Next(size=large-toolbar,tip=_"Next Song") \
+        Prev(tip=_"Previous Song") \
+        Play(tip=_"Play/Pause") \
+        Next(tip=_"Next Song") \
         _Filler101
 
     NBMain = (tabpos=bottom,typesubmenu='PC',pages="VBCover VBCurrentPlay VBSavedFilterPane VBArtist VBAlbum VBSongTree VBQueueList VBPlayList") \

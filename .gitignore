@@ -1,4 +1,6 @@
 debian/files
+debian/dirs
 debian/gmusicbrowser-art.substvars
+debian/gmusicbrowser-art.debhelper.log
 debian/gmusicbrowser-art/
 
