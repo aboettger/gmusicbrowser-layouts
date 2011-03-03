@@ -1,3 +1,10 @@
+gmusicbrowser-art (0.1.13ppa1) lucid; urgency=low
+
+  * all symbolic links removed :(
+
+ -- Andreas Böttger <andreas.boettger@gmx.de>  Thu, 03 Mar 2011 14:56:07 +0100
+
+
 gmusicbrowser-art (0.1.13ppa0) lucid; urgency=low
 
   * lucid packages
