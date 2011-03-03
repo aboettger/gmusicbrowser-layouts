@@ -23,18 +23,21 @@ distclean: clean
 	rm -rf locale/
 
 install:
-	install -pd "$(datadir)/gmusicbrowser/pix/awoken/"
+	install -pd "$(datadir)/gmusicbrowser/pix/gmb-art - awoken/"
+	install -pd "$(datadir)/gmusicbrowser/pix/gmb-art - faenza/"
 	install -pd "$(datadir)/gmusicbrowser/layouts/"
 	install -pd "$(datadir)/gmusicbrowser/layouts/gmb-art_skins/"
 	install -pm 644 layouts/*.layout  "$(datadir)/gmusicbrowser/layouts/"
 	cp -rp layouts/gmb-art_skins/* "$(datadir)/gmusicbrowser/layouts/gmb-art_skins/"
-	install -pm 644 icons/awoken/*.png    "$(datadir)/gmusicbrowser/pix/awoken/"
+	install -pm 644 icons/gmb-art\ -\ awoken/*.png    "$(datadir)/gmusicbrowser/pix/gmb-art - awoken/"
+	install -pm 644 icons/gmb-art\ -\ faenza/*.png    "$(datadir)/gmusicbrowser/pix/gmb-art - faenza/"
 
 postinstall:
 
 uninstall:
 	rm -rf "$(datadir)/gmusicbrowser/layouts/gmb-art_skins"
-	rm -rf "$(datadir)/gmusicbrowser/pix/awoken"
+	rm -rf "$(datadir)/gmusicbrowser/pix/gmb-art - awoken"
+	rm -rf "$(datadir)/gmusicbrowser/pix/gmb-art - faenza"
 	rm -f $(datadir)/gmusicbrowser/layouts/gmb-art*
 
 postuninstall:

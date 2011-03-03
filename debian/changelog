@@ -1,3 +1,11 @@
+gmusicbrowser-art (0.1.12ppa3) lucid; urgency=low
+
+  * lucid packages
+  * new icon theme: gmb-art - faenza
+
+ -- Andreas Böttger <andreas.boettger@gmx.de>  Thu, 03 Mar 2011 10:26:56 +0100
+
+
 gmusicbrowser-art (0.1.12ppa2) maverick; urgency=low
 
   * folders and files renamed
