@@ -180,7 +180,7 @@ HBMainContainer = 3Filler1 _VBMainContainer 3Filler2
 
                             HBReplayButtons = _Filler14 \
                                 Prev(size=large-toolbar,tip=_"Previous Song") \
-                                Play(size=dialog,tip=_"Play/Pause") \
+                                Play(size=button,tip=_"Play/Pause") \
                                 Next(size=large-toolbar,tip=_"Next Song") \
                                 _Filler15
 

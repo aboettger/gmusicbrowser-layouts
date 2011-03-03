@@ -60,7 +60,7 @@ VBMain = HBMainMenuBar _NBMain -HBScale -HBReplayButtons -HBInfo -HBSearchBar
     HBReplayButtons = \
         _Filler100 \
         Prev(size=large-toolbar,tip=_"Previous Song") \
-        Play(size=dialog,tip=_"Play/Pause") \
+        Play(size=button,tip=_"Play/Pause") \
         Next(size=large-toolbar,tip=_"Next Song") \
         _Filler101
 
