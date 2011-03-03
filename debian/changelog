@@ -1,8 +1,11 @@
 gmusicbrowser-art (0.1.13ppa2) lucid; urgency=low
 
   * Fixed: syntax error in help layout for arkanoid vertical
-  * different icon sizes for faenza icon theme
-  * cover overlay for Arkanoid Vertical
+  * Different icon sizes for faenza icon theme
+  * Cover overlay for Arkanoid Vertical
+  * Small changes to the layout of VastOne
+  * Additional album breadcrumb icon for awoken
+  * Tray icons (normal, play, pause) for awoken
 
  -- Andreas Böttger <andreas.boettger@gmx.de>  Thu, 03 Mar 2011 19:43:39 +0100
 
