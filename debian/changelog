@@ -8,6 +8,7 @@ gmusicbrowser-art (0.1.13ppa2) lucid; urgency=low
   * Tray icons (normal, play, pause) for awoken
   * License text added
   * Some changes for buttons in Arkanoid Vertical
+  * Progress added: Arkanoid Vertical
 
  -- Andreas Böttger <andreas.boettger@gmx.de>  Thu, 03 Mar 2011 19:43:39 +0100
 
