@@ -46,6 +46,7 @@ VBMain = HBMainMenuBar _NBMain -HBScale -HBReplayButtons -HBInfo -HBSearchBar
         VSeparator2 \
         ExtraButtons \
         Playlist \
+        5_Progress \
         -Button5(click1="Quit",relief=none,stock=gtk-quit,tip=_"Quit") \
         -Button4(click1="OpenCustom(ArkanoidVerticalHelp)",relief=none,stock=gtk-help,tip=_"Help") \
         -Pref(stock=gtk-preferences) \
