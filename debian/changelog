@@ -9,8 +9,9 @@ gmusicbrowser-art (0.1.13ppa2) lucid; urgency=low
   * License text added
   * Some changes for buttons in Arkanoid Vertical
   * Progress added: Arkanoid Vertical
+  * New icon theme: gmb-art - elementary
 
- -- Andreas Böttger <andreas.boettger@gmx.de>  Thu, 03 Mar 2011 19:43:39 +0100
+ -- Andreas Böttger <andreas.boettger@gmx.de>  Sun, 06 Mar 2011 15:33:06 +0100
 
 
 gmusicbrowser-art (0.1.13ppa1) lucid; urgency=low
