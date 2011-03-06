@@ -20,7 +20,7 @@ VolumeScroll = HBReplayButtons HBVolume
 
 VBMain = HBMainMenuBar _NBMain -HBScale -HBReplayButtons -HBInfo -HBSearchBar
 
-    HBInfo = \
+    HBInfo = FBHide3 \
         2-Pos(xalign=1) \
         -Queue(button=1,stock="queue:gmb-queue gtk-edit noqueue:gtk-edit gmb-queue") \
         -Sort1(button=1) \
@@ -29,6 +29,8 @@ VBMain = HBMainMenuBar _NBMain -HBScale -HBReplayButtons -HBInfo -HBSearchBar
         HBSongLock \
         HBAlbumLock \
         HBArtistLock
+
+        FBHide3 = 1,1,8,8 ToggleButton97(skin=hide.png::normal,widget=HBInfo)
 
     HBScale = _Scale
 
@@ -42,6 +44,7 @@ VBMain = HBMainMenuBar _NBMain -HBScale -HBReplayButtons -HBInfo -HBSearchBar
                 LockArtist1(button=1,stock="on:gmb-lock gmb-locklight off:gmb-locklight gmb-lock")
 
     HBMainMenuBar = \
+        FBHide1 \
         HBVolume \
         VSeparator2 \
         ExtraButtons \
@@ -55,9 +58,14 @@ VBMain = HBMainMenuBar _NBMain -HBScale -HBReplayButtons -HBInfo -HBSearchBar
         -VSeparator1 \
         -Button1(click1="RunPerlCode(::ChooseAddPath(0,1))",stock=gtk-add,tip=_"Add folder ...")
 
+        FBHide1 = 1,1,8,8 ToggleButton98(skin=hide.png::normal,widget=HBMainMenuBar)
+
         HBVolume = VolumeIcon(button=1)
 
-    HBSearchBar = _SimpleSearch(noselector=0,suggest=1) -Total(size=small,mode=filter)
+    HBSearchBar = FBHide2 \
+        _SimpleSearch(noselector=0,suggest=1) -Total(size=small,mode=filter)
+
+        FBHide2 = 1,1,8,8 ToggleButton99(skin=hide.png::normal,widget=HBSearchBar)
 
     HBReplayButtons = \
         _Filler100 \
