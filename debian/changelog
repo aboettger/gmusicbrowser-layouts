@@ -1,3 +1,10 @@
+gmusicbrowser-art (0.1.14) lucid; urgency=low
+
+  * bump version to 0.1.14ppa0
+
+ -- Andreas Böttger <andreas.boettger@gmx.de>  Sun, 06 Mar 2011 15:44:40 +0100
+
+
 gmusicbrowser-art (0.1.13ppa2) lucid; urgency=low
 
   * Fixed: syntax error in help layout for arkanoid vertical
