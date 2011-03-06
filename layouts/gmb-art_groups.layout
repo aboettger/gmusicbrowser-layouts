@@ -33,3 +33,30 @@ title:	text(pad=2, markup='<span font_desc="'.myfont.'">'.pesc($title).\
 		init_markup='<span font_desc="'.myfont.'"> </span>',)
 pic:	+aapic(y=title:h+title:y+4,picsize=picsize,ypad=2)
 
+
+{Group album_symbol}
+title = _"Album with cover or symbol"
+head = max(pic:h, title:h, symbol:h, ctrl:h)
+left = (pic:w + 2) / 2
+vcollapse = head
+vmin = head
+title: text(markup=pesc($album), pad=2,x=if(pic:wr, pic:w, symbol:w) + ctrl:w + 5, y=if(pic:wr, (pic:h / 2) - (title:h / 2), (24 / 2) - (title:h / 2)))
+#title: text(markup=pesc($album),pad=2,x=titlepos,y=(head-title:h)/2)
+symbol: icon(x=ctrl:w + 5, yalign=0, pad=2, icon='gmb-album', hide=pic:wr,size='button')
+ctrl: text(y=0, x=0, pad=2, markup='<big><b>'.if($_expanded,'-','+').'</b></big>')
+pic: aapic(x=ctrl:w + 5, picsize=size, pad=2, aa='album')
+size: OptionNumber(default=40, min=10, max=400, step=1)
+
+{Group artist_symbol}
+title = _"Artist with picture or symbol"
+head = max(pic:h, title:h, symbol:h, ctrl:h)
+left = (pic:w + 2) / 2
+vcollapse = head
+vmin = head
+title: text(markup=pesc($artist), pad=2,x=if(pic:wr, pic:w, symbol:w) + ctrl:w + 5, y=if(pic:wr, (pic:h / 2) - (title:h / 2), (24 / 2) - (title:h / 2)))
+#title: text(markup=pesc($album),pad=2,x=titlepos,y=(head-title:h)/2)
+symbol: icon(x=ctrl:w + 5, yalign=0, pad=2, icon='gmb-artist', hide=pic:wr,size='button')
+ctrl: text(y=0, x=0, pad=2, markup='<big><b>'.if($_expanded,'-','+').'</b></big>')
+pic: aapic(x=ctrl:w + 5, picsize=size, pad=2, aa='artist')
+size: OptionNumber(default=40, min=10, max=400, step=1)
+
