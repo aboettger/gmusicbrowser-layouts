@@ -1,7 +1,8 @@
 gmusicbrowser-art (0.1.14ppa1) lucid; urgency=low
 
   * Added: Button to hide elements in Arkanoid Vertical
-  * Added: New songtree groups to show artists/albums with cover/picture or symbol
+  * Added: New songtree groups to show artists/albums
+            with cover/picture or symbol
 
  -- Andreas Böttger <andreas.boettger@gmx.de>  Sun, 06 Mar 2011 16:24:28 +0100
 
