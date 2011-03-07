@@ -3,8 +3,9 @@ gmusicbrowser-art (0.1.14ppa1) lucid; urgency=low
   * Added: Button to hide elements in Arkanoid Vertical
   * Added: New songtree groups to show artists/albums
             with cover/picture or symbol
+  * Added: Conz layout family
 
- -- Andreas Böttger <andreas.boettger@gmx.de>  Sun, 06 Mar 2011 16:24:28 +0100
+ -- Andreas Böttger <andreas.boettger@gmx.de>  Mon, 07 Mar 2011 20:29:34 +0100
 
 
 gmusicbrowser-art (0.1.14) lucid; urgency=low
