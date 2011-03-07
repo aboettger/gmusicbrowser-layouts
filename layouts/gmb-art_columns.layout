@@ -1,4 +1,12 @@
-{Column playandskip}
+{Column gmb-art_playandskip}
 title = _"P&S"
+menutitle = _"gmb-art P&S"
 text: text(markup='<small>'.pesc(if($playcount,$playcount,0).'/'.if($skipcount,$skipcount,0)).'</small>')
+
+{Column gmb-art_ratingpic}
+title = _"Rating"
+menutitle = _"Rating (picture without resizing)"
+sort = rating
+width=100
+pic : picture(file=ratingpic($rating),h=$_h,w=$_w,init_file=ratingpic(0))
 
