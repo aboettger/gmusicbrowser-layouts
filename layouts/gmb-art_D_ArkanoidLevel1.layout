@@ -18,7 +18,7 @@ KeyBindings = \
     cs-H ShowHideWidget(FBShortCuts)
 
 FBMainContainer  = 70,200 FBShortCuts \
-    25,370,390,26 TimeBar(skin=bar.png::,handle_skin=pad.png:::normal) \
+    25,370,390,26 TimeBar(handle_skin=pad.png:::normal) \
     495,360 FBMainMenuBar
 
         FBShortCuts = \
