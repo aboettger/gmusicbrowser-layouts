@@ -324,7 +324,7 @@ VBmain  = _VBTreeAndInfo
             ResetFilter(group=1) \
             Refresh(group=1) \
             PlayFilter(group=1) \
-            FilterLock(group=1) \
+            FilterLock(relief=none,group=1) \
             -Pref(stock=gtk-preferences,size=button) \
             -SimpleSearch(group=1,nb=1)
 
