@@ -9,7 +9,7 @@ SkinPath = gmb-art_skins/arkanoid_skin
 
 Skin = background.png::s
 
-Default = Window(size=30%x100%)
+Default = Window(size=30%x100%,hidden=VBPlayList)
 
 KeyBindings = \
     cs-T ShowHideWidget(HBMainMenuBar) \
@@ -49,6 +49,9 @@ VBMain = HBMainMenuBar _NBMain -HBScale -HBReplayButtons -HBInfo -HBSearchBar
         VSeparator2 \
         ExtraButtons \
         Playlist \
+#        VSeparator3 \
+#        ToggleButton5(relief=none,size=large-toolbar,icon=view-list,tip=_"Simple List View")togglegroup=1,widget=VBPlayList) \
+#        ToggleButton6(relief=none,size=large-toolbar,icon=view-tree,tip=_"Songtree View",togglegroup=1,widget=VBSongTree) \
         5_Progress \
         -Button5(click1="Quit",relief=none,stock=gtk-quit,tip=_"Quit") \
         -Button4(click1="OpenCustom(ArkanoidVerticalHelp)",relief=none,stock=gtk-help,tip=_"Help") \
@@ -81,7 +84,7 @@ VBMain = HBMainMenuBar _NBMain -HBScale -HBReplayButtons -HBInfo -HBSearchBar
         VBQueueList \
         VBPlayList
 
-            NBFilter = (tabtitle=_"Filter",tabpos=bottom,typesubmenu='',pages="HPSavedFilterPane VBArtist VBAlbum ") \
+            NBFilter = (tabtitle=_"Filter",tabicon="gmb-filter",tabpos=bottom,typesubmenu='',pages="HPSavedFilterPane VBArtist VBAlbum ") \
                 HPArtistFilter \
                 HPAlbumFilter \
                 HPMoreFilter
@@ -98,7 +101,7 @@ VBMain = HBMainMenuBar _NBMain -HBScale -HBReplayButtons -HBInfo -HBSearchBar
                         FilterPane03(nb=0,hidebb=0,tabpos=bottom,page=savedtree,pages=savedtree) \
                         _FilterPane2(nb=2,hidetabs=0,hidebb=0,tabpos=bottom,pages=genre,page=genre)
 
-        VBCover = (tabtitle=_"Cover") \
+        VBCover = (tabtitle=_"Cover",tabicon="gmb-picture") \
             _Cover(click1="",overlay=0x0:1000x1000:gmb-art_skins/arkanoid_skin/arkanoid-vert-overlay.png,default=gmb-art_skins/arkanoid_skin/no-cover.svg) \
             20HBTitle \
             HBArtist \
@@ -114,7 +117,7 @@ VBMain = HBMainMenuBar _NBMain -HBScale -HBReplayButtons -HBInfo -HBSearchBar
 
                 HBArtist = _Artist(xalign=.5,markup="<big>%a</big>")
 
-        VBQueueList = (tabtitle=_"Queue") \
+        VBQueueList = (tabtitle=_"Queue",tabicon="gmb-queue") \
             _HBQueueList \
             -HBEditListButtons
 
@@ -126,10 +129,10 @@ VBMain = HBMainMenuBar _NBMain -HBScale -HBReplayButtons -HBInfo -HBSearchBar
 
                 MBQueueItem = QueueItem(label="AQ",minwidth=34,maxwidth=34)
 
-        VBPlayList = (tabtitle=_"Playlist") \
-            _SongList(cols="playandqueue titleaa",colwidth="queuenumber 20",sort="path album:i disc track file",mode=playlist,grouping="album|artistalbum_breadcrumbs(picsize=100)",sort="path album disc track file",songtree=1,group=1,follow=1)
+#        VBPlayList = (tabtitle=_"Playlist",tabicon="view-list_16x16") \
+#            _SongList(cols="playandqueue titleaa",colwidth="queuenumber 20",sort="path album:i disc track file",mode=playlist,grouping="album|artistalbum_breadcrumbs(picsize=100)",sort="path album disc track file",follow=1)
 
-        VBSongTree = (tabtitle=_"Songlist") \
+        VBSongTree = (tabtitle=_"Playlist",tabicon="view-tree_16x16") \
             _SongTree(cols="playandqueue track title ratingpic artist album",colwidth="album 150 artist 200 title 200",follow=1,grouping="album|artistalbum_breadcrumbs(picsize=100)",sort="path album disc track file") \
             HBSongTreeAct
 
