@@ -22,5 +22,5 @@ FBMainContainer = 0,0,291,56 FBMain
         229,3 Play(button=0,size=large-toolbar,tip=_"Play/Pause") \
         251,3 Next(button=0,size=large-toolbar,tip=_"Next Song") \
         210,38 Stars \
-        0,53,291,3 TimeBar(skin=bar.png::,handle_skin=pad.png::normal)
+        0,53,291,3 TimeBar(handle_skin=pad.png::normal)
 
