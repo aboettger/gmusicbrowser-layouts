@@ -1,0 +1,21 @@
+[Conz Aardvark]
+
+Author = "Satoshi Hayazaki"
+Type=G+
+
+Category = gmb-art
+
+Default = Window(size=80%x80%)
+
+VBall		= MBmenu HBStatus _HPmain
+MBmenu          = MainMenuItem LayoutItem PSortItem PFilterItem QueueItem
+HBStatus	= Sort Prev(size=menu) Stop(size=menu) Play(size=menu) Next(size=menu) _TimeBar(minwidth=500,text="%t by %a") LabelTime Length _Album(markup='<i><b> %l</b> (%y)</i>') -TogButton(label="Filter",widget=HBSearch,size=menu) Pref(size=menu) -Quit(size=menu)
+HPmain          = _HPpart
+HPpart		= VBpart2 NBpart3
+VBpart2		= HBSearch _VPcenter
+NBpart3		= PluginLyrics(shadow=none,HideToolbar=1) QueueList(hideif=empty,songtree=1,cols="albumminipic titleaa length") PluginArtistinfo(tabtitle="Artist Info") VPAlbum
+VPAlbum		= (tabtitle="Album") AABox(aa=album) _SongTree1(group=Play:artist)
+VPcenter        = _VBcenterdown
+VBcenterdown	= _SongTree(grouping="artist|pic(myfont=Arial%20Italic%2018,picsize=20,showyear=)|album|pic(myfont=Arial%20Bold%2018,picsize=250,showyear=1)")
+HBSearch	= SimpleSearch -Total
+

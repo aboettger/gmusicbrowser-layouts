@@ -1,0 +1,26 @@
+[Conz Glimm (different controls)]
+
+Author = "Satoshi Hayazaki"
+Type=G+
+
+Category = gmb-art
+
+Default = Window(size=80%x80%)
+
+VBall			= MBmenu 3Filler1 HBplaybar _HPmain 2Filler6
+MBmenu          = MainMenuItem LayoutItem PSortItem PFilterItem QueueItem
+HBplaybar		= Play(size=large-toolbar) 2Filler4 _VBplaycenter 4Filler8 -Quit
+VBplaycenter    = HBtitles HBtimebar
+HBtitles		=   Title1(markup="<b> <big>◄◄</big> %t</b>〈 %a 〉", group=Recent, click1=PrevSong, markup_empty="", minsize=50, tip='Click for previous song') \
+					_10Title_by(xalign=.5, tip='Click to play/pause song', click1=PlayPause) \
+					Title2(markup="〈 %a 〉<b>%t <big>►►</big> </b>",group=Next, click1=NextSong, xalign=1, markup_empty="<b><i>Next</i></b>", minsize=50, tip='Click for next song')
+HBtimebar		= Time(markup=%s,initsize="-XX:XX") _Scale LabelTime(markup='%m ')
+HPmain          = _HPpart
+HPpart			= VBpart2 NBpart3
+VBpart2			= HBSearch _VPcenter
+NBpart3			= PluginLyrics(shadow=none,HideToolbar=1) QueueList(hideif=empty,songtree=1,cols="albumminipic titleaa length") PluginArtistinfo(tabtitle="Artist Info") VPAlbum
+VPAlbum			= (tabtitle='Album') AABox(aa=album) _SongTree1(group=Play:artist)
+VPcenter        = _VBcenterdown
+VBcenterdown    = _SongTree(grouping="artist|pic(myfont=Arial%20Italic%2018,picsize=20,showyear=)|album|pic(myfont=Arial%20Bold%2018,picsize=600,showyear=1)" cols="Spacer playandqueueandtrack titleartist year length" )
+HBSearch		= SimpleSearch Refresh PlayFilter FLock _Total(xalign=.5) -Sort -Pref(size=menu) -VolumeIcon
+

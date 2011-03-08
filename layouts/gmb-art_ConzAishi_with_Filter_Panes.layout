@@ -1,0 +1,30 @@
+[Conz Aishi (with Filter Panes)]
+
+Author = "Satoshi Hayazaki"
+Type=G
+
+Category = gmb-art
+
+Default = Window(size=80%x80%,sticky=0)
+
+VBfirst		= 5Filler5 _HPall 2Filler6
+HPall		= VBall VPpanelyr
+VBall		= VBControls _HPmain
+VBControls	= HBStatus HBProgress HBControls
+HBStatus	= 4Filler1 HBTitle(xalign=.5, yalign=1) -Stars(yalign=0.5)
+HBTitle		= Title_by(expand_max=300,minsize=0,markup="<b>%t</b> by <b>%a</b> in <i>%l</i> (%y)",tip=_"Title: %t (Track No. %n)",yalign=0.5)
+HBControls	= Prev Stop Play Next 10Filler7 VolumeIcon(click1="") _VolumeSlider(horizontal=1, maxwidth=120) -ABSearch
+ABSearch	= (yscale=0) SimpleSearch
+HPmain          = _HPpart
+HPpart		= _VPcenter
+VPpanelyr	= HPFilters NBpart3
+#HPFilters	= HPFilter1 FPane2(pages=album, hidebb=1, rules_hint=1)
+#HPFilter1	= FPane0(pages=genre, hidebb=1) FPane1(pages=artist, hidebb=1)
+HPFilters = FPane0(pages=genre, hidebb=1) HPFilter1
+HPFilter1 = FPane2(pages=album, hidebb=1, rules_hint=1) FPane1(pages=artist, hidebb=1)
+NBpart3		= (tabpos="bottom") PluginLyrics(shadow=none,HideToolbar=1) QueueList(hideif=empty,songtree=1,cols="albumminipic titleaa length") PluginArtistinfo(tabtitle="Artist Info")
+VPcenter        = _VBcenterdown
+VBcenterdown	= _SongTree(grouping="artist|pic(myfont=Arial%20Italic%2018,picsize=20,showyear=)|album|pic(myfont=Arial%20Bold%2018,picsize=250,showyear=1) cols="Spacer playandqueuetrack titleartist year length") HBTotal
+HBTotal		=  Pref(size=menu) Sort #VolumeIcon #_VolumeSlider(horizontal=1) -Total -150Filler3
+HBProgress	= Time(markup=%s,initsize="-XX:XX") _Scale LabelTime(markup='%m ')
+

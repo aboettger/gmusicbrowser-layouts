@@ -1,5 +1,5 @@
-{Group artistalbum_breadcrumbs}
-title=_"album and artist breadcrumbs"
+{Group gmb-art_artistalbum_breadcrumbs}
+title=_"gmb-art - Album and artist breadcrumbs"
 head=title:h
 tail=25
 vcollapse=head
@@ -8,10 +8,10 @@ left=pic:w+2
 title:	text(markup='<b><big>'.pesc($album).'</big></b>'. if($year,'  <big><b>«</b></big>  '.pesc($year)) . '  <big><b>«</b></big> '.pesc($artist),pad=2)
 pic:	+aapic(y=title:h+title:y,picsize=picsize,ypad=2,xpad=1,aa='album')
 picsize : OptionNumber(default=100,min=20,max=1000,step=10)
-picstars : picture(file=ratingpic($rating_avrg),x=(picsize/2)-(picstars:w/2),y=pic:y+pic:h,hide=$rating_avrg==50)
+picstars : picture(file=ratingpic($rating_avrg),x=(picsize/2)-(picstars:w/2),y=pic:y+pic:h,hide=picsize < 80)
 
-{Group artistalbumdisk_breadcrumbs}
-title=_"album, artist and disk breadcrumbs"
+{Group gmb-art_artistalbumdisk_breadcrumbs}
+title=_"gmb-art - Album, artist and disk breadcrumbs"
 head=title:h
 tail=25
 vcollapse=head
@@ -20,16 +20,31 @@ left=pic:w+2
 title:	text(markup='<b><big>'.pesc($album).'</big></b>'. if($disc,'  <big><b>«</b></big>  <b>'.pesc($disc).'</b>'). if($year,'  <big><b>«</b></big>  '.pesc($year)) . '  <big><b>«</b></big>  '.pesc($artist),pad=2)
 pic:	+aapic(y=title:h+title:y,picsize=picsize,ypad=2,xpad=1,aa='album')
 picsize : OptionNumber(default=100,min=20,max=1000,step=10)
-picstars : picture(file=ratingpic($rating_avrg),x=(picsize/2)-(picstars:w/2),y=pic:y+pic:h,hide=$rating_avrg==50)
+picstars : picture(file=ratingpic($rating_avrg),x=(picsize/2)-(picstars:w/2),y=pic:y+pic:h,hide=picsize < 80)
 
-{Group pic}
-title= _"with picture"
-head=title:h
-vcollapse=head
-vmin=pic:y+pic:h+2
-left=pic:w+2
-title:	text(pad=2, markup='<span font_desc="'.myfont.'">'.pesc($title).\
-		if(showyear && $year,' <small>('.pesc($year).')</small>').'</span>',\
-		init_markup='<span font_desc="'.myfont.'"> </span>',)
-pic:	+aapic(y=title:h+title:y+4,picsize=picsize,ypad=2)
+{Group gmb-art_album_symbol}
+title = _"gmb-art - Album with cover or symbol"
+head = max(pic:h, title:h, symbol:h, ctrl:h)
+left = (pic:w + 2) / 2
+vcollapse = head
+vmin = head
+title: text(markup=pesc($album), pad=2,x=if(pic:wr, pic:w, symbol:w) + ctrl:w + 5, y=if(pic:wr, (pic:h / 2) - (title:h / 2), (24 / 2) - (title:h / 2)))
+#title: text(markup=pesc($album),pad=2,x=titlepos,y=(head-title:h)/2)
+symbol: icon(x=ctrl:w + 5, yalign=0, pad=2, icon='gmb-album', hide=pic:wr,size='button')
+ctrl: text(y=0, x=0, pad=2, markup='<big><b>'.if($_expanded,'-','+').'</b></big>')
+pic: aapic(x=ctrl:w + 5, picsize=size, pad=2, aa='album')
+size: OptionNumber(default=40, min=10, max=400, step=1)
+
+{Group gmb-art_artist_symbol}
+title = _"gmb-art - Artist with picture or symbol"
+head = max(pic:h, title:h, symbol:h, ctrl:h)
+left = (pic:w + 2) / 2
+vcollapse = head
+vmin = head
+title: text(markup=pesc($artist), pad=2,x=if(pic:wr, pic:w, symbol:w) + ctrl:w + 5, y=if(pic:wr, (pic:h / 2) - (title:h / 2), (24 / 2) - (title:h / 2)))
+#title: text(markup=pesc($album),pad=2,x=titlepos,y=(head-title:h)/2)
+symbol: icon(x=ctrl:w + 5, yalign=0, pad=2, icon='gmb-artist', hide=pic:wr,size='button')
+ctrl: text(y=0, x=0, pad=2, markup='<big><b>'.if($_expanded,'-','+').'</b></big>')
+pic: aapic(x=ctrl:w + 5, picsize=size, pad=2, aa='artist')
+size: OptionNumber(default=40, min=10, max=400, step=1)
 
