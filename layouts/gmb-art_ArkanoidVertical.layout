@@ -9,7 +9,7 @@ SkinPath = gmb-art_skins/arkanoid_skin
 
 Skin = background.png::s
 
-Default = Window(size=30%x100%,hidden=VBPlayList)
+Default = Window(size=30%x100%)
 
 KeyBindings = \
     cs-T ShowHideWidget(HBMainMenuBar) \
@@ -129,8 +129,8 @@ VBMain = HBMainMenuBar _NBMain -HBScale -HBReplayButtons -HBInfo -HBSearchBar
 
                 MBQueueItem = QueueItem(label="AQ",minwidth=34,maxwidth=34)
 
-        VBPlayList = (tabtitle=_"Playlist",tabicon="view-list_16x16") \
-            _SongList(cols="playandqueue titleaa",colwidth="queuenumber 20",sort="path album:i disc track file",mode=playlist,grouping="album|artistalbum_breadcrumbs(picsize=100)",sort="path album disc track file",follow=1)
+#        VBPlayList = (tabtitle=_"Playlist",tabicon="view-list_16x16") \
+#            _SongList(cols="playandqueue titleaa",colwidth="queuenumber 20",sort="path album:i disc track file",mode=playlist,grouping="album|artistalbum_breadcrumbs(picsize=100)",sort="path album disc track file",follow=1,group=1)
 
         VBSongTree = (tabtitle=_"Playlist",tabicon="view-tree_16x16") \
             _SongTree(cols="playandqueue track title ratingpic artist album",colwidth="album 150 artist 200 title 200",follow=1,grouping="album|artistalbum_breadcrumbs(picsize=100)",sort="path album disc track file") \
