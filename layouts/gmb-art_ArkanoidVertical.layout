@@ -75,9 +75,9 @@ VBMain = HBMainMenuBar _NBMain -HBScale -HBSongBreadcrumbs -HBReplayButtons -HBI
         FBHide2 = 1,1,8,8 ToggleButton99(skin=hide.png::normal,widget=HBSearchBar)
 
     HBSongBreadcrumbs = FBHide4 \
-        _Title40(xalign=.5,markup="<small>%t</small>",markup_empty="",group=Recent,click1="PrevSong") \
-        _Title41(xalign=.5,markup="<b>%t</b>") \
-        _Title42(xalign=.5,markup="<small>%t</small>",markup_empty="<small>...</small>",group=Next,click1="NextSong") \
+        _Title40(xalign=.5,markup="<small>%t</small>",markup_empty="",group=Recent,click1="PrevSong",tip="%l (%a)") \
+        _Title41(xalign=.5,markup="<b>%t</b>",tip="%l (%a)") \
+        _Title42(xalign=.5,markup="<small>%t</small>",markup_empty="<small>...</small>",group=Next,click1="NextSong",tip="%l (%a)") \
         4Filler40
 
         FBHide4 = 1,1,8,8 ToggleButton96(skin=hide.png::normal,widget=HBSongBreadcrumbs)
