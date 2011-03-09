@@ -10,5 +10,5 @@ VBMain = HBMenubar _HPContent
 
     HPContent  = VBBrowser VBSonglist
 
-    VBBrowser = SimpleSearch _SongTree(cols="playandqueue track title ratingpic artist album",colwidth="album 150 artist 200 title 200",follow=1,grouping="album|artistalbum_breadcrumbs(picsize=100)",sort="path album disc track file")
+    VBBrowser = SimpleSearch _SongTree(headers="off", cols="playandqueue track title ratingpic artist album",colwidth="album 150 artist 200 title 200",follow=1,grouping="album|artistalbum_breadcrumbs(picsize=100)",sort="path album disc track file")
 

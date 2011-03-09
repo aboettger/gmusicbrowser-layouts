@@ -4,10 +4,10 @@ head = max(pic:h, title:h, symbol:h, ctrl:h)
 left = 20
 vcollapse = head
 vmin = head
-title: text(markup=pesc($album), pad=2,x=if(pic:wr, pic:w, symbol:w) + ctrl:w + 5, y=if(pic:wr, (pic:h / 2) - (title:h / 2), (24 / 2) - (title:h / 2)))
+title: text(markup=pesc($album), pad=2,x=if(pic:wr, pic:w, symbol:w) + ctrl:w + 5, y=if(pic:wr, (pic:h / 2) - (title:h / 2), (symbol:h / 2) - (title:h / 2)))
 #title: text(markup=pesc($album),pad=2,x=titlepos,y=(head-title:h)/2)
-symbol: picture(w=40, h=40, x=ctrl:w + 5, y=0, yalign=0, pad=2, file='gmb-art_nocover.png')
-ctrl: text(y=if(pic:wr, (pic:h / 2) - (ctrl:h / 2), (24 / 2) - (ctrl:h / 2))), x=0, pad=2, markup='<big><b>'.if($_expanded,'-','+').'</b></big>')
+symbol: picture(w=30, h=30, resize='s', x=ctrl:w + 5, y=0, yalign=0, pad=2, file='gmb-art_nocover.png',hide=pic:wr)
+ctrl: picture(w=9, h=9, resize='s', y=(symbol:h / 2) - (ctrl:h / 2), x=0, pad=2, file=if($_expanded,'gmb-art_expanded.png','gmb-art_collapsed.png'))
 pic: aapic(x=ctrl:w + 5, picsize=30, pad=2, aa='album')
 
 {Group gmb-art_artist_symbol}
@@ -16,8 +16,8 @@ head = max(title:h, symbol:h, ctrl:h)
 left = 20
 vcollapse = head
 vmin = head
-title: text(markup=pesc($artist), pad=2,x=symbol:w + ctrl:w + 5, y=(24 / 2) - (title:h / 2))
+title: text(markup=pesc($artist), pad=2,x=symbol:w + ctrl:w + 2, y=(24 / 2) - (title:h / 2))
 #title: text(markup=pesc($album),pad=2,x=titlepos,y=(head-title:h)/2)
-symbol: icon(x=ctrl:w + 5, yalign=0, pad=2, icon='gmb-artist', hide=pic:wr,size='button')
-ctrl: text(y=0, x=0, pad=2, markup='<big><b>'.if($_expanded,'-','+').'</b></big>')
+symbol: icon(x=ctrl:w + 5, yalign=0, pad=2, icon='gmb-artist', size='button')
+ctrl: picture(w=9, h=9, resize='s', y=(24 / 2) - (ctrl:h / 2), x=0, pad=2, file=if($_expanded,'gmb-art_expanded.png','gmb-art_collapsed.png'))
 
