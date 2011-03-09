@@ -15,11 +15,12 @@ Default = Window(size=30%x100%) \
 KeyBindings = \
     cs-T ShowHideWidget(HBMainMenuBar) \
     cs-W ShowHideWidget(HBSearchBar) \
-    cs-N ShowHideWidget(HBInfo)
+    cs-N ShowHideWidget(HBInfo) \
+    cs-B ShowHideWidget(HBSongBreadcrumbs)
 
 VolumeScroll = HBReplayButtons HBVolume
 
-VBMain = HBMainMenuBar _NBMain -HBScale -HBReplayButtons -HBInfo -HBSearchBar
+VBMain = HBMainMenuBar _NBMain -HBScale -HBSongBreadcrumbs -HBReplayButtons -HBInfo -HBSearchBar
 
     HBInfo = FBHide3 \
         2-Pos(xalign=1) \
@@ -71,6 +72,14 @@ VBMain = HBMainMenuBar _NBMain -HBScale -HBReplayButtons -HBInfo -HBSearchBar
         _SimpleSearch(noselector=0,suggest=1) -Total(size=small,mode=filter)
 
         FBHide2 = 1,1,8,8 ToggleButton99(skin=hide.png::normal,widget=HBSearchBar)
+
+    HBSongBreadcrumbs = FBHide4 \
+        _Title40(xalign=.5,markup="<small>%t</small>",markup_empty="",group=Recent,click1="PrevSong") \
+        _Title41(xalign=.5,markup="<b>%t</b>") \
+        _Title42(xalign=.5,markup="<small>%t</small>",markup_empty="<small>...</small>",group=Next,click1="NextSong") \
+        4Filler40
+
+        FBHide4 = 1,1,8,8 ToggleButton96(skin=hide.png::normal,widget=HBSongBreadcrumbs)
 
     HBReplayButtons = \
         _Filler100 \
@@ -190,5 +199,6 @@ SBMain = VBMain
                     VBShortCuts = \
                         Text14(markup="<tt><b>Ctrl-Shift T</b></tt>    Show/Hide menu bar (<b><u>t</u></b>oolbar)") \
                         Text20(markup="<tt><b>Ctrl-Shift W</b></tt>    Show/Hide search bar (<b><u>W</u></b>here is)") \
-                        Text15(markup="<tt><b>Ctrl-Shift N</b></tt>    Show/Hide info and lock bar (i<b><u>n</u></b>fo and lockbar)")
+                        Text15(markup="<tt><b>Ctrl-Shift N</b></tt>    Show/Hide info and lock bar (i<b><u>n</u></b>fo and lockbar)") \
+                        Text16(markup="<tt><b>Ctrl-Shift B</b></tt>    Show/Hide title <b><u>b</u></b>readcrumbs")
 
