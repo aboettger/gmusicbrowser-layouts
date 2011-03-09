@@ -1,0 +1,23 @@
+{Group gmb-art_album_symbol}
+title = _"gmb-art - Album with cover or symbol (Clementine style)"
+head = max(pic:h, title:h, symbol:h, ctrl:h)
+left = 20
+vcollapse = head
+vmin = head
+title: text(markup=pesc($album), pad=2,x=if(pic:wr, pic:w, symbol:w) + ctrl:w + 5, y=if(pic:wr, (pic:h / 2) - (title:h / 2), (24 / 2) - (title:h / 2)))
+#title: text(markup=pesc($album),pad=2,x=titlepos,y=(head-title:h)/2)
+symbol: picture(w=40, h=40, x=ctrl:w + 5, y=0, yalign=0, pad=2, file='gmb-art_nocover.png')
+ctrl: text(y=if(pic:wr, (pic:h / 2) - (ctrl:h / 2), (24 / 2) - (ctrl:h / 2))), x=0, pad=2, markup='<big><b>'.if($_expanded,'-','+').'</b></big>')
+pic: aapic(x=ctrl:w + 5, picsize=30, pad=2, aa='album')
+
+{Group gmb-art_artist_symbol}
+title = _"gmb-art - Artist with symbol (Clementine style)"
+head = max(title:h, symbol:h, ctrl:h)
+left = 20
+vcollapse = head
+vmin = head
+title: text(markup=pesc($artist), pad=2,x=symbol:w + ctrl:w + 5, y=(24 / 2) - (title:h / 2))
+#title: text(markup=pesc($album),pad=2,x=titlepos,y=(head-title:h)/2)
+symbol: icon(x=ctrl:w + 5, yalign=0, pad=2, icon='gmb-artist', hide=pic:wr,size='button')
+ctrl: text(y=0, x=0, pad=2, markup='<big><b>'.if($_expanded,'-','+').'</b></big>')
+
