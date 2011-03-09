@@ -9,7 +9,8 @@ SkinPath = gmb-art_skins/arkanoid_skin
 
 Skin = background.png::s
 
-Default = Window(size=30%x100%)
+Default = Window(size=30%x100%) \
+    HPFolder(size=100)
 
 KeyBindings = \
     cs-T ShowHideWidget(HBMainMenuBar) \
@@ -22,9 +23,10 @@ VBMain = HBMainMenuBar _NBMain -HBScale -HBReplayButtons -HBInfo -HBSearchBar
 
     HBInfo = FBHide3 \
         2-Pos(xalign=1) \
-        -Queue(button=1,stock="queue:gmb-queue gtk-edit noqueue:gtk-edit gmb-queue") \
-        -Sort1(button=1) \
-        -FilterLock(relief=none) \
+        -Queue(button=1,relief=none,stock="queue:gmb-queue gtk-edit noqueue:gtk-edit gmb-queue") \
+        -Sort1(button=1,relief=none) \
+        -FilterLock(button=1,relief=none) \
+        -Filter(button=1,relief=none) \
         3Filler600 \
         HBSongLock \
         HBAlbumLock \
@@ -82,7 +84,13 @@ VBMain = HBMainMenuBar _NBMain -HBScale -HBReplayButtons -HBInfo -HBSearchBar
         NBFilter \
         VBSongTree \
         VBQueueList \
-        VBPlayList
+        VBPlayList \
+        HPFolder
+
+            HPFolder = (tabtitle=_"Folder",tabicon="gtk-directory") \
+                _FilterPane99(group=folder,nb=0,hidetabs=0,hidebb=0,tabpos=bottom,pages=folder,page=folder) \
+                _SongList99(sort="path file",group=folder,cols="playandqueue titleaa right_aligned_folder file album artist")
+
 
             NBFilter = (tabtitle=_"Filter",tabicon="gmb-filter",tabpos=bottom,typesubmenu='',pages="HPSavedFilterPane VBArtist VBAlbum ") \
                 HPArtistFilter \
@@ -130,7 +138,7 @@ VBMain = HBMainMenuBar _NBMain -HBScale -HBReplayButtons -HBInfo -HBSearchBar
                 MBQueueItem = QueueItem(label="AQ",minwidth=34,maxwidth=34)
 
 #        VBPlayList = (tabtitle=_"Playlist",tabicon="view-list_16x16") \
-#            _SongList(cols="playandqueue titleaa",colwidth="queuenumber 20",sort="path album:i disc track file",mode=playlist,grouping="album|artistalbum_breadcrumbs(picsize=100)",sort="path album disc track file",follow=1,group=1)
+#            _SongList(cols="playandqueue titleaa",colwidth="queuenumber 20",sort="path album:i disc track file",mode=playlist,grouping="album|artistalbum_breadcrumbs(picsize=100)",sort="path album disc track file",follow=1)
 
         VBSongTree = (tabtitle=_"Playlist",tabicon="view-tree_16x16") \
             _SongTree(cols="playandqueue track title ratingpic artist album",colwidth="album 150 artist 200 title 200",follow=1,grouping="album|artistalbum_breadcrumbs(picsize=100)",sort="path album disc track file") \
@@ -141,10 +149,9 @@ VBMain = HBMainMenuBar _NBMain -HBScale -HBReplayButtons -HBInfo -HBSearchBar
                 Sort(button=1) \
                 QueueFilter \
                 VSeparator100 \
-                Filter(button=1) \
                 PlayFilter \
                 VSeparator101 \
-                Button(size=menu,click1=GoToCurrentSong,stock=gtk-jump-to,tip=_"Go to playing song") \
+                Button(click1=GoToCurrentSong,size=button,stock=gtk-jump-to,tip=_"Go to playing song") \
                 5ResetFilter
 
                     MBSongTree = \
