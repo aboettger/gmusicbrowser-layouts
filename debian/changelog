@@ -1,3 +1,16 @@
+gmusicbrowser-art (0.1.14ppa3) lucid; urgency=low
+
+  * Added: tip on breadcrumbs
+  * Some design and usability improvements
+  * Added: New pane (Ctrl-Shift-B) with song breadcrumbs
+  * Some design modifications for Arkanoid Vetical: Filter button now in info
+    bar, new notebook page Folder
+  * Button "jump to playing" with new size
+  * Tabicons added, SongList removed
+
+ -- Andreas Böttger <andreas.boettger@gmx.de>  Wed, 09 Mar 2011 21:29:46 +0100
+
+
 gmusicbrowser-art (0.1.14ppa2) lucid; urgency=low
 
   * Changed: G+ for layouts that have a layout menu

@@ -22,9 +22,10 @@ VolumeScroll = HBReplayButtons HBVolume
 
 VBMain = HBMainMenuBar _NBMain -HBScale -HBSongBreadcrumbs -HBReplayButtons -HBInfo -HBSearchBar
 
+    HBScale = _Scale
+
     HBInfo = FBHide3 \
-        2-Pos(xalign=1) \
-        -Queue(button=1,relief=none,stock="queue:gmb-queue gtk-edit noqueue:gtk-edit gmb-queue") \
+        -Queue(button=1,relief=none,stock="queue:gmb-queue0 gmb-queue0 noqueue:gmb-queue gmb-queue") \
         -Sort1(button=1,relief=none) \
         -FilterLock(button=1,relief=none) \
         -Filter(button=1,relief=none) \
@@ -34,8 +35,6 @@ VBMain = HBMainMenuBar _NBMain -HBScale -HBSongBreadcrumbs -HBReplayButtons -HBI
         HBArtistLock
 
         FBHide3 = 1,1,8,8 ToggleButton97(skin=hide.png::normal,widget=HBInfo)
-
-    HBScale = _Scale
 
             HBSongLock = Label100(markup=_"<small>Song:</small>") \
                 LockSong1(button=1,stock="on:gmb-lock gmb-locklight off:gmb-locklight gmb-lock")
@@ -69,14 +68,16 @@ VBMain = HBMainMenuBar _NBMain -HBScale -HBSongBreadcrumbs -HBReplayButtons -HBI
         HBVolume = VolumeIcon(button=1)
 
     HBSearchBar = FBHide2 \
-        _SimpleSearch(noselector=0,suggest=1) -Total(size=small,mode=filter)
+        _SimpleSearch(noselector=0,suggest=1) \
+        -Total(size=small,mode=filter) \
+        2-Pos(size=small,xalign=1)
 
         FBHide2 = 1,1,8,8 ToggleButton99(skin=hide.png::normal,widget=HBSearchBar)
 
     HBSongBreadcrumbs = FBHide4 \
-        _Title40(xalign=.5,markup="<small>%t</small>",markup_empty="",group=Recent,click1="PrevSong") \
-        _Title41(xalign=.5,markup="<b>%t</b>") \
-        _Title42(xalign=.5,markup="<small>%t</small>",markup_empty="<small>...</small>",group=Next,click1="NextSong") \
+        _Title40(xalign=.5,markup="<small>%t</small>",markup_empty="",group=Recent,click1="PrevSong",tip="%l (%a)") \
+        _Title41(xalign=.5,markup="<b>%t</b>",tip="%l (%a)") \
+        _Title42(xalign=.5,markup="<small>%t</small>",markup_empty="<small>...</small>",group=Next,click1="NextSong",tip="%l (%a)") \
         4Filler40
 
         FBHide4 = 1,1,8,8 ToggleButton96(skin=hide.png::normal,widget=HBSongBreadcrumbs)
@@ -156,9 +157,9 @@ VBMain = HBMainMenuBar _NBMain -HBScale -HBSongBreadcrumbs -HBReplayButtons -HBI
             HBSongTreeAct = \
                 MBSongTree \
                 Sort(button=1) \
-                QueueFilter \
                 VSeparator100 \
-                PlayFilter \
+                QueueFilter \
+                PlayFilter(tip=_"Play listed songs") \
                 VSeparator101 \
                 Button(click1=GoToCurrentSong,size=button,stock=gtk-jump-to,tip=_"Go to playing song") \
                 5ResetFilter
