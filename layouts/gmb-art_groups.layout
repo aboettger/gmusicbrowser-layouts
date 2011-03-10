@@ -30,10 +30,11 @@ vmin = head
 
 line: line(x1=0,y1=0,x2=$_w,y2=0,color='#000000')
 title:	text(y=pic:h, x= $_w/2 - title:w/2, markup='<b><big>'.pesc($album).'</big></b>'. if($disc,'  <big><b>«</b></big>  <b>'.pesc($disc).'</b>'). if($year,'  <big><b>«</b></big>  '.pesc($year)) . '  <big><b>«</b></big>  '.pesc($artist),pad=2)
-#title:	text(y=pic:h, markup='<b><big>'.pesc($title).'</big></b>',pad=2, x= $_w/2 - title:w/2)
 pic:	aapic(picsize=picsize,ypad=2, x=$_w/2 - pic:w/2)
 nocover: picture(w=picsize,h=picsize,yalign=0,resize='s',file='gmb-art_nocover.png',x=$_w/2 - pic:w/2,hide=pic:wr || !shownocover)
+picstars : picture(file=ratingpic($rating_avrg),x=($_w/2 - pic:w/2) / 2 - picstars:w/2, y=pic:y + pic:h / 2,hide=!showrating)
 
 picsize: OptionNumber(default=100,min=20,max=1000,step=10)
 shownocover: OptionBoolean(default=1,name='show a \'no cover\'')
+showrating: OptionBoolean(default=1,name='show album rating')
 
