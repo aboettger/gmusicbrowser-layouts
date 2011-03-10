@@ -7,6 +7,6 @@ text: text(markup='<small>'.pesc(if($playcount,$playcount,0).'/'.if($skipcount,$
 title = _"Rating"
 menutitle = _"Rating (picture without resizing)"
 sort = rating
-width=100
-pic : picture(file=ratingpic($rating),h=$_h,w=$_w,init_file=ratingpic(0))
+width = 80
+pic: picture(file=ratingpic($rating),x=0,y=0,h=$_h,w=$_w)
 
