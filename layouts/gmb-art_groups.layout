@@ -45,3 +45,12 @@ picsize: OptionNumber(default=100,min=20,max=1000,step=10)
 shownocover: OptionBoolean(default=1,name='show a \'no cover\'')
 showrating: OptionBoolean(default=1,name='show album rating')
 
+{Group gmb-art_disknr_with_symbol}
+title=_"gmb-art - Disk number and symbol"
+head= max(case:h, title:h, album:h)
+vcollapse=head
+vmin = head
+case: picture(file='gmb-art_nocover.png',w=24,h=24,resize='s',x=0, y=0,pad=2)
+album: aapic(x=3,y=4,w=case:w-5,h=case:h-7,aa='album')
+title: text(x=case:w + 5,y=case:h/2 - title:h/2,markup='<b>'.if($disc,$disc,'?').'</b>')
+
