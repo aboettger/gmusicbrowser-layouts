@@ -7,6 +7,10 @@ vmin=pic:y+pic:h+25
 left=pic:w+2
 title:	text(markup='<b><big>'.pesc($album).'</big></b>'. if($year,'  <big><b>«</b></big>  '.pesc($year)) . '  <big><b>«</b></big> '.pesc($artist),pad=2)
 pic:	+aapic(y=title:h+title:y,picsize=picsize,ypad=2,xpad=1,aa='album')
+picstars : picture(file=ratingpic($rating_avrg),x=(picsize/2)-(picstars:w/2),y=pic:y+pic:h,hide=picsize < 80)
+nocover: picture(w=picsize,h=picsize,resize='s',file='gmb-art_nocover.png',y=title:h + title:y,hide=pic:wr || !shownocover)
+
+shownocover: OptionBoolean(default=1,name='show a \'no cover\'')
 picsize : OptionNumber(default=100,min=20,max=1000,step=10)
 picstars : picture(file=ratingpic($rating_avrg),x=(picsize/2)-(picstars:w/2),y=pic:y+pic:h,hide=picsize < 80)
 
@@ -18,9 +22,12 @@ vcollapse=head
 vmin=pic:y+pic:h+25
 left=pic:w+2
 title:	text(markup='<b><big>'.pesc($album).'</big></b>'. if($disc,'  <big><b>«</b></big>  <b>'.pesc($disc).'</b>'). if($year,'  <big><b>«</b></big>  '.pesc($year)) . '  <big><b>«</b></big>  '.pesc($artist),pad=2)
-pic:	+aapic(y=title:h+title:y,picsize=picsize,ypad=2,xpad=1,aa='album')
-picsize : OptionNumber(default=100,min=20,max=1000,step=10)
+pic:	aapic(y=title:h + title:y, picsize=picsize,ypad=2,xpad=1,aa='album')
 picstars : picture(file=ratingpic($rating_avrg),x=(picsize/2)-(picstars:w/2),y=pic:y+pic:h,hide=picsize < 80)
+nocover: picture(w=picsize,h=picsize,resize='s',file='gmb-art_nocover.png',y=title:h + title:y,hide=pic:wr || !shownocover)
+
+shownocover: OptionBoolean(default=1,name='show a \'no cover\'')
+picsize : OptionNumber(default=100,min=20,max=1000,step=10)
 
 {Group gmb-art_cover_center}
 title=_"gmb-art - Cover centered, album, artist and disk breadcrumbs"
