@@ -91,11 +91,15 @@ VBMain = HBMainMenuBar _NBMain -HBScale -HBSongBreadcrumbs -HBReplayButtons -HBI
 
     NBMain = (tabpos=bottom,typesubmenu='PC',pages="VBCover VBCurrentPlay VBSavedFilterPane VBArtist VBAlbum VBSongTree VBQueueList VBPlayList") \
         VBCover \
+        HBVisuals \
         NBFilter \
         VBSongTree \
         VBQueueList \
         VBPlayList \
         HPFolder
+
+            HBVisuals = (tabtitle=_"Visuals") \
+                _Visuals
 
             HPFolder = (tabtitle=_"Folder",tabicon="gtk-directory") \
                 _FilterPane99(group=folder,nb=0,hidetabs=0,hidebb=0,tabpos=bottom,pages=folder,page=folder) \
@@ -142,10 +146,11 @@ VBMain = HBMainMenuBar _NBMain -HBScale -HBSongBreadcrumbs -HBReplayButtons -HBI
             HBQueueList = _QueueList(cols="track queuenumber titleaa",colwidth="track 20",sort="path album:i disc track file",grouping="album|artistalbum_breadcrumbs(picsize=100)",sort="path album disc track file",songtree=1,group=2)
 
             HBEditListButtons = \
-                MBQueueItem \
+                BMSettingsQueue \
                 EditListButtons(group=2,small=1,orientation=horizontal,relief=none)
 
-                MBQueueItem = QueueItem(label="AQ",minwidth=34,maxwidth=34)
+                BMSettingsQueue = (icon=gmb-queue,size="button") \
+                    QueueItem
 
 #        VBPlayList = (tabtitle=_"Playlist",tabicon="view-list_16x16") \
 #            _SongList(cols="playandqueue titleaa",colwidth="queuenumber 20",sort="path album:i disc track file",mode=playlist,grouping="album|artistalbum_breadcrumbs(picsize=100)",sort="path album disc track file",follow=1)
@@ -155,7 +160,7 @@ VBMain = HBMainMenuBar _NBMain -HBScale -HBSongBreadcrumbs -HBReplayButtons -HBI
             HBSongTreeAct
 
             HBSongTreeAct = \
-                MBSongTree \
+                BMSettings \
                 Sort(button=1) \
                 VSeparator100 \
                 QueueFilter \
@@ -164,10 +169,9 @@ VBMain = HBMainMenuBar _NBMain -HBScale -HBSongBreadcrumbs -HBReplayButtons -HBI
                 Button(click1=GoToCurrentSong,size=button,stock=gtk-jump-to,tip=_"Go to playing song") \
                 5ResetFilter
 
-                    MBSongTree = \
-                        #QueueItem1(label="AQ",minwidth=34,maxwidth=34) \
-                        PlayItem \
-                        HistItem
+                BMSettings = (icon=gtk-preferences,size="button") \
+                    PlayItem \
+                    HistItem
 
 [ArkanoidVerticalHelp]
 # Help for Arkanoid Vertical

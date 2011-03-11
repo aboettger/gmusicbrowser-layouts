@@ -90,7 +90,7 @@ HBMainContainer = 3Filler1 _VBMainContainer 3Filler2
             VBMainMenuBar = \
                 HBVolume \
                 HSeparator2 \
-                MBViews \
+                BMViews \
                 ExtraButtons \
                 Playlist \
                 -Button5(click1="Quit",relief=none,stock=gtk-quit,tip=_"Quit") \
@@ -101,9 +101,9 @@ HBMainContainer = 3Filler1 _VBMainContainer 3Filler2
                 -HSeparator1 \
                 -Button1(click1="RunPerlCode(::ChooseAddPath(0,1))",stock=gtk-add,tip=_"Add folder ...")
 
-                    MBViews = SMViews
 
-                        SMViews = (label=_"->",minwidth=34,maxwidth=34) \
+                    BMViews = (icon=gtk-preferences,size="button") \
+
                             MenuItem05(togglewidget=VBReplayButtons,label=_"Standard position for replay buttons") \
                             MenuItem04(togglewidget=HBAlterReplayButtons,label=_"Alternative position for replay buttons") \
                             SeparatorMenuItem02 \
