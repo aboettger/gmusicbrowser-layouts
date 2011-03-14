@@ -1,0 +1,27 @@
+[D_Smaller Screen Titles]
+# This is a clone of Smaller Screen Titles by rafeviper (http://fav.me/d356vlg)
+# Needs the full support for transparency.
+# This support will later be implemented in the GMB.
+Type = D
+Author = aboettger, rafeviper
+
+Name = _"Smaller Screen Titles"
+
+Category = gmb-art
+
+SkinPath = gmb-art_skins/smallerscreentitles_skin
+
+Skin = case.png::
+
+Default = Window(size=150x200)
+
+Window = transparent=1
+
+FBMainContainer = 25,25 Cover(minsize=100,maxsize=100,default=gmb-art_skins/smallerscreentitles_skin/no-cover.png,overlay=0x0:104x104:gmb-art_skins/smallerscreentitles_skin/overlay.png,click1="") \
+    33,120 Prev(skin=prev_next.png:::normal_prelight_active) \
+    60,120 Play(skin=play_pause.png:::normal_prelight_active:play_pause) \
+    90,120 Next(skin=prev_next.png:::normal_prelight_active) \
+    10,149,120,12 Title(xalign=1,markup="<span font='9px' font-weight='bold' fgcolor='#FFFFFF'>%t</span>",click1="") \
+    10,161,120,12 Album(xalign=1,markup="<span font='9px' font-weight='bold' fgcolor='#FFFFFF'>%l</span>",click1="") \
+    10,174,120,12 Artist(xalign=1,markup="<span font='10px' font-weight='bold' fgcolor='#7bced8'>%a</span>",click1="")
+

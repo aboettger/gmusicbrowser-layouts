@@ -1,4 +1,0 @@
-{Column playandskip}
-title = _"P&S"
-text: text(markup='<small>'.pesc(if($playcount,$playcount,0).'/'.if($skipcount,$skipcount,0)).'</small>')
-

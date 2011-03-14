@@ -1,0 +1,81 @@
+[D_iPod_nano_4g]
+Type = D
+
+Category = gmb-art
+
+Author = aboettger
+Name = _"iPod nano 4g"
+
+SkinPath = gmb-art_skins/ipod_skin
+
+Skin = Ipodnano4g.png::
+
+Default = Window(size=135x328,hidden=FBMainContainer2|FBMainContainer3)
+
+Window = transparent=1
+
+# DefaultFocus	= FBStatus
+
+VolumeScroll = Vol
+
+FBMainContainer = \
+    15,195 Vol(click1="",skin=touchwheel.png:::normal) \
+    15,15 FBStatus \
+    15,129 FBTimeBar \
+    15,195 FBControls \
+    15,15 FBMainContainer1 \
+    15,15 FBMainContainer2 \
+    15,15 FBMainContainer3
+
+    FBStatus = 37,1 Play0(activate="",skin=play_pause_text.png:::normal_prelight_active:play_pause)
+
+    FBTimeBar = 12,13,80,6 TimeBar1(skin=progress_bar_base.png::hs,handle_skin=progress_bar.png::hs:normal)
+
+    FBControls = \
+        0,9 FBControls1 \
+        0,26 FBControls2 \
+        0,85 FBControls3
+
+            FBControls1 = 44,0 Pref1(skin=menu.png:::normal_prelight_active)
+
+            FBControls2 = \
+                11,20 Prev1(skin=prev.png:::normal_prelight_active) \
+                85,20 Next1(skin=next.png:::normal_prelight_active)
+
+            FBControls3 = 48,0 Play1(skin=play_pause.png:::normal_prelight_active)
+
+    ##################
+    ### 1st page
+    ##################
+
+    # Cover and Text and Select Button (ToggleButton)
+    FBMainContainer1 = \
+        0,10 Cover1(minsize=50,maxsize=50,overlay=0x0:101x101:gmb-art_skins/ipod_skin/cover_overlay.png,click1="") \
+        0,67 FBTitleAlbumArtist1 \
+        29,205 ToggleButton1(skin=select.png::s:normal_prelight_active,togglegroup=1,widget=FBMainContainer2)
+
+        FBTitleAlbumArtist1 = \
+            0,0,101,16 Title1(markup="<span font='12px' fgcolor='black'>%t</span>",click1="") \
+            0,16,101,14 Album1(markup="<span font='10px' fgcolor='black'>%l</span>",click1="") \
+            0,30,101,14 Artist1(markup="<span font='10px' fgcolor='black'>%a</span>",click1="")
+
+    ##################
+    ### 2nd page
+    ##################
+
+    # Rating and Select Button (ToggleButton)
+    FBMainContainer2 = \
+        0,50,101,25 HBStars2 \
+        29,205 ToggleButton2(skin=select.png::s:normal_prelight_active,togglegroup=1,widget=FBMainContainer3)
+
+        HBStars2= _Stars2
+
+    ##################
+    ### 3rd page
+    ##################
+
+    # Cover and Select Button (ToggleButton)
+    FBMainContainer3 = \
+        3,10 Cover3(minsize=100,maxsize=100,overlay=0x0:101x101:gmb-art_skins/ipod_skin/cover_overlay.png,click1="") \
+        29,205 ToggleButton3(skin=select.png::s:normal_prelight_active,togglegroup=1,widget=FBMainContainer1)
+

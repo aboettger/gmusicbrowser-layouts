@@ -1,0 +1,26 @@
+[T_Arkanoid_Tray]
+
+Type = T
+Author = aboettger
+
+Category = gmb-art
+
+
+Name = _"Arkanoid tray"
+
+SkinPath = gmb-art_skins/arkanoidtray_skin
+
+Skin = base.png::
+
+FBMainContainer = 0,0,291,56 FBMain
+
+    FBMain = 3,4 Cover(minsize=50,maxsize=50) \
+        60,8,130,12 Title(xalign=1,markup="<span font='10px' font-weight='bold' fgcolor='#FFFFFF'>%t</span>",click1="") \
+        60,21,130,12 Album(xalign=1,markup="<span font='9px' font-weight='bold' fgcolor='#FFFFFF'>%l</span>",click1="") \
+        60,34,130,12 Artist(xalign=1,markup="<span font='10px' font-weight='bold' fgcolor='#7bced8'>%a</span>",click1="") \
+        207,3 Prev(button=0,size=large-toolbar,tip=_"Previous Song") \
+        229,3 Play(button=0,size=large-toolbar,tip=_"Play/Pause") \
+        251,3 Next(button=0,size=large-toolbar,tip=_"Next Song") \
+        210,38 Stars \
+        0,53,291,3 TimeBar(handle_skin=pad.png::normal)
+

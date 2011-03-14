@@ -1,0 +1,45 @@
+[VastOne GQLC Bottom]
+Type=G+
+Author=VastOne
+Category = gmb-art
+Title		= Gmusicbrowser playing %S by %a
+Default		= Window(size=1120x820) FilterPane0(page=genre) FilterPane1(page=artist) FilterPane2(page=album,albumpsize=32,albuminfo=1) QueueList(cols=titleaa length) VPRight(size=230-353) VPListAndQueue(size=195-588)
+MBmenu		= MainMenuItem LayoutItem PSortItem PFilterItem QueueItem SMView
+SMView		= (label=_"View") MenuItem0(togglewidget=HPfp0,label=_"Categories pane") MenuItem1(togglewidget=FilterPane0,label=_"Genres pane") MenuItem2(togglewidget=FilterPane2,label=_"Album pane") MenuItem3(togglewidget=FilterPane1,label=_"Artist pane") MenuItem4(togglewidget=NBLists,label=_"Left pane") MenuItem5(togglewidget=QueueList,label=_"Queue") MenuItem6(togglewidget=VBSongList,label=_"Playlist")
+# HBButtons1	= -Pos -Queue -5Sort -5Filter
+# HBButtons2	= OpenBrowser Pref Quit
+# VBButtons	= HBButtons1 HBButtons2
+HBTitle		= Filler0 _Title
+HBArtist	= LockArtist _Artist -Stars
+HBAlbum		= LockAlbum _Album -VBVol
+HBTime		= 7Prev 7Play 7Next PlayingTime(markup="%s",initsize="XX:XX",xalign=0) _TimeSlider(direct_mode=1) -Length(markup="$length",initsize="XX:XX",xalign=1)
+VBText		= 2HBTitle 2HBArtist 2HBAlbum
+HBleft		= 1_VBText
+HBmenu		= MBmenu 5Sort 5Filter 5Queue 5Pos ExtraButtons -Quit -Pref -Button2(click1="RunPerlCode(::IdleCheck)",stock=gtk-refresh,size=button,minwidth=34,maxwidth=34,tip=_"check now") \
+        -Button3(click1="RunPerlCode(::IdleScan)",stock=gtk-zoom-in,size=button,minwidth=34,maxwidth=34,tip=_"scan now")
+VBleft2		= HBleft 6_HBTime
+VBVol		= VolumeIcon
+VBLeft		= _NBLists
+    NBLists = SongTree(tabtitle=_"Artist/Album Playing",activate=queueinsert, activate2=addplay, songypad=1, group=Play:artist) \
+Context(tabtitle=_"Context") \
+VBartist \
+VBalbum \
+SongSearch(tabtitle=_"Song",activate=queueinsert)
+# SongList(tabtitle=_"Playlist",activate=queueinsert,activate2=addplay,mode=playlist,group=2,follow=1)
+VBartist= (tabtitle=_"Artist") SimpleSearch1(group=1,fields=artist,noselector=1) _FilterPane10(group=1,activate=queueinsert,pages=artist,nb=2)
+VBalbum= (tabtitle=_"Album") SimpleSearch2(group=3,fields=album,noselector=1) _FilterPane11(group=3,activate=queueinsert,pages=album,nb=2)
+HBupper		= _VBleft2 5-Cover
+# HPbrowser	= FilterPane0(nb=1) _SongList
+HPfp1		= FilterPane1(nb=2,hidebb=1) FilterPane2(nb=3,hidebb=1)
+HPfp0	 	= FilterPane0(nb=1,hidebb=1) HPfp1
+HBSongList	= SimpleSearch(maxwidth=260) Total
+VBSongList	= HBSongList _SongTree1(activate=queueinsert,activate2=addplay,songypad=1)
+VPRight		= HPfp0 _VBSongList
+VPListAndQueue = VBQueue VPRight
+    VBQueue = _QueueList(group=1) HBQueueButtons
+        HBQueueButtons	= EditListButtons(group=1,small=1) 4QueueActions
+HPBottom	= VBLeft _VPListAndQueue
+VBmain		= HBmenu 5_HPBottom  HBupper
+HSize0		= Filler0 LockArtist LockAlbum
+VolumeScroll	= HBupper
+

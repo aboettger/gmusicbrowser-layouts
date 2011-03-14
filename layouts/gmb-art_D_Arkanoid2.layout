@@ -1,0 +1,34 @@
+[D_Arkanoid_2]
+Type = D
+Name = _"Arkanoid 2"
+
+Category = gmb-art
+
+SkinPath = gmb-art_skins/arkanoid_skin
+
+Window =  transparent=1
+
+#DefaultFontColor= white
+
+VBmain = \
+    HBTitle \
+    HBArtist \
+    HBAlbum \
+    -HBStarsAndButtons \
+    -TimeBar(minheight=2,maxheight=2,skin=::,handle_skin=handle_mini.png:::normal_prelight_active) \
+    -Cover(click1="",forceratio=1,maxsize=400,overlay=6x6:778x778:gmb-art_skins/arkanoid_skin/overlay.png,default=gmb-art_skins/arkanoid_skin/no-cover.png)
+
+    HBStarsAndButtons = Stars -HBButtons
+
+    HBTitle = _Title(click1="",markup="<b>%t</b>")
+
+    HBArtist = _Artist(click1="",markup="<i><small>%a</small></i>")
+
+    HBAlbum= _Album(click1="",markup="<small>%l</small>")
+
+    HBButtons = 0Filler1 \
+        Prev(size=small-toolbar) \
+        Play(size=small-toolbar) \
+        Next(size=small-toolbar) \
+        _Filler2
+

@@ -1,6 +1,85 @@
-gmusicbrowser-art (0.1.13) maverick; urgency=low
+gmusicbrowser-art (0.1.14ppa3) lucid; urgency=low
+
+  * Added: tip on breadcrumbs
+  * Some design and usability improvements
+  * Added: New pane (Ctrl-Shift-B) with song breadcrumbs
+  * Some design modifications for Arkanoid Vetical: Filter button now in info
+    bar, new notebook page Folder
+  * Button "jump to playing" with new size
+  * Tabicons added, SongList removed
+
+ -- Andreas Böttger <andreas.boettger@gmx.de>  Wed, 09 Mar 2011 21:29:46 +0100
+
+
+gmusicbrowser-art (0.1.14ppa2) lucid; urgency=low
+
+  * Changed: G+ for layouts that have a layout menu
+
+ -- Andreas Böttger <andreas.boettger@gmx.de>  Mon, 07 Mar 2011 20:40:40 +0100
+
+
+gmusicbrowser-art (0.1.14ppa1) lucid; urgency=low
+
+  * Added: Button to hide elements in Arkanoid Vertical
+  * Added: New songtree groups to show artists/albums
+            with cover/picture or symbol
+  * Added: Conz layout family
+
+ -- Andreas Böttger <andreas.boettger@gmx.de>  Mon, 07 Mar 2011 20:29:34 +0100
+
+
+gmusicbrowser-art (0.1.14) lucid; urgency=low
+
+  * bump version to 0.1.14ppa0
+
+ -- Andreas Böttger <andreas.boettger@gmx.de>  Sun, 06 Mar 2011 15:44:40 +0100
+
+
+gmusicbrowser-art (0.1.13ppa2) lucid; urgency=low
+
+  * Fixed: syntax error in help layout for arkanoid vertical
+  * Different icon sizes for faenza icon theme
+  * Cover overlay for Arkanoid Vertical
+  * Small changes to the layout of VastOne
+  * Additional album breadcrumb icon for awoken
+  * Tray icons (normal, play, pause) for awoken
+  * License text added
+  * Some changes for buttons in Arkanoid Vertical
+  * Progress added: Arkanoid Vertical
+  * New icon theme: gmb-art - elementary
+
+ -- Andreas Böttger <andreas.boettger@gmx.de>  Sun, 06 Mar 2011 15:33:06 +0100
+
+
+gmusicbrowser-art (0.1.13ppa1) lucid; urgency=low
+
+  * all symbolic links removed :(
+
+ -- Andreas Böttger <andreas.boettger@gmx.de>  Thu, 03 Mar 2011 14:56:07 +0100
+
+
+gmusicbrowser-art (0.1.13ppa0) lucid; urgency=low
+
+  * lucid packages
+  * new icon theme: gmb-art - faenza
+  * some modifications: gmb-art awoken
+  * improved support for shimmer layouts
+
+ -- Andreas Böttger <andreas.boettger@gmx.de>  Thu, 03 Mar 2011 14:03:47 +0100
+
+
+gmusicbrowser-art (0.1.12ppa2) maverick; urgency=low
+
+  * folders and files renamed
+
+ -- Andreas Böttger <andreas.boettger@gmx.de>  Wed, 02 Mar 2011 11:24:00 +0100
+
+
+gmusicbrowser-art (0.1.12ppa1) maverick; urgency=low
 
   * Compatibility with the shimmer gmusicbrowser project
+  * Merge branch 'master' of https://github.com/VastOne/gmusicbrowser-layouts
+    into VastOne-master
 
  -- Andreas Böttger <andreas.boettger@gmx.de>  Wed, 02 Mar 2011 09:47:07 +0100
 

@@ -1,0 +1,45 @@
+[D_Widescreen]
+# This is a clone of a covergloobus theme by skm-industries (http://fav.me/d36u8aa)
+Type = D
+Author = aboettger, skm-industries (http://skm-industries.deviantart.com/)
+
+Name = _"Widescreen"
+
+Category = gmb-art
+
+SkinPath = gmb-art_skins/widebar_skin
+
+Skin = bg1.png::
+
+Default = Window(size=1920x57)
+
+Window = transparent=1
+
+FBMainContainer = \
+    10,35,518,15 Artist(xalign=0,markup="%a",click1="") \
+    539,35,842,15 Title(xalign=0.5,markup="%t",click1="") \
+    1391,35,521,15 Album(xalign=1,markup="%l",click1="")
+
+[D_Widescreen_Rating]
+# This is a clone of a covergloobus theme by skm-industries (http://fav.me/d36u8aa)
+Type = D
+Author = aboettger, skm-industries (http://skm-industries.deviantart.com/)
+
+Name = _"Widescreen with rating"
+
+Category = gmb-art
+
+SkinPath = gmb-art_skins/widebar_skin
+
+Skin = bg1.png::hs
+
+Default = Window(size=1920x57)
+
+Window = transparent=1
+
+FBMainContainer = \
+    10,35,590,15 Artist(xalign=0,markup="%a",click1="") \
+    620,35,590,15 Title(xalign=0.5,markup="%t",click1="") \
+    1220,35,590,15 Album(xalign=1,markup="%l",click1="") \
+    1820,33,101,25 Stars
+

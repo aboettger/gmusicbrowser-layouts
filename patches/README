@@ -1,0 +1,4 @@
+* Patch to take pictures for cover and artists from Jamendo (http://www.jamendo.com/)
+
+  $ sudo patch /usr/share/gmusicbrowser/plugins/fetch_cover.pm fetch_cover.patch
+

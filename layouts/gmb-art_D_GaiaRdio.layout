@@ -1,0 +1,33 @@
+[D_Gaia-Rdio]
+# This is a clone of Gaia Rdio by gabriela2400 (http://fav.me/d317fy3)
+Type = D
+Author = aboettger, gabriela2400
+
+Name = _"Gaia Rdio"
+
+Category = gmb-art
+
+SkinPath = gmb-art_skins/gaiardio_skin
+
+Skin = case.png::
+
+Default = Window(size=226x437)
+
+Window = transparent=1
+
+VolumeScroll = VolBar
+
+FBMainContainer = 26,39 Cover(minsize=175,maxsize=175,overlay=0x0:181x181:gmb-art_skins/gaiardio_skin/overlay.png,click1="") \
+    54,226 Prev(skin=prev.png:::normal_prelight_active) \
+    94,226 Play(skin=play_pause.png:::normal_prelight_active:play_pause) \
+    134,226 Next(skin=next.png:::normal_prelight_active) \
+    34,286 FBTitleAlbumArtist \
+    59,395,77,5 VolBar(skin=bar.png::,handle_skin=fill.png:::normal)
+    # \
+    #40,360,79,6 TimeBar(skin=bar.png::,handle_skin=fill.png:::normal)
+
+        FBTitleAlbumArtist = \
+            0,0,147,15 Artist(markup="<span font='12px' font-weight='bold' fgcolor='white'>%a</span>",click1="") \
+            0,14,147,13 Title(markup="<span font='10px' fgcolor='white'>%t</span>",click1="") \
+            0,26,147,14 Album(markup="<span font='11px' fgcolor='white'>%l</span>",click1="")
+

@@ -1,0 +1,188 @@
+[Exaile]
+Author = shimmerproject.org
+Type = G+
+
+Category = gmb-art
+
+
+Title = %t by %a
+Default = Window(size=80%x80%)
+
+KeyBindings = c-J GoToCurrentSong
+
+VolumeScroll = HBVolume
+
+# Window = hidden=FilterPane2|FilterPane3|FilterPane4|FilterPane5|FilterPane6|FilterPane7
+
+VBMain = HBMenubar _HPSidebarCenter HBStatusbar
+
+    HBStatusbar = 10-Total(mode=filter)
+
+    HBMenubar = _MBEdit
+        MBEdit = SMMusic0 SMEdit1 SMView2 SMControl3 SMHelp4
+            SMMusic0 = (label=_"File") \
+                MenuItem00(command="RunPerlCode(::ChooseAddPath(0,1))",label=_"Add folder ...",icon="gtk-add") \
+                SeparatorMenuItem01 \
+                MenuItem02(command=Quit,label=_"Quit",icon="gtk-quit")
+            SMEdit1 = (label=_"Edit") \
+                MenuItem10(command=EnqueueSelected,label=_"Queue",icon="gmb-queue") \
+                # MenuItem11(command=,label=_"Add to playlist") \ \
+                SeparatorMenuItem10 \
+                MenuItem14(command=OpenPref,label=_"Preferences",icon="gtk-preferences")
+
+            # SMView menu for common mode
+            SMView2 = (label=_"View") \
+                MenuItem25(command=GoToCurrentSong,label=_"Go to Playing Track",icon="go-jump") \
+                SeparatorMenuItem21 \
+                LayoutItem \
+                MenuItem24(togglewidget=HBSearchAndToolbar,label=_"Playlist Utilities Bar")
+
+            SMControl3 = (label=_"Tools") \
+                MenuItem32(command="RunPerlCode(::IdleScan)",label=_"Rescan Collection",icon="gtk-refresh") \
+                MenuItem33(command="OpenSongProp",label=_"Track Properties",icon="gtk-properties") \
+                MenuItem34(click1=OpenCustom(Equalizer),label=_"Equalizer")
+
+            SMHelp4 = (label=_"Help") \
+                MenuItem41(command="RunPerlCode(::AboutDialog)",label=_"About",icon="gtk-about")
+
+    HPSidebarCenter = VBSidebar VBCenter
+
+        VBSidebar = _NBSidebar VProgress
+
+            NBSidebar = (tabpos=left90,typesubmenu='PC') \
+                NBSidebar1 \
+                FilterPane10(tabtitle=_"Playlists",nb=0,hidebb=1,tabpos=left90,page=savedtree,pages=savedtree) \
+                FilterPane11(tabtitle=_"Files",nb=0,hidebb=1,tabpos=left90,page=folder,pages=folder)
+
+                NBSidebar1 = (tabtitle=_"Collection",typesubmenu='') \
+                    FilterPane1(tabtitle=_"Artist",\
+                        group=99,\
+                        nb=0,\
+                        hidebb=1,\
+                        pages=artist,\
+                        page=artist,\
+                        page_artist/depth=1,\
+                        page_artist/lmarkup="0|<b>%a</b>%Y <small>%s <small>%l</small></small>",\
+                        page_artist/lpicsize='0|32',\
+                        page_artist/noall=1,\
+                        page_artist/sort=default|default,\
+                        page_artist/type=artist|album\
+                    ) \
+                    FilterPane2(tabtitle=_"Album",\
+                        group=99,\
+                        nb=0,\
+                        hidebb=1,\
+                        page=album,\
+                        pages=album,\
+                        page_album/noall=1\
+                    ) \
+                    FilterPane3(tabtitle=_"Genre - Artist",\
+                        group=99,\
+                        nb=0,\
+                        hidebb=1,\
+                        page=genre,\
+                        pages=genre,\
+                        page_genre/depth=2,\
+                        page_genre/lmarkup="0|0|<b>%a</b>%Y <small>%s <small>%l</small></small>",\
+                        page_genre/lpicsize='0|32|32',\
+                        page_genre/noall=1,\
+                        page_genre/sort=default|default|default,\
+                        page_genre/type=genre|artist|album\
+                    ) \
+                    FilterPane4(tabtitle=_"Genre - Album",\
+                        group=99,\
+                        nb=0,\
+                        hidebb=1,\
+                        page=genre,\
+                        pages=genre,\
+                        page_genre/depth=2,\
+                        page_genre/lmarkup="0|0|<b>%a</b>%Y <small>%s <small>%l</small></small>",\
+                        page_genre/lpicsize='0|32|32',\
+                        page_genre/noall=1,\
+                        page_genre/sort=default|default|default,\
+                        page_genre/type=genre|album|artist\
+                    ) \
+                    FilterPane5(tabtitle=_"Year - Artist",\
+                        group=99,\
+                        nb=0,\
+                        hidebb=1,\
+                        page=year,\
+                        pages=year,\
+                        page_year/depth=2,\
+                        page_year/lmarkup="0|0|<b>%a</b>%Y <small>%s <small>%l</small></small>",\
+                        page_year/lpicsize='0|32|32',\
+                        page_year/noall=1,\
+                        page_year/sort=default|default|default,\
+                        page_year/type=year|artist|album\
+                    ) \
+                    FilterPane6(tabtitle=_"Year - Album",\
+                        group=99,\
+                        nb=0,\
+                        hidebb=1,\
+                        page=year,\
+                        pages=year,\
+                        page_year/depth=2,\
+                        page_year/lmarkup="0|0|<b>%a</b>%Y <small>%s <small>%l</small></small>",\
+                        page_year/lpicsize='0|32|32',\
+                        page_year/noall=1,\
+                        page_year/sort=default|default|default,\
+                        page_year/type=year|album|artist\
+                    ) \
+                    FilterPane7(tabtitle=_"Artist (Jahr - Album)",\
+                        group=99,\
+                        nb=0,\
+                        hidebb=1,\
+                        pages=artist,\
+                        page=artist,\
+                        page_artist/depth=1,\
+                        page_artist/lmarkup="0|<b>%y %a</b>",\
+                        page_artist/lpicsize='0|32',\
+                        page_artist/noall=1,\
+                        page_artist/sort=default|default,\
+                        page_artist/type=artist|album\
+                    )
+
+        VBCenter = 10HBPlayer _HBSongLists 5HBSearchAndToolbar HBControls
+
+            HBSongLists = _NBSongLists \
+                3Filler7
+
+                NBSongLists = (typesubmenu='L') SongList(tabtitle=_"Playlist 1",mode=playlist,tabicon="gmb-list",cols="playandqueue track title album artist length")
+
+            HBPlayer = (maxheight=100,minheight=100) \
+                HBCover \
+                5VBSongInfo \
+                _VBVolume \
+                5Filler5
+
+                HBCover = (maxheight=100,minheight=100,minwidth=100,maxwidth=100) \
+                    Cover(default=elementary/no-cover.svg,showcover=0,minsize=100,maxsize=100)
+
+                VBVolume = 100Filler3 HBVolume
+                    HBVolume = \
+                        -VolSlider(horizontal=1,minwidth=125,maxwidth=125) \
+                        -VolumeIcon(click1=TogMute,size=button,button=1)
+
+                VBSongInfo =  \
+                    _Title(yalign=0.5,minsize=0,markup="<big><big><b>%t</b></big></big>",click1="") \
+                    _Artist(yalign=1,minsize=0,markup="by %a") \
+                    _Album(yalign=1,minsize=0,markup="from %l")\
+                    100Filler2
+
+
+            HBSearchAndToolbar = _HBToolbar \
+                Text1(text=_"Search:") \
+                10_SimpleSearch
+
+                HBToolbar = Sort(button=1,relief=none,minwidth=28) \
+                    ResetFilter(button=1,relief=none,minwidth=28)
+
+            HBControls = Prev(size=button,relief=normal) \
+                Play(size=button,relief=normal) \
+                Stop(size=button,relief=normal) \
+                Next(size=button,relief=normal) \
+                _VBTimeBar \
+                3Filler4
+
+                VBTimeBar = 2Filler0 TimeBar(text="$current / %m") 1Filler1
+

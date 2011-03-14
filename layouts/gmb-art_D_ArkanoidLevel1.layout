@@ -1,0 +1,33 @@
+[Arkanoid Level 1]
+
+Author=aboettger
+Type=D
+
+Category = gmb-art
+
+SkinPath = gmb-art_skins/arkanoid_skin
+
+Skin = Arkanoid_Level_1.png::e
+
+Default = Window(size=640x400)
+
+VolumeScroll = Vol
+
+KeyBindings = \
+    cs-T ShowHideWidget(FBMainMenuBar) \
+    cs-H ShowHideWidget(FBShortCuts)
+
+FBMainContainer  = 70,200 FBShortCuts \
+    25,370,390,26 TimeBar(handle_skin=pad.png:::normal) \
+    495,360 FBMainMenuBar
+
+        FBShortCuts = \
+            0,0 Text1(markup="<tt><b>Ctrl-Shift H</b></tt>    Show/Hide This <b><u>H</u></b>elp") \
+            0,20 Text2(markup="<tt><b>Ctrl-Shift T</b></tt>    Show/Hide <b><u>T</u></b>oolbar")
+
+    FBMainMenuBar =  \
+        0,0 Prev(size=small-toolbar,tip=_"Previous Song") \
+        27,0 Play(size=small-toolbar,tip=_"Play/Pause") \
+        54,0 Next(size=small-toolbar,tip=_"Next Song") \
+        90,3 Vol
+

@@ -1,0 +1,56 @@
+{Group gmb-art_artistalbum_breadcrumbs}
+title=_"gmb-art - Album and artist breadcrumbs"
+head=title:h
+tail=25
+vcollapse=head
+vmin=pic:y+pic:h+25
+left=pic:w+2
+title:	text(markup='<b><big>'.pesc($album).'</big></b>'. if($year,'  <big><b>«</b></big>  '.pesc($year)) . '  <big><b>«</b></big> '.pesc($artist),pad=2)
+pic:	+aapic(y=title:h+title:y,picsize=picsize,ypad=2,xpad=1,aa='album')
+picstars : picture(file=ratingpic($rating_avrg),x=(picsize/2)-(picstars:w/2),y=pic:y+pic:h,hide=picsize < 80)
+nocover: picture(w=picsize,h=picsize,resize='s',file='gmb-art_nocover.png',y=title:h + title:y,hide=pic:wr || !shownocover)
+
+shownocover: OptionBoolean(default=1,name='show a \'no cover\'')
+picsize : OptionNumber(default=100,min=20,max=1000,step=10)
+picstars : picture(file=ratingpic($rating_avrg),x=(picsize/2)-(picstars:w/2),y=pic:y+pic:h,hide=picsize < 80)
+
+{Group gmb-art_artistalbumdisk_breadcrumbs}
+title=_"gmb-art - Album, artist and disk breadcrumbs"
+head=title:h
+tail=25
+vcollapse=head
+vmin=pic:y+pic:h+25
+left=pic:w+2
+title:	text(markup='<b><big>'.pesc($album).'</big></b>'. if($disc,'  <big><b>«</b></big>  <b>'.pesc($disc).'</b>'). if($year,'  <big><b>«</b></big>  '.pesc($year)) . '  <big><b>«</b></big>  '.pesc($artist),pad=2)
+pic:	aapic(y=title:h + title:y, picsize=picsize,ypad=2,xpad=1,aa='album')
+picstars : picture(file=ratingpic($rating_avrg),x=(picsize/2)-(picstars:w/2),y=pic:y+pic:h,hide=picsize < 80)
+nocover: picture(w=picsize,h=picsize,resize='s',file='gmb-art_nocover.png',y=title:h + title:y,hide=pic:wr || !shownocover)
+
+shownocover: OptionBoolean(default=1,name='show a \'no cover\'')
+picsize : OptionNumber(default=100,min=20,max=1000,step=10)
+
+{Group gmb-art_cover_center}
+title=_"gmb-art - Cover centered, album, artist and disk breadcrumbs"
+head= max(pic:h, nocover:h) + title:h + line:h
+vcollapse=head
+vmin = head
+
+line: line(x1=0,y1=0,x2=$_w,y2=0,color='#000000')
+title:	text(y=pic:h, x= $_w/2 - title:w/2, markup='<b><big>'.pesc($album).'</big></b>'. if($disc,'  <big><b>«</b></big>  <b>'.pesc($disc).'</b>'). if($year,'  <big><b>«</b></big>  '.pesc($year)) . '  <big><b>«</b></big>  '.pesc($artist),pad=2)
+pic:	aapic(picsize=picsize,ypad=2, x=$_w/2 - pic:w/2)
+nocover: picture(w=picsize,h=picsize,yalign=0,resize='s',file='gmb-art_nocover.png',x=$_w/2 - pic:w/2,hide=pic:wr || !shownocover)
+picstars : picture(file=ratingpic($rating_avrg),x=($_w/2 - pic:w/2) / 2 - picstars:w/2, y=pic:y + pic:h / 2,hide=!showrating)
+
+picsize: OptionNumber(default=100,min=20,max=1000,step=10)
+shownocover: OptionBoolean(default=1,name='show a \'no cover\'')
+showrating: OptionBoolean(default=1,name='show album rating')
+
+{Group gmb-art_disknr_with_symbol}
+title=_"gmb-art - Disk number and symbol"
+head= max(case:h, title:h, album:h)
+vcollapse=head
+vmin = head
+case: picture(file='gmb-art_nocover.png',w=24,h=24,resize='s',x=0, y=0,pad=2)
+album: aapic(x=3,y=4,w=case:w-5,h=case:h-7,aa='album')
+title: text(x=case:w + 5,y=case:h/2 - title:h/2,markup='<b>'.if($disc,$disc,'?').'</b>')
+

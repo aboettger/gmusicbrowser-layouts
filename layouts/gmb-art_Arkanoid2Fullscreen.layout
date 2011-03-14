@@ -1,0 +1,37 @@
+[Arkanoid 2 Fullscreen]
+
+Author=aboettger
+Type=F
+
+Category = gmb-art
+
+SkinPath = gmb-art_skins/arkanoid_skin
+
+Skin = background_black.png::s
+
+Window  = fullscreen=1,sticky=1
+
+KeyBindings	= Escape CloseWindow \
+    F11 ToggleFullscreenLayout
+
+VBMainContainer  = _HPContent -HBReplayButtons
+    HBReplayButtons = Prev(size=menu) \
+        Play(size=menu) \
+        Next(size=menu) \
+        20VSeparator \
+        5_TimeBar(text="%t by %a (%m)",minwidth=240,skin=::,handle_skin=pad.png:::normal_prelight_active) \
+        10-Stars
+
+    HPContent = _HBCover
+        HBCover = _Cover(click1="",reflection=40,r_alpha1=80,r_alpha2=0,r_scale=90,overlay=6x6:778x778:gmb-art_skins/arkanoid_skin/overlay.png,default=gmb-art_skins/arkanoid_skin/no-cover.png,showcover=0)
+
+[Arkanoid Fullscreen with queue] based on Arkanoid 2 Fullscreen
+
+Author=aboettger
+Type=F
+
+Category = gmb-art
+
+    HPContent = HBCover HBQueueList
+        HBQueueList = _QueueList
+
