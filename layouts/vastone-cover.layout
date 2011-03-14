@@ -1,5 +1,6 @@
 [D_vastone_song_cover]
 Type= D
+Author=VastOne
 Name= _"VastOne Song & Cover"
 Window =  transparent=1
 DefaultFontColor= white
