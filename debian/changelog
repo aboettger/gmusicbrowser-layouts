@@ -1,3 +1,18 @@
+gmusicbrowser-art (0.1.15) lucid; urgency=low
+
+* New group layout for center-aligned covers
+* Added: AwOken gmb xcf
+* Added: album rating for Group gmb-art_cover_center
+* Added: Option to show no-cover pic in all gmb-art groups
+* Added: group layout for disk
+* Visualization for Arkanoid Vertical, conversion of menus on buttons.
+* Cover desktop widget added
+* Wing desktop widget added
+* Panel desktop widget added
+
+ -- Andreas Böttger <andreas.boettger@gmx.de>  Wed, 09 Mar 2011 21:29:46 +0100
+
+
 gmusicbrowser-art (0.1.14ppa3) lucid; urgency=low
 
   * Added: tip on breadcrumbs
