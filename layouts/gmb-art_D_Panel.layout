@@ -1,0 +1,20 @@
+[D_Panel]
+Type = D
+Author = aboettger, helloindustries -=- Set width and height: 392x24
+
+Name = "Panel"
+
+Category = gmb-art
+
+SkinPath = gmb-art_skins/panel_skin
+
+Skin = bg.png::
+
+Default = Window(size=392x24)
+
+Window = transparent=1
+
+FBMainContainer = \
+    25,0,200,24 Title(yalign=0.5,xalign=0,markup="%t",click1="") \
+    240,0,150,24 Artist(yalign=0.5,xalign=0,markup="%a",click1="")
+
