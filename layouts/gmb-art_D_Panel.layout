@@ -15,6 +15,6 @@ Default = Window(size=392x24)
 Window = transparent=1
 
 FBMainContainer = \
-    25,0,200,24 Title(yalign=0.5,xalign=0,markup="%t",click1="") \
-    240,0,150,24 Artist(yalign=0.5,xalign=0,markup="%a",click1="")
+    28,1,200,23 Title(yalign=0.5,xalign=0,markup="%t",click1="") \
+    243,1,150,23 Artist(yalign=0.5,xalign=0,markup="%a",click1="")
 
