@@ -18,6 +18,9 @@ Window = transparent=1
 
 VolumeScroll = Vol
 
+FBMain = 0,0,135,328 \
+	FBMainContainer
+
 FBMainContainer = \
     15,195 Vol(click1="",skin=touchwheel.png:::normal) \
     15,15 FBStatus \
