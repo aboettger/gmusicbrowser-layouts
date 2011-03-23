@@ -1,3 +1,17 @@
+gmusicbrowser-art (0.1.15ppa1) lucid; urgency=low
+
+  * background and timebar corrected in
+    layouts/gmb-art_Arkanoid2Fullscreen.layout
+  * time bar corrected in layouts/gmb-art_D_ArkanoidLevel1.layout
+  * some corrections in layouts/gmb-art_D_Panel.layout
+  * new background image for /gmb-art_D_Panel.layout and corected
+    width for artist box
+  * layouts/gmb-art_D_Panel.layout: text needs moving down by 1px,
+    and left by 3pix
+
+ -- Andreas Böttger <andreas.boettger@gmx.de>  Wed, 23 Mar 2011 22:11:47 +0100
+ 
+
 gmusicbrowser-art (0.1.15) lucid; urgency=low
 
   * New group layout for center-aligned covers
