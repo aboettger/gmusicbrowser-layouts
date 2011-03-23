@@ -18,6 +18,6 @@ FBMain = 0,0,392,24 \
 	FBMainContainer
 
 	FBMainContainer = \
-		28,1,200,23 Title(yalign=0.5,xalign=0,markup="%t",click1="") \
-		243,1,149,23 Artist(yalign=0.5,xalign=0,markup="%a",click1="")
+		24,1,180,23 Title(yalign=0.5,xalign=0,markup="%t",click1="") \
+		239,1,145,23 Artist(yalign=0.5,xalign=0,markup="%a",click1="")
 
