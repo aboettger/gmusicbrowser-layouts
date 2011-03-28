@@ -196,7 +196,7 @@ HBMainContainer = 3Filler1 _VBMainContainer 3Filler2
 
                         HPSavedAndFilterAndList = VBSavedFilterPane VPFilterAndList
 
-                            VBSavedFilterPane = _FilterPane4(nb=0,hidebb=1,tabpos=left90,page=savedtree,pages=savedtree)
+                            VBSavedFilterPane = _FilterPane4(rules_hint=1,nb=0,hidebb=1,tabpos=left90,page=savedtree,pages=savedtree)
 
                             VPFilterAndList = VPFilter VBList
 
@@ -204,15 +204,15 @@ HBMainContainer = 3Filler1 _VBMainContainer 3Filler2
 
                                     VPFilterTop = _HBGenre _HBYear
 
-                                        HBGenre = _FilterPane5(nb=2,hidebb=1,pages=genre,page=genre,page_genre/mode=cloud,page_genre/cloud_min=8,page_genre/sort=alpha)
+                                        HBGenre = _FilterPane5(rules_hint=1,nb=2,hidebb=1,pages=genre,page=genre,page_genre/mode=cloud,page_genre/cloud_min=8,page_genre/sort=alpha)
 
                                         HBYear = _FilterPane2(nb=4,hidebb=1,pages=year,page=year,page_year/mode=cloud,page_year/cloud_min=8,page_year/sort=year)
 
                                     HPFilterCenter = HBArtist HBAlbum
 
-                                        HBArtist = _FilterPane0(nb=3, hidebb=1,pages=artist,page=artist,page_artist/lmarkup=1)
+                                        HBArtist = _FilterPane0(rules_hint=1,nb=3, hidebb=1,pages=artist,page=artist,page_artist/lmarkup=1)
 
-                                        HBAlbum = _FilterPane1(nb=5,hidebb=1,pages=album,page=album,page_album/mode=mosaic,page_album/lpicsize=64,page_album/lmarkup=1,page_album/mmarkup=below)
+                                        HBAlbum = _FilterPane1(rules_hint=1,nb=5,hidebb=1,pages=album,page=album,page_album/mode=mosaic,page_album/lpicsize=64,page_album/lmarkup=1,page_album/mmarkup=below)
 
                                 VBList = _VBSongTree Progress
 
@@ -315,10 +315,10 @@ VBmain  = _VBTreeAndInfo
     VBTreeAndInfo = HBStatus _VPFilterLists VProgress
         VPFilterLists = HPFilterPanes HPLists
 
-        HPFilterPanes = FilterPane0(group=1,nb=0,hidebb=1,page=savedtree,pages=savedtree) HBArtistAlbum
+        HPFilterPanes = FilterPane0(rules_hint=1,group=1,nb=0,hidebb=1,page=savedtree,pages=savedtree) HBArtistAlbum
             HBArtistAlbum = _HBArtist _HBAlbum
-            HBArtist = _FilterPane2(group=1,nb=2, hidebb=1,pages=artist,page=artist,page_artist/lpicsize=64,page_artist/lmarkup=1)
-            HBAlbum = _FilterPane3(group=1,nb=3,hidebb=1,pages=album,page=album,page_album/mode=mosaic,page_album/lpicsize=64,page_album/lmarkup=1,page_album/mmarkup=below)
+            HBArtist = _FilterPane2(rules_hint=1,group=1,nb=2, hidebb=1,pages=artist,page=artist,page_artist/lpicsize=64,page_artist/lmarkup=1)
+            HBAlbum = _FilterPane3(rules_hint=1,group=1,nb=3,hidebb=1,pages=album,page=album,page_album/mode=mosaic,page_album/lpicsize=64,page_album/lmarkup=1,page_album/mmarkup=below)
 
         HBStatus = HistItem(group=1) \
             ResetFilter(group=1) \
