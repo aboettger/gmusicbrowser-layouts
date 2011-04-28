@@ -7,7 +7,7 @@ Category = gmb-art
 
 SkinPath = gmb-art_skins/arkanoid_skin
 
-Skin = background_black.png::s
+Skin = background_fullscreen.png::s
 
 Window  = fullscreen=1,sticky=1
 
@@ -19,7 +19,7 @@ VBMainContainer  = _HPContent -HBReplayButtons
         Play(size=menu) \
         Next(size=menu) \
         20VSeparator \
-        5_TimeBar(text="%t by %a (%m)",minwidth=240,skin=::,handle_skin=pad.png:::normal_prelight_active) \
+        5_Scale(minwidth=240) \
         10-Stars
 
     HPContent = _HBCover

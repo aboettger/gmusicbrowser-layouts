@@ -1,0 +1,22 @@
+[D_Widescreen]
+Type = D
+Author = aboettger, helloindustries
+
+Name = "Wing"
+
+Category = gmb-art
+
+SkinPath = gmb-art_skins/wing_skin
+
+Skin = bg.png::
+
+Default = Window(size=457x29)
+
+Window = transparent=1
+
+FBMainContainer = \
+    0,2,34,12 Text1(markup=_"Track:",yalign=0,xalign=1) \
+    0,13,34,12 Text2(markup=_"By:",yalign=0,xalign=1) \
+    40,2,400,12 Title(yalign=0,xalign=0,markup="%t",click1="") \
+    40,13,400,12 Artist(yalign=0,xalign=0,markup="%a",click1="")
+

@@ -102,7 +102,7 @@ VBMain = HBMainMenuBar _NBMain -HBScale -HBSongBreadcrumbs -HBReplayButtons -HBI
                 _Visuals
 
             HPFolder = (tabtitle=_"Folder",tabicon="gtk-directory") \
-                _FilterPane99(group=folder,nb=0,hidetabs=0,hidebb=0,tabpos=bottom,pages=folder,page=folder) \
+                _FilterPane99(group=folder,rules_hint=1,nb=0,hidetabs=0,hidebb=0,tabpos=bottom,pages=folder,page=folder) \
                 _SongList99(sort="path file",group=folder,cols="playandqueue titleaa right_aligned_folder file album artist")
 
 
@@ -112,16 +112,16 @@ VBMain = HBMainMenuBar _NBMain -HBScale -HBSongBreadcrumbs -HBReplayButtons -HBI
                 HPMoreFilter
 
                     HPArtistFilter = (tabtitle=_"2nd Level") \
-                        FilterPane01(nb=0,hidebb=0,tabpos=bottom,page=savedtree,pages=savedtree) \
-                        _FilterPane3(nb=3,hidetabs=0,hidebb=0,tabpos=bottom,pages=artist,page=artist,page_artist/mode=mosaic,page_artist/mpicsize=128,page_artist/lpicsize=128,page_artist/lmarkup=1,page_artist/mmarkup=below)
+                        FilterPane01(rules_hint=1,nb=0,hidebb=0,tabpos=bottom,page=savedtree,pages=savedtree) \
+                        _FilterPane3(rules_hint=1,nb=3,hidetabs=0,hidebb=0,tabpos=bottom,pages=artist,page=artist,page_artist/mode=mosaic,page_artist/mpicsize=128,page_artist/lpicsize=128,page_artist/lmarkup=1,page_artist/mmarkup=below)
 
                     HPAlbumFilter = (tabtitle=_"3rd Level") \
-                        FilterPane02(nb=0,hidebb=0,tabpos=bottom,page=savedtree,pages=savedtree) \
-                        _FilterPane4(nb=4,hidetabs=0,hidebb=0,tabpos=bottom,pages=album,page=album,page_album/mode=mosaic,page_album/mpicsize=128,page_album/lpicsize=128,page_album/lmarkup=1,page_album/mmarkup=below)
+                        FilterPane02(rules_hint=1,nb=0,hidebb=0,tabpos=bottom,page=savedtree,pages=savedtree) \
+                        _FilterPane4(rules_hint=1,nb=4,hidetabs=0,hidebb=0,tabpos=bottom,pages=album,page=album,page_album/mode=mosaic,page_album/mpicsize=128,page_album/lpicsize=128,page_album/lmarkup=1,page_album/mmarkup=below)
 
                     HPMoreFilter = (tabtitle=_"1st Level") \
-                        FilterPane03(nb=0,hidebb=0,tabpos=bottom,page=savedtree,pages=savedtree) \
-                        _FilterPane2(nb=2,hidetabs=0,hidebb=0,tabpos=bottom,pages=genre,page=genre)
+                        FilterPane03(rules_hint=1,nb=0,hidebb=0,tabpos=bottom,page=savedtree,pages=savedtree) \
+                        _FilterPane2(rules_hint=1,nb=2,hidetabs=0,hidebb=0,tabpos=bottom,pages=genre,page=genre)
 
         VBCover = (tabtitle=_"Cover",tabicon="gmb-picture") \
             _Cover(click1="",overlay=0x0:1000x1000:gmb-art_skins/arkanoid_skin/arkanoid-vert-overlay.png,default=gmb-art_skins/arkanoid_skin/no-cover.svg) \

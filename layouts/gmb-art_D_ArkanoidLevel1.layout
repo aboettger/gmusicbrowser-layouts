@@ -11,14 +11,19 @@ Skin = Arkanoid_Level_1.png::e
 
 Default = Window(size=640x400)
 
+Window = transparent=1
+
 VolumeScroll = Vol
 
 KeyBindings = \
     cs-T ShowHideWidget(FBMainMenuBar) \
     cs-H ShowHideWidget(FBShortCuts)
+    
+FBMain = 0,0,640,400 \
+	FBMainContainer
 
 FBMainContainer  = 70,200 FBShortCuts \
-    25,370,390,26 TimeBar(handle_skin=pad.png:::normal) \
+    25,370,390,26 TimeBar(skin=timebar_skin.png::,handle_skin=pad.png:::normal) \
     495,360 FBMainMenuBar
 
         FBShortCuts = \
