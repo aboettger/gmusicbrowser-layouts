@@ -25,6 +25,7 @@ distclean: clean
 install:
 	install -pd "$(datadir)/gmusicbrowser/pix/gmb-art - awoken/"
 	install -pd "$(datadir)/gmusicbrowser/pix/gmb-art - faenza/"
+	install -pd "$(datadir)/gmusicbrowser/pix/gmb-art - faenza darkest/"
 	install -pd "$(datadir)/gmusicbrowser/pix/gmb-art - elementary/"
 	install -pd "$(datadir)/gmusicbrowser/layouts/"
 	install -pd "$(datadir)/gmusicbrowser/layouts/gmb-art_skins/"
@@ -33,6 +34,7 @@ install:
 	cp -rp layouts/gmb-art_skins/* "$(datadir)/gmusicbrowser/layouts/gmb-art_skins/"
 	install -pm 644 icons/gmb-art\ -\ awoken/*.png    "$(datadir)/gmusicbrowser/pix/gmb-art - awoken/"
 	install -pm 644 icons/gmb-art\ -\ faenza/*.png    "$(datadir)/gmusicbrowser/pix/gmb-art - faenza/"
+	install -pm 644 icons/gmb-art\ -\ faenza darkest/*.png    "$(datadir)/gmusicbrowser/pix/gmb-art - faenza darkest/"	
 	install -pm 644 icons/gmb-art\ -\ elementary/*.png    "$(datadir)/gmusicbrowser/pix/gmb-art - elementary/"
 
 postinstall:
@@ -41,6 +43,7 @@ uninstall:
 	rm -rf "$(datadir)/gmusicbrowser/layouts/gmb-art_skins"
 	rm -rf "$(datadir)/gmusicbrowser/pix/gmb-art - awoken"
 	rm -rf "$(datadir)/gmusicbrowser/pix/gmb-art - faenza"
+	rm -rf "$(datadir)/gmusicbrowser/pix/gmb-art - faenza darkest"
 	rm -rf "$(datadir)/gmusicbrowser/pix/gmb-art - elementary"
 	rm -f $(datadir)/gmusicbrowser/layouts/gmb-art*
 
