@@ -1,0 +1,169 @@
+[cardiacanesthesia] 
+Author= MajorGrubert (with aboettger's help and inspiration)
+Type=G+
+
+Category = gmb-art
+
+Default = Window(size=90%x80%) HPMainPannel(size=100) HPCentreEtDroite(size=300) HPPanneaux(size=150)
+
+VolumeScroll = VBVolume HPNowplaying
+
+
+VBMain = HBMenu _VBMainContainer
+		
+	HBMenu = MBmenu
+	
+		MBmenu = MainMenuItem LayoutItem PSortItem PFilterItem QueueItem
+
+	VBMainContainer = 3Filler1 _HPMainPannel 3Filler2
+	
+		HPMainPannel = _VBMainGauche _HPCentreEtDroite
+ 
+		HPCentreEtDroite = _VPMainCentre _VPDroite
+
+
+ 	
+
+############################
+# Left
+############################
+
+	VBMainGauche =  HBSearchBar _FilterPane2(nb=0,hidetabs=0,hidebb=1,tabpos=left90,page=savedtree,pages=savedtree)
+		
+		HBSearchBar = (minheight=34,maxheight=34)  ResetFilter2 2_SimpleSearch(noselector=1,suggest=0)   
+  
+	
+############################
+# Middle
+############################
+
+	VPMainCentre = _HPPanneaux _VBSongtree
+
+
+		HPPanneaux = _HPAlbumArtist _HBGenre
+			HBGenre = _FilterPane5(nb=2,hidebb=1,pages=genre,page=genre,page_genre/mode=cloud,page_genre/cloud_min=8,page_genre/sort=alpha)
+			HPAlbumArtist = _HBArtist _HBAlbum
+	 			HBArtist = _FilterPane0(nb=3,\
+		                      hidebb= 1,\
+				      hidetabs= 1,\
+				      min= 1,\
+				      page= artist,\
+					page_artist/depth= 1,\
+					page_artist/lmarkup= 1,\
+					page_artist/lpicsize= '-1|16',\
+				      pages= artist) 
+				HBAlbum = _FilterPane1(nb=5,\
+					hidebb= 1,\
+				      	hidetabs= 1,\
+				      	min= 1,\
+				      	page= album,\
+				      	page_album/lmarkup= 1,\
+					page_album/lpicsize= 64,\
+					page_album/mmarkup= below,\
+					page_album/mode=mosaic,\
+					page_album/sort= year,\
+				      	pages=album)   
+
+		VBSongtree =  _VBSong 3Filler5 HBTotal
+
+			VBSong = HBSongTreeAct \
+                                        _SongTree(cols="playandqueue track title ratingpic artist album",colwidth="album 150 artist 200 title 200",follow=1,grouping="album|artistalbum_breadcrumbs(picsize=100)",sort="path album disc track file")
+
+
+                                        HBSongTreeAct = FilterLock(button=1,relief=none) \
+                                            Sort3(button=1) \
+                                            QueueFilter3 \
+                                            Filter(button=1) \
+                                            PlayFilter \
+                                            Button3(size=menu,click1=GoToCurrentSong,stock=gtk-jump-to,tip=_"Go to playing song") \
+                                            _Filler99 \
+                                            _Filler98 \
+                                            -ResetFilter97 \
+                                            -MBSongTree
+
+                                                MBSongTree = PlayItem HistItem
+				    
+			HBTotal = -Total(size=small)
+
+
+
+############################
+# Right
+############################
+
+	VPDroite =  HPNowplaying _VBListsETBoutons 
+
+		############ Info artist, cover, volume, time bar zone ##########
+
+		HPNowplaying = VBCover _HBSongInfoEtControlsEtTimebarEtVolume
+                
+                	VBCover = _Filler6 Cover(default=elementary/no-cover.svg,showcover=0,minsize=200,maxsize=400) Stars _Filler7
+
+			HBSongInfoEtControlsEtTimebarEtVolume = _VBSongInfoEtControlsEtTimebar VBVolume
+
+				VBVolume = VolumeIcon(button=1) _VolumeSlider(1,0)
+
+				VBSongInfoEtControlsEtTimebar = -HBControls _VBSongInfoEtTimebar 
+
+					VBSongInfoEtTimebar = _Filler8 VBSongInfo _Filler9 -HBTimeBar 
+
+						VBSongInfo =  \
+					   		_HBInfoTitre \
+					    		_HBInfoArtist \
+					    		_HBInfoalbum \
+							_HBInfoGenre
+
+								HBInfoTitre = 2Filler10 _Title(minsize=0,markup="<big><big><big><b>%t</b></big></big></big>",click1="",yalign=0.5) 
+								HBInfoArtist = 2Filler11 _Artist(yalign=1,minsize=0,markup="<big><big>by %a</big></big>",click1="")
+								HBInfoalbum = 2Filler12 _Album(minsize=1,expand_max=200,yalign=1,markup="in %l",click1="") -2Filler13 -Date 
+								HBInfoGenre = -2Filler20 -Title2(yalign=1,minsize=0,markup="<i>%g</i> ",click1="")
+
+						HBTimeBar = 2Filler14 _TimeBar 2Filler15
+
+					HBControls = \
+						_Filler16 \
+						Prev(size=large-toolbar,tip=_"Previous Song") \
+						Play(size=large-toolbar,tip=_"Play/Pause") \
+						Stop(size=large-toolbar,tip=_"Stop") \
+						Next(size=large-toolbar,tip=_"Next Song") \
+						_Filler17
+		
+		############## Lists and bottom buttons ##################                			
+
+		VBListsETBoutons = _NBSidebar1 HBBouton
+
+			NBSidebar1 = (tabpos=right90,typesubmenu='PC') \
+		                VBQueueList \
+		                VBPlayList
+
+				VBQueueList = (tabtitle=_"Queue") \
+		                    EditListButtons(group=2,small=1,relief=none) \
+		                    _QueueList(cols="queuenumber titleaa",colwidth="queuenumber 20",sort="path album:i disc track file",songtree=0,group=2) \
+				    HBQueueActions
+
+                                	HBQueueActions = Total1(size="small",group=2) -QueueActions 			
+
+                		VBPlayList = (tabtitle=_"Playlist") \
+                            		_SongList(cols="playandqueue titleaa",colwidth="queuenumber 20",sort="path album:i disc track file",mode=playlist,group=1,follow=1)
+
+		##############  Boutons ############################	
+
+			HBBouton = \
+				Fullscreen(size=button,minwidth=34,maxwidth=34) \
+				Playlist(size=button,minwidth=34,maxwidth=34) \
+				ResetFilter \		
+				HSeparator1 \
+				Sort(size=button,minwidth=34,maxwidth=34) \
+				10Filter(size=button,minwidth=34,maxwidth=34)  \
+				Queue(size=button,minwidth=34,maxwidth=34)  \
+		
+				-Quit(size=button,minwidth=34,maxwidth=34,tip=_"Quit") \
+				-Pref(stock=gtk-preferences,size=button,minwidth=34,maxwidth=34) \
+			       	-HSeparator2 \
+				#-MBLayouts \
+				-HSeparator3 \
+				-Button1(click1="RunPerlCode(::ChooseAddPath(0,1))",stock=gtk-add,size=button,minwidth=34,maxwidth=34,tip=_"Add folder ...") \
+				-Button2(click1="RunPerlCode(::IdleCheck)",stock=gtk-refresh,size=button,minwidth=34,maxwidth=34,tip=_"check now") \
+				-Button3(click1="RunPerlCode(::IdleScan)",stock=gtk-zoom-in,size=button,minwidth=34,maxwidth=34,tip=_"scan now")		
+
+					#MBLayouts = (minwidth=34,maxwidth=34) \ LayoutItem 
