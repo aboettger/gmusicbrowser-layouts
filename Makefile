@@ -34,7 +34,7 @@ install:
 	cp -rp layouts/gmb-art_skins/* "$(datadir)/gmusicbrowser/layouts/gmb-art_skins/"
 	install -pm 644 icons/gmb-art\ -\ awoken/*.png    "$(datadir)/gmusicbrowser/pix/gmb-art - awoken/"
 	install -pm 644 icons/gmb-art\ -\ faenza/*.png    "$(datadir)/gmusicbrowser/pix/gmb-art - faenza/"
-	install -pm 644 icons/gmb-art\ -\ faenza darkest/*.png    "$(datadir)/gmusicbrowser/pix/gmb-art - faenza darkest/"	
+	install -pm 644 icons/gmb-art\ -\ faenza\ darkest/*.png    "$(datadir)/gmusicbrowser/pix/gmb-art - faenza darkest/"	
 	install -pm 644 icons/gmb-art\ -\ elementary/*.png    "$(datadir)/gmusicbrowser/pix/gmb-art - elementary/"
 
 postinstall:

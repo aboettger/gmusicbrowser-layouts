@@ -1,3 +1,10 @@
+gmusicbrowser-art (0.1.16) lucid; urgency=low
+
+  * Added: Two new layouts
+
+ -- Andreas Böttger <andreas.boettger@gmx.de>  Mon, 16 May 2011 16:57:08 +0200
+ 
+
 gmusicbrowser-art (0.1.15ppa2) lucid; urgency=low
 
   * Added: rules_hint=1 for alternate line shading
