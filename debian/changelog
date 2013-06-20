@@ -1,3 +1,9 @@
+gmusicbrowser-art (0.2.0) raring; urgency=low
+
+  * add raring
+
+ -- Andreas Böttger <andreas.boettger@gmx.de>  Sun, 24 Jun 2012 13:08:33 +0200
+
 gmusicbrowser-art (0.2.0) quantal; urgency=low
 
   * bump version to 0.2.0
