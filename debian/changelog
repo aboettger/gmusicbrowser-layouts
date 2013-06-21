@@ -1,3 +1,9 @@
+gmusicbrowser-art (0.2.1) raring; urgency=low
+
+  * bump version to 0.2.1
+
+ -- Andreas Böttger <andy.boettger@gmail.com>  Sun, 21 Jun 2013 17:39:26 +0200
+
 gmusicbrowser-art (0.2.0) raring; urgency=low
 
   * add raring really :)
