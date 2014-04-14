@@ -54,3 +54,10 @@ case: picture(file='gmb-art_nocover.png',w=24,h=24,resize='s',x=0, y=0,pad=2)
 album: aapic(x=3,y=4,w=case:w-5,h=case:h-7,aa='album')
 title: text(x=case:w + 5,y=case:h/2 - title:h/2,markup='<b>'.if($disc,$disc,'?').'</b>')
 
+{Group gmb-art_diskname}
+title=_"gmb-art - Disk name"
+head= max(case:h, title:h, album:h)
+vcollapse=head
+vmin = head
+title:	text(markup='<b><big>'.pesc($discname).'</big></b>',pad=2)
+

@@ -1,10 +1,9 @@
 Source: gmusicbrowser-art
 Section: sound
 Priority: optional
-Maintainer: Andreas Böttger <andreas.boettger@gmx.de>
+Maintainer: Andreas Böttger <andy.boettger@gmail.com>
 Build-Depends: debhelper (>= 7), debconf (>= 0.2.17)
 Standards-Version: 3.9.1
-Homepage: http://gmusicbrowser.deviantart.com/
 
 Package: gmusicbrowser-art
 Architecture: all
