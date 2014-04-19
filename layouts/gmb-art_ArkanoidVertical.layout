@@ -16,7 +16,8 @@ KeyBindings = \
     cs-T ShowHideWidget(HBMainMenuBar) \
     cs-W ShowHideWidget(HBSearchBar) \
     cs-N ShowHideWidget(HBInfo) \
-    cs-B ShowHideWidget(HBSongBreadcrumbs)
+    cs-B ShowHideWidget(HBSongBreadcrumbs) \
+    cs-F SetFocusOn(SimpleSearch)
 
 VolumeScroll = HBReplayButtons HBVolume
 
@@ -68,7 +69,7 @@ VBMain = HBMainMenuBar _NBMain -HBScale -HBSongBreadcrumbs -HBReplayButtons -HBI
         HBVolume = VolumeIcon(button=1)
 
     HBSearchBar = FBHide2 \
-        _SimpleSearch(noselector=0,suggest=1) \
+        _SimpleSearch(activate=SetFocusOn(VBSongTree),noselector=0,suggest=1) \
         -Total(size=small,mode=filter) \
         2-Pos(size=small,xalign=1)
 
@@ -205,5 +206,7 @@ SBMain = VBMain
                         Text14(markup="<tt><b>Ctrl-Shift T</b></tt>    Show/Hide menu bar (<b><u>t</u></b>oolbar)") \
                         Text20(markup="<tt><b>Ctrl-Shift W</b></tt>    Show/Hide search bar (<b><u>W</u></b>here is)") \
                         Text15(markup="<tt><b>Ctrl-Shift N</b></tt>    Show/Hide info and lock bar (i<b><u>n</u></b>fo and lockbar)") \
-                        Text16(markup="<tt><b>Ctrl-Shift B</b></tt>    Show/Hide title <b><u>b</u></b>readcrumbs")
+                        Text16(markup="<tt><b>Ctrl-Shift B</b></tt>    Show/Hide title <b><u>b</u></b>readcrumbs") \
+                        Text21(markup="<tt><b>Ctrl-Shift F</b></tt>    Go to search")
+
 
