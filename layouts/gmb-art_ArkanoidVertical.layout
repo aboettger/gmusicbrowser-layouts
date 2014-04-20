@@ -60,7 +60,7 @@ VBMain = HBMainMenuBar _NBMain -HBScale -HBSongBreadcrumbs -HBReplayButtons -HBI
         -Button4(click1="OpenCustom(ArkanoidVerticalHelp)",relief=none,stock=gtk-help,tip=_"Help") \
         -Pref(stock=gtk-preferences) \
         -Button2(click1="RunPerlCode(::IdleCheck)",stock=gtk-refresh,tip=_"check now") \
-        -Button3(click1="RunPerlCode(::IdleScan)",stock=gtk-zoom-in,tip=_"scan now") \
+        -Button3(click1="RunPerlCode(::IdleScan)",stock=gtk-find,tip=_"scan now") \
         -VSeparator1 \
         -Button1(click1="RunPerlCode(::ChooseAddPath(0,1))",stock=gtk-add,tip=_"Add folder ...")
 
@@ -69,7 +69,7 @@ VBMain = HBMainMenuBar _NBMain -HBScale -HBSongBreadcrumbs -HBReplayButtons -HBI
         HBVolume = VolumeIcon(button=1)
 
     HBSearchBar = FBHide2 \
-        _SimpleSearch(activate=SetFocusOn(VBSongTree),noselector=0,suggest=1) \
+        _SimpleSearch(activate=SetFocusOn(VBSongTree),suggest=1) \
         -Total(size=small,mode=filter) \
         2-Pos(size=small,xalign=1)
 
