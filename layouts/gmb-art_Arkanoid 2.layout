@@ -97,7 +97,7 @@ HBMainContainer = 3Filler1 _VBMainContainer 3Filler2
                 -Button4(click1="OpenCustom(ArkanoidHelp)",relief=none,stock=gtk-help,tip=_"Help") \
                 -Pref(stock=gtk-preferences) \
                 -Button2(click1="RunPerlCode(::IdleCheck)",stock=gtk-refresh,tip=_"check now") \
-                -Button3(click1="RunPerlCode(::IdleScan)",stock=gtk-zoom-in,,tip=_"scan now") \
+                -Button3(click1="RunPerlCode(::IdleScan)",stock=gtk-find,tip=_"scan now") \
                 -HSeparator1 \
                 -Button1(click1="RunPerlCode(::ChooseAddPath(0,1))",stock=gtk-add,tip=_"Add folder ...")
 
