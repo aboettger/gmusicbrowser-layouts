@@ -1,3 +1,11 @@
+gmusicbrowser-art (0.2.2) trusty; urgency=low
+
+  * bump version to 0.2.2
+  * All of the custom GTK stock icons removed. Instead, the original icon of the particular icon theme are used.
+  * new icons for library rescan in "gmb-art -> Arkanoid Vertical" and "gmb-art -> Arkanoid 2"
+
+ -- Andreas Böttger <andy.boettger@gmail.com>  Sun, 21 Jun 2013 17:39:26 +0200
+
 gmusicbrowser-art (0.2.1) raring; urgency=low
 
   * bump version to 0.2.1
