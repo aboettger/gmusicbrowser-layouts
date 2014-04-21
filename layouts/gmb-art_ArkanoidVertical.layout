@@ -50,23 +50,23 @@ VBMain = HBMainMenuBar _NBMain -HBScale -HBSongBreadcrumbs -HBReplayButtons -HBI
         FBHide1 \
         HBVolume \
         VSeparator2 \
-        ExtraButtons \
+        ExtraButtons(size=large-toolbar) \
         Playlist \
 #        VSeparator3 \
 #        ToggleButton5(relief=none,size=large-toolbar,icon=view-list,tip=_"Simple List View")togglegroup=1,widget=VBPlayList) \
 #        ToggleButton6(relief=none,size=large-toolbar,icon=view-tree,tip=_"Songtree View",togglegroup=1,widget=VBSongTree) \
         5_Progress \
-        -Button5(click1="Quit",relief=none,stock=gtk-quit,tip=_"Quit") \
-        -Button4(click1="OpenCustom(ArkanoidVerticalHelp)",relief=none,stock=gtk-help,tip=_"Help") \
-        -Pref(stock=gtk-preferences) \
-        -Button2(click1="RunPerlCode(::IdleCheck)",stock=gtk-refresh,tip=_"check now") \
-        -Button3(click1="RunPerlCode(::IdleScan)",stock=gtk-find,tip=_"scan now") \
+        -Button5(size=large-toolbar,click1="Quit",relief=none,stock=gtk-quit,tip=_"Quit") \
+        -Button4(size=large-toolbar,click1="OpenCustom(ArkanoidVerticalHelp)",relief=none,stock=gtk-help,tip=_"Help") \
+        -Pref(size=large-toolbar,stock=gtk-preferences) \
+        -Button2(size=large-toolbar,click1="RunPerlCode(::IdleCheck)",stock=gtk-refresh,tip=_"check now") \
+        -Button3(size=large-toolbar,click1="RunPerlCode(::IdleScan)",stock=gtk-find,tip=_"scan now") \
         -VSeparator1 \
-        -Button1(click1="RunPerlCode(::ChooseAddPath(0,1))",stock=gtk-add,tip=_"Add folder ...")
+        -Button1(size=large-toolbar,click1="RunPerlCode(::ChooseAddPath(0,1))",stock=gtk-add,tip=_"Add folder ...")
 
         FBHide1 = 1,1,8,8 ToggleButton98(skin=hide.png::normal,widget=HBMainMenuBar)
 
-        HBVolume = VolumeIcon(button=1)
+        HBVolume = VolumeIcon(size=large-toolbar,button=1)
 
     HBSearchBar = FBHide2 \
         _SimpleSearch(activate=SetFocusOn(VBSongTree),suggest=1) \
@@ -85,9 +85,9 @@ VBMain = HBMainMenuBar _NBMain -HBScale -HBSongBreadcrumbs -HBReplayButtons -HBI
 
     HBReplayButtons = \
         _Filler100 \
-        Prev(tip=_"Previous Song") \
-        Play(tip=_"Play/Pause") \
-        Next(tip=_"Next Song") \
+        Prev(size=large-toolbar,tip=_"Previous Song") \
+        Play(size=dialog,tip=_"Play/Pause") \
+        Next(size=large-toolbar,tip=_"Next Song") \
         _Filler101
 
     NBMain = (tabpos=bottom,typesubmenu='PC',pages="VBCover VBCurrentPlay VBSavedFilterPane VBArtist VBAlbum VBSongTree VBQueueList VBPlayList") \
