@@ -162,15 +162,15 @@ VBMain = HBMainMenuBar _NBMain -HBScale -HBSongBreadcrumbs -HBReplayButtons -HBI
 
             HBSongTreeAct = \
                 BMSettings \
-                Sort(button=1) \
+                Sort(size=menu,button=1) \
                 VSeparator100 \
-                QueueFilter \
-                PlayFilter(tip=_"Play listed songs") \
+                QueueFilter(size=menu) \
+                PlayFilter(size=menu,tip=_"Play listed songs") \
                 VSeparator101 \
-                Button(click1=GoToCurrentSong,size=button,stock=gtk-jump-to,tip=_"Go to playing song") \
-                5ResetFilter
+                Button(click1=GoToCurrentSong,size=menu,stock=gmb-song,tip=_"Go to playing song") \
+                5ResetFilter(size=menu)
 
-                BMSettings = (icon=gtk-preferences,size="button") \
+                BMSettings = (icon=gtk-preferences,size="menu") \
                     PlayItem \
                     HistItem
 

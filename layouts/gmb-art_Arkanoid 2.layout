@@ -226,7 +226,7 @@ HBMainContainer = 3Filler1 _VBMainContainer 3Filler2
                                             MBQueueItem1 \
                                             Filter(button=1) \
                                             PlayFilter \
-                                            Button(size=menu,click1=GoToCurrentSong,stock=gtk-jump-to,tip=_"Go to playing song") \
+                                            Button(size=menu,click1=GoToCurrentSong,stock=gmb-song,tip=_"Go to playing song") \
                                             _Filler9 \
                                             _Filler10 \
                                             -ResetFilter \

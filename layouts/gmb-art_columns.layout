@@ -4,9 +4,9 @@ menutitle = _"gmb-art P&S"
 text: text(markup='<small>'.pesc(if($playcount,$playcount,0).'/'.if($skipcount,$skipcount,0)).'</small>')
 
 {Column gmb-art_ratingpic}
-title = _"Rating"
-menutitle = _"Rating (picture without resizing)"
+title = _"Rat3"
+menutitle = _"gmb-art Rat3"
 sort = rating
-width = 80
-pic: picture(file=ratingpic($rating),x=0,y=0,h=$_h,w=$_w)
+width=100
+pic : picture(file=ratingpic($rating),h=32,w=80,resize='ratio',init_file=ratingpic(0))
 
