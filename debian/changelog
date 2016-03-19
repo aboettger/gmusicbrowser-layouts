@@ -1,3 +1,9 @@
+gmusicbrowser-art (0.2.3) trusty; urgency=low
+
+  * New GPG-key, bump version to 0.2.3
+
+ -- Andreas Böttger <andy.boettger@gmail.com>  Sat, 19 Mar 2016 19:03:21 +0100
+
 gmusicbrowser-art (0.2.2) trusty; urgency=low
 
   * bump version to 0.2.2
